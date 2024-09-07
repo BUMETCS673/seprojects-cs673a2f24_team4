@@ -1,1 +1,1 @@
-## Team Member : Jaindra Parvathaneni, Hi I am Jaindra and I am the configuration leader for Team 4 
+## Hi i am jaindra parvathaneni and i am the configuration leader for my team
