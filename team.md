@@ -1,1 +1,1 @@
-## Hi i am jaindra parvathaneni and i am the configuration leader for my team
+## hi I am Jaindra Parvathaneni and i am the configuration leader for this team
