@@ -5,3 +5,5 @@
 ## Hey, I am Faizan Ahmad and I am the Design and Implementation Leader for this team
 
 ## Hey, I am Tushar Kendre and I am the Requirement Leader for this team.
+
+## Hey, I am Shubh Gupta and I am the QA leader for team 4.
