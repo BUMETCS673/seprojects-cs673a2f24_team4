@@ -1,0 +1,23 @@
+{
+  "name": "se-t4",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "lerna run --parallel dev",
+    "build": "lerna run build",
+    "format": "lerna run format",
+    "serve": "lerna run --parallel serve",
+    "prisma": "yarn workspace @se-t4/database prisma"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^5.1.8"
+  },
+  "dependencies": {
+    "yarn": "^1.22.19"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "extends": ["prettier", "plugin:node/recommended", "eslint:recommended"],
+  "plugins": ["prettier/recommended", "@typescript-eslint/recommended"],
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescrit-eslint/no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off"
+  }
+}
