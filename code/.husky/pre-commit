@@ -1,1 +1,8 @@
-yarn format:changed
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run the format script
+yarn format:staged
+
+# Check for linting errors on the formatted files
+yarn lint:staged

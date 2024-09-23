@@ -9,7 +9,8 @@
     "serve": "lerna run --parallel serve",
     "prisma": "yarn workspace @se-t4/database prisma",
     "prepare": "husky",
-    "format:staged": "git diff --cached --name-only --diff-filter=ACMRT | grep -E '\\.(js|jsx|json|css|md|ts|tsx)$' | xargs prettier --write"
+    "format:staged": "git diff --cached --name-only --diff-filter=ACMRT | grep -E '\\.(js|jsx|json|css|md|ts|tsx)$' | xargs prettier --write",
+    "lint:staged": "git diff --cached --name-only --diff-filter=ACMRT | grep -E '\\.(js|jsx|json|css|md|ts|tsx)$' | xargs eslint"
   },
   "workspaces": {
     "packages": [
