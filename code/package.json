@@ -8,8 +8,7 @@
     "format": "lerna run format",
     "lint": "lerna run lint",
     "serve": "lerna run --parallel serve",
-    "prisma": "yarn workspace @se-t4/database prisma",
-    "prepare": "husky"
+    "prisma": "yarn workspace @se-t4/database prisma"
   },
   "workspaces": {
     "packages": [
@@ -27,7 +26,6 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.12",
-    "husky": "^9.1.6",
     "lerna": "^5.1.8",
     "prettier": "^3.3.3",
     "typescript-eslint": "^8.6.0"
