@@ -1,78 +1,67 @@
-import js from '@eslint/js';
 import globals from 'globals';
+import tsParser from '@typescript-eslint/parser';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import prettier from 'eslint-plugin-prettier';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import prettier from 'eslint-plugin-prettier';
+// import nodePlugin from 'eslint-plugin-node';
 
-export default tseslint.config(
+export default [
   {
     ignores: ['dist'],
   },
   {
-    files: ['packages/**/*.{ts,tsx}'],
+    files: ['packages/api/**/*.{js,jsx,json,css,md,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
-      parser: tsParser,
+      globals: globals.node,
+      parser: tsParser
     },
     plugins: {
       '@typescript-eslint': tseslint,
       prettier,
+      // node: nodePlugin
+      // node plugin commented out because the latest version isn't compatible with eslint v9
     },
-    extends: [
-      'eslint:recommended',
-      'plugin:prettier/recommended',
-      'plugin:@typescript-eslint/recommended',
-    ],
     rules: {
+      ...tseslint.configs.recommended.rules, // TypeScript recommended rules
+      // ...nodePlugin.configs.recommended.rules,
+      // Node plugin recommended rules commented out because the latest version isn't compatible with eslint v9
       'prettier/prettier': 'error',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'off',
       'func-names': 'off',
       'no-process-exit': 'off',
       'object-shorthand': 'off',
-      'class-methods-use-this': 'off',
-    },
-    overrides: [
-      {
-        files: ['packages/api/**/*.ts'],
-        env: {
-            'node': true
-        },
-        extends: [
-            'plugin:node/recommended'
-        ]
-      },
-      {
-        files: ['packages/react-app/**/*.{ts,tsx}'],
-        env: {
-            'browser': true
-        },
-        settings: {
-          'react': {
-            'version': 'detect'
-          }
-        },
-        plugins: {
-            'react-hooks': reactHooks,
-            'react-refresh': reactRefresh,
-        },
-        extends: [
-            js.configs.recommended,
-            ...tseslint.configs.recommended,
-            'plugin:react/recommended',
-            'plugin:react-hooks/recommended',
-        ],
-        rules: {
-            ...reactHooks.configs.recommended.rules,
-            'react-refresh/only-export-components': [
-                'warn',
-                { allowConstantExport: true },
-            ]
-        }
-      }
-    ]
+      'class-methods-use-this': 'off'
+    }
   },
-);
+  {
+    files: ['packages/react-app/**/*.{js,jsx,json,css,md,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      parser: tsParser,
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      prettier,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules, // TypeScript recommended rules
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'prettier/prettier': 'error',
+      '@typescript-eslint/no-unused-vars': 'warn'
+    }
+  }
+];

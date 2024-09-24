@@ -11,7 +11,8 @@
     "start": "npm run build:ts && fastify start -a 0.0.0.0 -l info dist/app.js",
     "build:ts": "tsc",
     "dev": "tsc && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"tsc -w\" \"fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js\"",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md|ts|tsx)\""
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md|ts|tsx)\"",
+    "lint": "eslint \"**/*.+(js|jsx|json|css|md|ts|tsx)\""
   },
   "keywords": [],
   "author": "",

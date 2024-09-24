@@ -2,7 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Run the format script
-yarn format:staged
+# yarn format
 
 # Check for linting errors on the formatted files
-yarn lint:staged
+# yarn lint

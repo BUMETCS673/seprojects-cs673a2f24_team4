@@ -6,11 +6,10 @@
     "dev": "lerna run --parallel dev",
     "build": "lerna run build",
     "format": "lerna run format",
+    "lint": "lerna run lint",
     "serve": "lerna run --parallel serve",
     "prisma": "yarn workspace @se-t4/database prisma",
-    "prepare": "husky",
-    "format:staged": "git diff --cached --name-only --diff-filter=ACMRT | grep -E '\\.(js|jsx|json|css|md|ts|tsx)$' | xargs prettier --write",
-    "lint:staged": "git diff --cached --name-only --diff-filter=ACMRT | grep -E '\\.(js|jsx|json|css|md|ts|tsx)$' | xargs eslint"
+    "prepare": "husky"
   },
   "workspaces": {
     "packages": [
