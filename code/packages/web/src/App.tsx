@@ -3,11 +3,15 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
-import { increment, selectCount } from 'src/redux/slices/counterSlice';
+import { decrement, increment, selectCount } from 'src/redux/slices/counterSlice';
 
 function App() {
-  const count = useAppSelector(selectCount)
-  const dispatch = useAppDispatch()
+  const count = useAppSelector(selectCount);
+  const dispatch = useAppDispatch();
+
+  const decrementCounter = useCallback(() => {
+    dispatch(decrement());
+  }, []);
 
   const incrementCounter = useCallback(() => {
     dispatch(increment());
@@ -25,9 +29,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={incrementCounter}>
-          count is {count}
-        </button>
+        <button onClick={decrementCounter}>-</button>
+        &nbsp;
+        <span> count is {count} </span>
+        &nbsp;
+        <button onClick={incrementCounter}>+</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
