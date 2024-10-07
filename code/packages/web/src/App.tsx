@@ -31,7 +31,7 @@ function App() {
       <div className="card">
         <button onClick={decrementCounter}>-</button>
         &nbsp;
-        <span> count is {count} </span>
+        <span> Current count is {count} </span>
         &nbsp;
         <button onClick={incrementCounter}>+</button>
         <p>
