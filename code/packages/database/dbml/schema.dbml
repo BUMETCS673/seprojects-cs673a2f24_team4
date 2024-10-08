@@ -1,0 +1,37 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Users {
+  id String [pk]
+  email String [unique, not null]
+  firstName String
+  lastName String
+  company String
+  phone String
+  group String
+  username String
+  providerId String
+  providerName String
+  active Boolean [not null, default: true]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  Storage Storage [not null]
+}
+
+Table Storage {
+  id String [pk]
+  name String [not null]
+  mimetype String [not null]
+  url String [unique, not null]
+  user Users [not null]
+  active Boolean [not null, default: true]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  archivedAt DateTime
+  deletedAt DateTime
+  userId String [not null]
+}
+
+Ref: Storage.userId > Users.id

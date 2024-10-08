@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Running precommit hook..."
+
+cd code
+
+echo "Lint staged starting.."
+yarn lint-staged
+if [ $? -ne 0 ]; then
+    echo "Lint staged failed. Commit aborted."
+    exit 1
+fi
+echo "Lint staged successful"
