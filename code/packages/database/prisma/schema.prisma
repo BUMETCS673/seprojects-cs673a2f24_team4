@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../dist"
+  binaryTargets   = ["native", "linux-musl"]
+  previewFeatures = ["omitApi"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+  output   = "../dbml"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id        String  @id @default(cuid())
+  email     String  @unique
+  firstName String?
+  lastName  String?
+  company   String?
+  phone     String?
+  group     String?
+  username  String?
+
+  providerId   String?
+  providerName String?
+
+  active    Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  deletedAt DateTime?
+
+  Storage Storage[]
+}
+
+model Storage {
+  id       String @id @default(cuid())
+  name     String
+  mimetype String
+  url      String @unique
+
+  user Users @relation(fields: [userId], references: [id])
+
+  active     Boolean   @default(true)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @default(now())
+  archivedAt DateTime?
+
+  deletedAt DateTime?
+  userId    String
+}

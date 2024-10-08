@@ -1,0 +1,16 @@
+{
+  "name": "@se-t4/database",
+  "version": "0.0.1",
+  "main": "dist/index",
+  "types": "dist/index",
+  "devDependencies": {
+    "prisma": "^5.16.1",
+    "prisma-dbml-generator": "^0.9.1"
+  },
+  "scripts": {
+    "generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.1"
+  }
+}
