@@ -2,7 +2,7 @@ import { PrismaClient } from '@se-t4/database';
 import { FastifyPluginAsync } from 'fastify';
 import { getRequestQueryString } from '../../../../swagger/schema';
 
-const path = require('path');
+import * as path from 'path';
 
 const storage: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   fastify.post(
@@ -28,7 +28,7 @@ const storage: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       } else {
         reply.badRequest();
       }
-    }
+    },
   );
 
   fastify.get<{ Params: { fileName: string } }>(
@@ -44,10 +44,9 @@ const storage: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
           userId: request.userId,
         },
       });
-      console.log(fileData);
       reply.header('Content-Disposition', 'attachment; filename=example.pdf');
       return reply.sendFile(fileName);
-    }
+    },
   );
 };
 
