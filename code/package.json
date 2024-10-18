@@ -1,0 +1,46 @@
+{
+  "name": "se-t4",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "lerna run --parallel dev",
+    "build": "lerna run build",
+    "format": "lerna run format",
+    "lint": "lerna run lint",
+    "serve": "lerna run --parallel serve",
+    "prisma": "yarn workspace @se-t4/database prisma",
+    "prepare": "husky"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "eslint": "^9.11.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "husky": "^9.1.6",
+    "lerna": "^5.1.8",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.6.0"
+  },
+  "dependencies": {
+    "yarn": "^1.22.19"
+  },
+  "lint-staged": {
+    "packages/**/*.{js,jsx,json,css,md,ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ]
+  }
+}

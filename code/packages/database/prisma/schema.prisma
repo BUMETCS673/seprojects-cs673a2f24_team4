@@ -1,0 +1,169 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../dist"
+  binaryTargets   = ["native", "linux-musl"]
+  previewFeatures = ["omitApi"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+  output   = "../dbml"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id        String  @id @default(cuid())
+  email     String  @unique
+  firstName String?
+  lastName  String?
+  company   String?
+  phone     String?
+  group     String?
+  username  String?
+
+  providerId   String?
+  providerName String?
+
+  active    Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  deletedAt DateTime?
+
+  Storage Storage[]
+
+  JobListing JobListings[]
+
+  Resumes Resumes[]
+
+  Applications Applications[]
+
+  RecruiterShortlist RecruiterShortlist[]
+}
+
+model Storage {
+  id       String @id @default(cuid())
+  name     String
+  mimetype String
+  url      String @unique
+
+  user Users @relation(fields: [userId], references: [id])
+
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  deletedAt DateTime?
+  userId    String
+
+  Resumes Resumes[]
+}
+
+model JobListings {
+  id               String  @id @default(cuid())
+  title            String
+  description      String
+  active           Boolean @default(true)
+  coreRequirements String
+
+  user Users @relation(fields: [userId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  deletedAt DateTime?
+  userId    String
+
+  Applications Applications[]
+
+  RecruiterShortlist RecruiterShortlist[]
+  ResumeMatch        ResumeMatch[]
+}
+
+model Resumes {
+  id                String @id @default(cuid())
+  impactScore       Float?
+  presentationScore Float?
+  competencyScore   Float?
+
+  user    Users   @relation(fields: [userId], references: [id])
+  storage Storage @relation(fields: [storageId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  deletedAt DateTime?
+  userId    String
+  storageId String
+
+  Applications Applications[]
+
+  ResumeMatch ResumeMatch[]
+}
+
+enum ApplicationStatus {
+  APPLIED
+  CANCELLED
+  INTERVIEWING
+  REJECTED
+  OFFER
+}
+
+model Applications {
+  id     String            @id @default(cuid())
+  status ApplicationStatus @default(APPLIED)
+
+  applicant  Users       @relation(fields: [applicantId], references: [id])
+  jobListing JobListings @relation(fields: [jobListingId], references: [id])
+  resume     Resumes     @relation(fields: [resumeId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  deletedAt    DateTime?
+  applicantId  String
+  jobListingId String
+  resumeId     String
+
+  RecruiterShortlist RecruiterShortlist[]
+}
+
+model RecruiterShortlist {
+  id String @id @default(cuid())
+
+  recruiter   Users        @relation(fields: [recruiterId], references: [id])
+  application Applications @relation(fields: [applicationId], references: [id])
+  jobListing  JobListings  @relation(fields: [jobListingId], references: [id])
+
+  recruiterId   String
+  applicationId String
+  jobListingId  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now())
+
+  deletedAt DateTime?
+}
+
+model ResumeMatch {
+  id String @id @default(cuid())
+
+  coreRequirementScore String
+  competencyScore      String
+  overallScore         String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @default(now())
+
+  deletedAt DateTime?
+
+  resume     Resumes     @relation(fields: [resumeId], references: [id])
+  jobListing JobListings @relation(fields: [jobListingId], references: [id])
+
+  resumeId     String
+  jobListingId String
+}

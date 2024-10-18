@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+dist
+.env*
+!.env.example
+yarn-error.log
+
+*/temp.xlsx
+lerna-debug.log
+*/temp.json

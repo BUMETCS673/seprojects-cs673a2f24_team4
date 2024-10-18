@@ -1,0 +1,145 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Users {
+  id String [pk]
+  email String [unique, not null]
+  firstName String
+  lastName String
+  company String
+  phone String
+  group String
+  username String
+  providerId String
+  providerName String
+  active Boolean [not null, default: true]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  Storage Storage [not null]
+  JobListing JobListings [not null]
+  Resumes Resumes [not null]
+  Applications Applications [not null]
+  RecruiterShortlist RecruiterShortlist [not null]
+}
+
+Table Storage {
+  id String [pk]
+  name String [not null]
+  mimetype String [not null]
+  url String [unique, not null]
+  user Users [not null]
+  active Boolean [not null, default: true]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  userId String [not null]
+  Resumes Resumes [not null]
+}
+
+Table JobListings {
+  id String [pk]
+  title String [not null]
+  description String [not null]
+  active Boolean [not null, default: true]
+  coreRequirements String [not null]
+  user Users [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  userId String [not null]
+  Applications Applications [not null]
+  RecruiterShortlist RecruiterShortlist [not null]
+  ResumeMatch ResumeMatch [not null]
+}
+
+Table Resumes {
+  id String [pk]
+  impactScore Float
+  presentationScore Float
+  competencyScore Float
+  user Users [not null]
+  storage Storage [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  userId String [not null]
+  storageId String [not null]
+  Applications Applications [not null]
+  ResumeMatch ResumeMatch [not null]
+}
+
+Table Applications {
+  id String [pk]
+  status ApplicationStatus [not null, default: 'APPLIED']
+  applicant Users [not null]
+  jobListing JobListings [not null]
+  resume Resumes [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  applicantId String [not null]
+  jobListingId String [not null]
+  resumeId String [not null]
+  RecruiterShortlist RecruiterShortlist [not null]
+}
+
+Table RecruiterShortlist {
+  id String [pk]
+  recruiter Users [not null]
+  application Applications [not null]
+  jobListing JobListings [not null]
+  recruiterId String [not null]
+  applicationId String [not null]
+  jobListingId String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+}
+
+Table ResumeMatch {
+  id String [pk]
+  coreRequirementScore String [not null]
+  competencyScore String [not null]
+  overallScore String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [default: `now()`, not null]
+  deletedAt DateTime
+  resume Resumes [not null]
+  jobListing JobListings [not null]
+  resumeId String [not null]
+  jobListingId String [not null]
+}
+
+Enum ApplicationStatus {
+  APPLIED
+  CANCELLED
+  INTERVIEWING
+  REJECTED
+  OFFER
+}
+
+Ref: Storage.userId > Users.id
+
+Ref: JobListings.userId > Users.id
+
+Ref: Resumes.userId > Users.id
+
+Ref: Resumes.storageId > Storage.id
+
+Ref: Applications.applicantId > Users.id
+
+Ref: Applications.jobListingId > JobListings.id
+
+Ref: Applications.resumeId > Resumes.id
+
+Ref: RecruiterShortlist.recruiterId > Users.id
+
+Ref: RecruiterShortlist.applicationId > Applications.id
+
+Ref: RecruiterShortlist.jobListingId > JobListings.id
+
+Ref: ResumeMatch.resumeId > Resumes.id
+
+Ref: ResumeMatch.jobListingId > JobListings.id
