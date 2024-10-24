@@ -29,3 +29,8 @@ export const validatePostApplications = yup.object().shape({
   jobListingId: textRequired,
   resumeId: textRequired,
 });
+
+export const validatePostShortlist = yup.object().shape({
+  applicationId: textRequired,
+  jobListingId: textRequired,
+});
