@@ -12,6 +12,9 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     if (request.authUser.group.includes('recruiter')) {
       const jobListings = await dbClient.jobListings.findMany({
         where: { userId: request.userId },
+        include: {
+          Applications: true,
+        },
       });
       reply.send(jobListings);
     } else {
