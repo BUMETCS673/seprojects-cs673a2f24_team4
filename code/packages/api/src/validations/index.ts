@@ -20,3 +20,7 @@ export const validatePutJobListing = yup.object().shape({
   description: textOptional.min(2).max(3000),
   coreRequirements: textOptional.min(2).max(3000),
 });
+
+export const validatePostResume = yup.object().shape({
+  storageId: textRequired,
+});
