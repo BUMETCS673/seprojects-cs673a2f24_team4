@@ -1,7 +1,10 @@
 import { PrismaClient } from '@se-t4/database';
 import { FastifyPluginAsync } from 'fastify';
 import { getRequestQueryString } from '../../../../swagger/schema';
-import { validatePostApplications } from '../../../../validations';
+import {
+  validatePostApplications,
+  validatePutApplications,
+} from '../../../../validations';
 
 const applications: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   fastify.get('/', { ...getRequestQueryString }, async (request, reply) => {
@@ -45,6 +48,39 @@ const applications: FastifyPluginAsync = async (fastify, opts): Promise<void> =>
         },
       });
       reply.status(201).send(newApplication);
+    },
+  );
+
+  enum ApplicationStatus {
+    APPLIED = 'APPLIED',
+    CANCELLED = 'CANCELLED',
+    INTERVIEWING = 'INTERVIEWING',
+    REJECTED = 'REJECTED',
+    OFFER = 'OFFER',
+  }
+
+  type applicationPutBody = {
+    status: ApplicationStatus;
+  };
+
+  fastify.put<{ Querystring: { applicationId: string }; Body: applicationPutBody }>(
+    '/',
+    { ...getRequestQueryString },
+    async (request, reply) => {
+      const dbClient = fastify.container<PrismaClient>('PrismaClient');
+      if (request.authUser.group.includes('recruiter')) {
+        const body = await validatePutApplications.validate(request.body);
+        const updatedApplication = await dbClient.applications.update({
+          where: {
+            id: request.query.applicationId,
+          },
+          data: {
+            status: body.status,
+          },
+        });
+      } else {
+        reply.status(400).send({ message: 'Not authorized' });
+      }
     },
   );
 

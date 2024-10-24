@@ -30,6 +30,19 @@ export const validatePostApplications = yup.object().shape({
   resumeId: textRequired,
 });
 
+enum ApplicationStatus {
+  APPLIED = 'APPLIED',
+  CANCELLED = 'CANCELLED',
+  INTERVIEWING = 'INTERVIEWING',
+  REJECTED = 'REJECTED',
+  OFFER = 'OFFER',
+}
+export const validatePutApplications = yup.object().shape({
+  status: yup
+    .mixed<ApplicationStatus>()
+    .oneOf(Object.values(ApplicationStatus))
+    .required(),
+});
 export const validatePostShortlist = yup.object().shape({
   applicationId: textRequired,
   jobListingId: textRequired,
