@@ -2,7 +2,6 @@ import { PrismaClient } from '@se-t4/database';
 import { FastifyPluginAsync } from 'fastify';
 import { getRequestQueryString } from '../../../../swagger/schema';
 import { validatePostResume } from '../../../../validations';
-import { connect } from 'http2';
 
 const resume: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   fastify.get('/', { ...getRequestQueryString }, async (request, reply) => {
@@ -55,6 +54,7 @@ const resume: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       await dbClient.resumes.delete({
         where: {
           id: request.query.resumeId,
+          userId: request.userId,
         },
       });
       reply.status(204);

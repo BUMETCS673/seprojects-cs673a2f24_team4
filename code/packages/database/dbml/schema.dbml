@@ -93,9 +93,6 @@ Table RecruiterShortlist {
   recruiterId String [not null]
   applicationId String [not null]
   jobListingId String [not null]
-  createdAt DateTime [default: `now()`, not null]
-  updatedAt DateTime [default: `now()`, not null]
-  deletedAt DateTime
 }
 
 Table ResumeMatch {
