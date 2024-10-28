@@ -144,10 +144,6 @@ model RecruiterShortlist {
   recruiterId   String
   applicationId String
   jobListingId  String
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @default(now())
-
-  deletedAt DateTime?
 }
 
 model ResumeMatch {

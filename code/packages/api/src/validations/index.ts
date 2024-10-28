@@ -20,3 +20,30 @@ export const validatePutJobListing = yup.object().shape({
   description: textOptional.min(2).max(3000),
   coreRequirements: textOptional.min(2).max(3000),
 });
+
+export const validatePostResume = yup.object().shape({
+  storageId: textRequired,
+});
+
+export const validatePostApplications = yup.object().shape({
+  jobListingId: textRequired,
+  resumeId: textRequired,
+});
+
+enum ApplicationStatus {
+  APPLIED = 'APPLIED',
+  CANCELLED = 'CANCELLED',
+  INTERVIEWING = 'INTERVIEWING',
+  REJECTED = 'REJECTED',
+  OFFER = 'OFFER',
+}
+export const validatePutApplications = yup.object().shape({
+  status: yup
+    .mixed<ApplicationStatus>()
+    .oneOf(Object.values(ApplicationStatus))
+    .required(),
+});
+export const validatePostShortlist = yup.object().shape({
+  applicationId: textRequired,
+  jobListingId: textRequired,
+});
