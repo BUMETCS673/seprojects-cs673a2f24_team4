@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ForgotPasswordPage from './ForgotPasswordPage';
 
-test('renders ForgotPasswordPage with form and reset button', () => {
+test('renders ForgotPasswordPage with form and reset button ', () => {
   render(<ForgotPasswordPage />);
 
   const emailLabel = screen.getByText(/Email:/i);
