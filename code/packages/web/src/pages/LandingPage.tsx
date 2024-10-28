@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LandingPage.css'; // Assuming you'll be using a CSS file for styling
+import './LandingPage.css'; 
 
 const LandingPage = () => {
   return (
@@ -20,7 +20,6 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="hero-image">
-          {/* Add any 3D visuals or SVGs here based on the design */}
           <img src="path-to-hero-image.png" alt="AI Illustration" />
         </div>
       </section>
@@ -30,7 +29,6 @@ const LandingPage = () => {
         <h2>Smart Resume Matching</h2>
         <p>Uses advanced AI algorithms to find the most suitable candidates.</p>
         <div className="features-image">
-          {/* Add the mockup image of the tool */}
           <img src="path-to-tool-mockup.png" alt="Smart Resume Matching" />
         </div>
         <div className="features-list">
@@ -52,7 +50,7 @@ const LandingPage = () => {
         <h2>Fast and Scalable</h2>
         <p>Process up to 500 resumes in minutes, saving you hours of manual work.</p>
         <div className="pricing-plans">
-          <div className="plan">
+          <div className="plan free-plan">
             <h3>Free</h3>
             <p>$0/month</p>
             <ul>
@@ -62,7 +60,7 @@ const LandingPage = () => {
             </ul>
             <button className="pricing-btn">Get started for free</button>
           </div>
-          <div className="plan popular">
+          <div className="plan pro-plan">
             <h3>Pro</h3>
             <p>$9/month</p>
             <ul>
@@ -72,7 +70,7 @@ const LandingPage = () => {
             </ul>
             <button className="pricing-btn">Sign up now</button>
           </div>
-          <div className="plan">
+          <div className="plan business-plan">
             <h3>Business</h3>
             <p>$19/month</p>
             <ul>
