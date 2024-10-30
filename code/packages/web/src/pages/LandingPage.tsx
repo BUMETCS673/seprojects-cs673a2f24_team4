@@ -1,6 +1,7 @@
+// LandingPage.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LandingPage.css'; // Assuming you'll be using a CSS file for styling
+import './LandingPage.css';
 
 const LandingPage = () => {
   return (
@@ -20,8 +21,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="hero-image">
-          {/* Add any 3D visuals or SVGs here based on the design */}
-          <img src="path-to-hero-image.png" alt="AI Illustration" />
+          <img src="/external/path-to-hero-image.png" alt="AI Illustration" />
         </div>
       </section>
 
@@ -30,17 +30,16 @@ const LandingPage = () => {
         <h2>Smart Resume Matching</h2>
         <p>Uses advanced AI algorithms to find the most suitable candidates.</p>
         <div className="features-image">
-          {/* Add the mockup image of the tool */}
-          <img src="path-to-tool-mockup.png" alt="Smart Resume Matching" />
+          <img src="/external/path-to-tool-mockup.png" alt="Smart Resume Matching" />
         </div>
         <div className="features-list">
           <div className="feature-item">
-            <img src="path-to-icon1.png" alt="Integration Ecosystem" />
+            <img src="/external/path-to-icon1.png" alt="Integration Ecosystem" />
             <h3>Integration Ecosystem</h3>
             <p>Enhance your productivity by connecting with your favorite tools.</p>
           </div>
           <div className="feature-item">
-            <img src="path-to-icon2.png" alt="Goal Setting and Tracking" />
+            <img src="/external/path-to-icon2.png" alt="Goal Setting and Tracking" />
             <h3>Goal Setting and Tracking</h3>
             <p>Define and track your goals, breaking down objectives into achievable tasks.</p>
           </div>
