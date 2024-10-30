@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import { decrement, increment, selectCount } from 'src/redux/slices/counterSlice';
+import  PaymentForm  from './pages/payment-page/PaymentPage';
 
 function App() {
   const count = useAppSelector(selectCount);
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -40,7 +41,8 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
+      <PaymentForm />
     </>
   );
 }

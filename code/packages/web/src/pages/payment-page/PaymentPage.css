@@ -1,0 +1,16 @@
+body {
+    min-width: unset;
+    width: 100%;
+    /* Rectangle 2 */
+
+    position: absolute;
+    width: 1440px;
+    height: 1024px;
+
+    background: linear-gradient(201.28deg, #EAEEFE 71.37%, #183EC2 97.31%);
+
+}
+
+#root {
+    min-width: 100%;
+}

@@ -15,4 +15,6 @@ const renderApp = () =>
     </Provider>,
   );
 
-UserService.initKeycloak(renderApp);
+renderApp();
+
+// UserService.initKeycloak(renderApp);
