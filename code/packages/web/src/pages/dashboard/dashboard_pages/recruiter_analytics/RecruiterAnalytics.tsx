@@ -2,55 +2,54 @@ import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Copyright from '../internals/components/Copyright';
-import ChartUserByCountry from './ChartUserByCountry';
-import CustomizedTreeView from './CustomizedTreeView';
-import CustomizedDataGrid from './CustomizedDataGrid';
-import HighlightedCard from './HighlightedCard';
-import PageViewsBarChart from './PageViewsBarChart';
-import SessionsChart from './SessionsChart';
-import StatCard, { StatCardProps } from './StatCard';
+import Copyright from 'src/internals/components/Copyright';
+import ChartUserByCountry from 'src/components/ChartUserByCountry';
+import CustomizedTreeView from 'src/components/CustomizedTreeView';
+import CustomizedDataGrid from 'src/components/CustomizedDataGrid';
+import HighlightedCard from 'src/components/HighlightedCard';
+import PageViewsBarChart from 'src/components/PageViewsBarChart';
+import SessionsChart from 'src/components/SessionsChart';
+import StatCard, { StatCardProps } from 'src/components/StatCard';
 
 const data: StatCardProps[] = [
   {
-    title: 'Users',
-    value: '14k',
+    title: 'Resumes Shortlisted',
+    value: '350',
     interval: 'Last 30 days',
-    trendText: '+12%',
+    trendText: '+600%',
     trend: 'up',
     data: [
-      200, 24, 220, 260, 240, 380, 100, 240, 280, 240, 300, 340, 320, 360, 340, 380,
-      360, 400, 380, 420, 400, 640, 340, 460, 440, 480, 460, 600, 880, 920,
+      5, 6, 7, 8, 9, 10, 10, 11, 12, 12, 13, 13, 14, 15, 15, 16, 17, 18, 18, 19, 20,
+      21, 22, 23, 24, 25, 26, 27, 28, 30,
     ],
   },
   {
-    title: 'Conversions',
-    value: '325',
+    title: 'Jobs Listed',
+    value: '73',
     interval: 'Last 30 days',
-    trendText: '-8%',
-    trend: 'down',
+    trendText: '+2%',
+    trend: 'up',
     data: [
-      1640, 1250, 970, 1130, 1050, 900, 720, 1080, 900, 450, 920, 820, 840, 600, 820,
-      780, 800, 760, 380, 740, 660, 620, 840, 500, 520, 480, 400, 360, 300, 220,
+      1, 2, 1, 3, 2, 4, 1, 5, 3, 6, 5, 3, 6, 4, 7, 3, 6, 8, 6, 8, 7, 4, 8, 5, 9, 6,
+      2, 3, 2, 2,
     ],
   },
   {
-    title: 'Event count',
-    value: '200k',
+    title: 'Applications Received',
+    value: '1768',
     interval: 'Last 30 days',
-    trendText: '+0.6%',
+    trendText: '0%',
     trend: 'neutral',
     data: [
-      500, 400, 510, 530, 520, 600, 530, 520, 510, 730, 520, 510, 530, 620, 510, 530,
-      520, 410, 530, 520, 610, 530, 520, 610, 530, 420, 510, 430, 520, 510,
+      58, 60, 59, 62, 59, 60, 57, 61, 60, 59, 60, 58, 59, 57, 58, 60, 59, 58, 60, 61,
+      58, 59, 60, 57, 58, 59, 57, 58, 57, 58,
     ],
   },
 ];
 
-export default function MainGrid() {
+export default function RecruiterAnalytics() {
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px' } }}>
-      {/* cards */}
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
         Overview
       </Typography>

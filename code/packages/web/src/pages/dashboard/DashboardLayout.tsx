@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import AppNavbar from 'src/components/AppNavbar';
 import Header from 'src/components/Header';
-import MainGrid from 'src/components/MainGrid';
 import SideMenu from 'src/components/SideMenu';
 import AppTheme from 'src/theme/AppTheme';
 import {
@@ -21,9 +20,17 @@ const xThemeComponents = {
   ...treeViewCustomizations,
 };
 
-const DashboardLayout = (props: { disableCustomTheme?: boolean }) => {
+interface DashboardLayoutProps {
+  disableCustomTheme?: boolean;
+  element: JSX.Element;
+}
+
+const DashboardLayout = ({ disableCustomTheme, element }: DashboardLayoutProps) => {
   return (
-    <AppTheme {...props} themeComponents={xThemeComponents}>
+    <AppTheme
+      disableCustomTheme={disableCustomTheme}
+      themeComponents={xThemeComponents}
+    >
       <CssBaseline enableColorScheme />
       <Box sx={{ width: '100%', display: 'flex' }}>
         <SideMenu />
@@ -46,7 +53,7 @@ const DashboardLayout = (props: { disableCustomTheme?: boolean }) => {
             }}
           >
             <Header />
-            <MainGrid />
+            {element}
           </Stack>
         </Box>
       </Box>
