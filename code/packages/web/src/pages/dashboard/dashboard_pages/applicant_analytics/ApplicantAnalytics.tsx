@@ -44,7 +44,7 @@ const data: StatCardProps[] = [
   },
 ];
 
-export default function ApplicantAnalytics() {
+export const ApplicantAnalytics = () => {
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px' } }}>
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
@@ -88,4 +88,4 @@ export default function ApplicantAnalytics() {
       <Copyright sx={{ my: 4 }} />
     </Box>
   );
-}
+};

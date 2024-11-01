@@ -20,12 +20,14 @@ const xThemeComponents = {
   ...treeViewCustomizations,
 };
 
-interface DashboardLayoutProps {
+interface DashboardLayoutProps extends React.PropsWithChildren {
   disableCustomTheme?: boolean;
-  element: JSX.Element;
 }
 
-const DashboardLayout = ({ disableCustomTheme, element }: DashboardLayoutProps) => {
+const DashboardLayout: React.FC<DashboardLayoutProps> = ({
+  disableCustomTheme,
+  children,
+}) => {
   return (
     <AppTheme
       disableCustomTheme={disableCustomTheme}
@@ -53,7 +55,7 @@ const DashboardLayout = ({ disableCustomTheme, element }: DashboardLayoutProps) 
             }}
           >
             <Header />
-            {element}
+            {children}
           </Stack>
         </Box>
       </Box>
