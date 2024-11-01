@@ -5,6 +5,9 @@ export { ApplicantResumeAnalysis } from './applicant_resume_analysis/ApplicantRe
 
 // Recruiter Components
 export { RecruiterAnalytics } from './recruiter_analytics/RecruiterAnalytics';
+export { RecruiterJobListings } from './recruiter_job_listings/RecruiterJobListings';
+export { RecruiterResumeAnalysis } from './recruiter_resume_analysis/RecruiterResumeAnalysis';
+export { RecruiterShortlists } from './recruiter_shortlists/RecruiterShortlists';
 
 // Common Components
 export { Profile } from './profile/Profile';

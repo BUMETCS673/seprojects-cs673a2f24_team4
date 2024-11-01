@@ -12,11 +12,14 @@ import {
   Billing,
   ManageSubscription,
   Profile,
+  RecruiterShortlists,
 } from 'src/pages/dashboard/dashboard_pages';
+import { ROUTES } from 'src/react_router/routes';
 
 const commonRoutes: React.ReactElement[] = [
   <Route
-    path="/dashboard/profile"
+    key={ROUTES.profile}
+    path={ROUTES.profile}
     element={
       <DashboardLayout>
         <Profile />
@@ -24,7 +27,8 @@ const commonRoutes: React.ReactElement[] = [
     }
   />,
   <Route
-    path="/dashboard/billing"
+    key={ROUTES.billing}
+    path={ROUTES.billing}
     element={
       <DashboardLayout>
         <Billing />
@@ -32,7 +36,8 @@ const commonRoutes: React.ReactElement[] = [
     }
   />,
   <Route
-    path="/dashboard/manage-subscription"
+    key={ROUTES.subscription}
+    path={ROUTES.subscription}
     element={
       <DashboardLayout>
         <ManageSubscription />
@@ -43,7 +48,8 @@ const commonRoutes: React.ReactElement[] = [
 
 const applicantRoutes: React.ReactElement[] = [
   <Route
-    path="/dashboard/analytics"
+    key={ROUTES.analytics}
+    path={ROUTES.analytics}
     element={
       <DashboardLayout>
         <ApplicantAnalytics />
@@ -51,7 +57,8 @@ const applicantRoutes: React.ReactElement[] = [
     }
   />,
   <Route
-    path="/dashboard/resume-analysis"
+    key={ROUTES.resumeAnalysis}
+    path={ROUTES.resumeAnalysis}
     element={
       <DashboardLayout>
         <ApplicantResumeAnalysis />
@@ -59,10 +66,20 @@ const applicantRoutes: React.ReactElement[] = [
     }
   />,
   <Route
-    path="/dashboard/job-listings"
+    key={ROUTES.jobListings}
+    path={ROUTES.jobListings}
     element={
       <DashboardLayout>
         <ApplicantJobListings />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.shortlists}
+    path={ROUTES.shortlists}
+    element={
+      <DashboardLayout>
+        <RecruiterShortlists />
       </DashboardLayout>
     }
   />,

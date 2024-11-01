@@ -15,32 +15,40 @@ import {
   BrazilFlag,
   GlobeFlag,
 } from '../internals/components/CustomIcons';
+import { CustomIcon } from 'src/components/AppNavbar';
 
 const data = [
-  { label: 'India', value: 50000 },
-  { label: 'USA', value: 35000 },
-  { label: 'Brazil', value: 10000 },
+  { label: 'USA', value: 45000 },
+  { label: 'India', value: 25000 },
+  { label: 'Brazil', value: 15000 },
+  { label: 'Custom', value: 10000 },
   { label: 'Other', value: 5000 },
 ];
 
 const countries = [
   {
-    name: 'India',
-    value: 50,
-    flag: <IndiaFlag />,
-    color: 'hsl(220, 25%, 65%)',
-  },
-  {
     name: 'USA',
-    value: 35,
+    value: 45,
     flag: <UsaFlag />,
     color: 'hsl(220, 25%, 45%)',
   },
   {
+    name: 'India',
+    value: 25,
+    flag: <IndiaFlag />,
+    color: 'hsl(220, 25%, 65%)',
+  },
+  {
     name: 'Brazil',
-    value: 10,
+    value: 15,
     flag: <BrazilFlag />,
     color: 'hsl(220, 25%, 30%)',
+  },
+  {
+    name: 'Custom',
+    value: 10,
+    flag: <CustomIcon />,
+    color: 'hsl(220, 25%, 20%)',
   },
   {
     name: 'Other',

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useCallback } from 'react';
 import { styled } from '@mui/material/styles';
 import Divider, { dividerClasses } from '@mui/material/Divider';
 import Menu from '@mui/material/Menu';
@@ -10,20 +10,42 @@ import ListItemIcon, { listItemIconClasses } from '@mui/material/ListItemIcon';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import MenuButton from './MenuButton';
+import { ROUTES } from 'src/react_router/routes';
+import { useNavigate } from 'react-router-dom';
 
 const MenuItem = styled(MuiMenuItem)({
   margin: '2px 0',
 });
 
+type ListMenuItem = {
+  text: string;
+  path: string;
+};
+
+const menuItems: ListMenuItem[] = [
+  { text: 'Profile', path: ROUTES.profile },
+  { text: 'Billing', path: ROUTES.billing },
+  { text: 'Subscription', path: ROUTES.subscription },
+];
+
 export default function OptionsMenu() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const navigate = useNavigate();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
+  const menuSelection = useCallback((item: ListMenuItem) => {
+    setAnchorEl(null);
+    navigate(item.path);
+  }, []);
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <React.Fragment>
       <MenuButton
@@ -53,9 +75,16 @@ export default function OptionsMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>Billing</MenuItem>
-        <MenuItem onClick={handleClose}>Subscriptions</MenuItem>
+        {menuItems.map((item) => (
+          <MenuItem
+            key={item.text}
+            onClick={() => {
+              menuSelection(item);
+            }}
+          >
+            {item.text}
+          </MenuItem>
+        ))}
         <Divider />
         <MenuItem
           onClick={handleClose}

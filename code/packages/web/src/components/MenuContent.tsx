@@ -13,27 +13,54 @@ import {
   ReceiptRounded,
   WorkRounded,
 } from '@mui/icons-material';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { ROUTES } from 'src/react_router/routes';
+import { useCallback } from 'react';
 
-const mainListItems = [
-  { text: 'Analytics', icon: <AnalyticsRoundedIcon /> },
-  { text: 'Resume Analysis', icon: <DocumentScannerRounded /> },
-  { text: 'Job Listings', icon: <WorkRounded /> },
-  { text: 'Shortlists', icon: <AssignmentRoundedIcon /> },
+type ListItem = {
+  text: string;
+  icon: React.ReactElement;
+  path: string;
+};
+
+const mainListItems: ListItem[] = [
+  { text: 'Analytics', icon: <AnalyticsRoundedIcon />, path: ROUTES.analytics },
+  {
+    text: 'Resume Analysis',
+    icon: <DocumentScannerRounded />,
+    path: ROUTES.resumeAnalysis,
+  },
+  { text: 'Job Listings', icon: <WorkRounded />, path: ROUTES.jobListings },
+  { text: 'Shortlists', icon: <AssignmentRoundedIcon />, path: ROUTES.shortlists },
 ];
 
-const secondaryListItems = [
-  { text: 'Profile', icon: <PersonRounded /> },
-  { text: 'Billing', icon: <ReceiptRounded /> },
-  { text: 'Manage Subscription', icon: <LoyaltyRounded /> },
+const secondaryListItems: ListItem[] = [
+  { text: 'Profile', icon: <PersonRounded />, path: ROUTES.profile },
+  { text: 'Billing', icon: <ReceiptRounded />, path: ROUTES.billing },
+  {
+    text: 'Manage Subscription',
+    icon: <LoyaltyRounded />,
+    path: ROUTES.subscription,
+  },
 ];
 
 export default function MenuContent() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const menuSelection = useCallback((item: ListItem) => {
+    navigate(item.path);
+  }, []);
+
   return (
     <Stack sx={{ flexGrow: 1, p: 1, justifyContent: 'space-between' }}>
       <List dense>
         {mainListItems.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: 'block' }}>
-            <ListItemButton selected={index === 0}>
+            <ListItemButton
+              onClick={() => menuSelection(item)}
+              selected={location.pathname == item.path}
+            >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
@@ -44,7 +71,10 @@ export default function MenuContent() {
       <List dense>
         {secondaryListItems.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: 'block' }}>
-            <ListItemButton>
+            <ListItemButton
+              onClick={() => menuSelection(item)}
+              selected={location.pathname == item.path}
+            >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
