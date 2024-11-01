@@ -54,10 +54,8 @@ export default function OptionsMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <Divider />
-        <MenuItem onClick={handleClose}>Add another account</MenuItem>
-        <MenuItem onClick={handleClose}>Settings</MenuItem>
+        <MenuItem onClick={handleClose}>Billing</MenuItem>
+        <MenuItem onClick={handleClose}>Subscriptions</MenuItem>
         <Divider />
         <MenuItem
           onClick={handleClose}

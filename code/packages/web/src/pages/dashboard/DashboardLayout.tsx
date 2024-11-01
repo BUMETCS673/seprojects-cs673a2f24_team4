@@ -25,13 +25,13 @@ const DashboardLayout = (props: { disableCustomTheme?: boolean }) => {
   return (
     <AppTheme {...props} themeComponents={xThemeComponents}>
       <CssBaseline enableColorScheme />
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ width: '100%', display: 'flex' }}>
         <SideMenu />
         <AppNavbar />
-        {/* Main content */}
         <Box
           component="main"
           sx={(theme) => ({
+            width: '100%',
             backgroundColor: alpha(theme.palette.background.default, 1),
             overflow: 'hidden',
           })}
