@@ -7,15 +7,17 @@ import DashboardLayout from 'src/pages/dashboard/DashboardLayout';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/home" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="/dashboard/*" element={<DashboardLayout />} />
-      </Routes>
-    </Router>
+    <div style={{ height: '100vh' }}>
+      <Router>
+        <Routes>
+          <Route path="/home" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/dashboard/*" element={<DashboardLayout />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

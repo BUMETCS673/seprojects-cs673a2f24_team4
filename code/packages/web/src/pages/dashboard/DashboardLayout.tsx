@@ -33,7 +33,7 @@ const DashboardLayout = (props: { disableCustomTheme?: boolean }) => {
           sx={(theme) => ({
             width: '100%',
             backgroundColor: alpha(theme.palette.background.default, 1),
-            overflow: 'hidden',
+            overflow: 'scroll',
           })}
         >
           <Stack
