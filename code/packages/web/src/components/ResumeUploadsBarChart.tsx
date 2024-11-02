@@ -6,18 +6,15 @@ import Stack from '@mui/material/Stack';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { useTheme } from '@mui/material/styles';
 
-export default function PageViewsBarChart() {
+export default function ResumeUploadsBarChart() {
   const theme = useTheme();
-  const colorPalette = [
-    theme.palette.primary.dark,
-    theme.palette.primary.main,
-    theme.palette.primary.light,
-  ];
+
+  const colorPalette = [theme.palette.primary.main, theme.palette.primary.light];
   return (
     <Card variant="outlined" sx={{ width: '100%' }}>
       <CardContent>
         <Typography component="h2" variant="subtitle2" gutterBottom>
-          Page views and downloads
+          Resume uploads
         </Typography>
         <Stack sx={{ justifyContent: 'space-between' }}>
           <Stack
@@ -29,16 +26,16 @@ export default function PageViewsBarChart() {
             }}
           >
             <Typography variant="h4" component="p">
-              1.3M
+              52
             </Typography>
-            <Chip size="small" color="error" label="-8%" />
+            <Chip size="small" color="error" label="-16%" />
           </Stack>
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-            Page views and downloads for the last 6 months
+            Resume upload history for the last 6 months
           </Typography>
         </Stack>
         <BarChart
-          borderRadius={8}
+          borderRadius={4}
           colors={colorPalette}
           xAxis={
             [
@@ -49,23 +46,22 @@ export default function PageViewsBarChart() {
               },
             ] as any
           }
+          yAxis={[
+            {
+              max: 100,
+            },
+          ]}
           series={[
             {
-              id: 'page-views',
-              label: 'Page views',
-              data: [2234, 3872, 2998, 4125, 3357, 2789, 2998],
+              id: 'single-resume',
+              label: 'Resume Uploads',
+              data: [22, 38, 29, 41, 33, 27, 29],
               stack: 'A',
             },
             {
-              id: 'downloads',
-              label: 'Downloads',
-              data: [3098, 4215, 2384, 2101, 4752, 3593, 2384],
-              stack: 'A',
-            },
-            {
-              id: 'conversions',
-              label: 'Conversions',
-              data: [4051, 2275, 3129, 4693, 3904, 2038, 2275],
+              id: 'resume-with-job-descriptions',
+              label: 'Resume w/ Job Desc',
+              data: [30, 42, 23, 21, 47, 35, 23],
               stack: 'A',
             },
           ]}

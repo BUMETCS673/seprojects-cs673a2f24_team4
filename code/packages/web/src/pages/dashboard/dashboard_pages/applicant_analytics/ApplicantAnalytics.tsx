@@ -7,10 +7,10 @@ import ChartApplicantByCountry from 'src/components/ChartApplicantByCountry';
 import CustomizedTreeView from 'src/components/CustomizedTreeView';
 import CustomizedDataGrid from 'src/components/CustomizedDataGrid';
 import HighlightedCard from 'src/components/HighlightedCard';
-import PageViewsBarChart from 'src/components/PageViewsBarChart';
 import StatCard, { StatCardProps } from 'src/components/StatCard';
 import { getLast7Days } from 'src/utils/DateTimeUtils';
 import ResumeScoreChart from 'src/components/ResumeScoreChart';
+import ResumeUploadsBarChart from 'src/components/ResumeUploadsBarChart';
 
 const last7Days = getLast7Days();
 
@@ -72,7 +72,7 @@ export const ApplicantAnalytics = () => {
           <ResumeScoreChart />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <PageViewsBarChart />
+          <ResumeUploadsBarChart />
         </Grid>
       </Grid>
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
