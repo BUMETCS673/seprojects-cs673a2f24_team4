@@ -1,0 +1,149 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f2f6fa 30%, #d8e0f3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Left Section for Title */
+  .welcome-back {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .welcome-back h1 {
+    font-size: 3rem;
+    color: #1b1b1b;
+  }
+  
+  .skip-lag {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #1b1b1b;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .skip-lag:hover {
+    background: #1b1b1b;
+    color: white;
+  }
+  
+  /* Signup Form Box */
+  .signup-box {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-box h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .signup-box p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .signup-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-box label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .signup-box input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signup-btn {
+    padding: 15px;
+    background: linear-gradient(90deg, #0d3dff, #0037b3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .signup-btn:hover {
+    background: linear-gradient(90deg, #0a35e3, #002ea5);
+  }
+  
+  /* Social Login Buttons */
+  .social-login {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-login p {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons button {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .google-login {
+    background-color: #db4437;
+    color: white;
+  }
+  
+  .facebook-login {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .github-login {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Footer Links */
+  .login-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
