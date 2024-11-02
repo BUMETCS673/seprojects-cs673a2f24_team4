@@ -62,7 +62,11 @@ export const ApplicantAnalytics = () => {
           </Grid>
         ))}
         <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <HighlightedCard />
+          <HighlightedCard
+            heading="Analyze Resume"
+            subHeading="Use our powerful AI to analyze your resume"
+            buttonText="Upload Resume"
+          />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <SessionsChart />

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -8,7 +7,17 @@ import InsightsRoundedIcon from '@mui/icons-material/InsightsRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
-export default function HighlightedCard() {
+interface HighlightedCardProps {
+  heading: string;
+  subHeading: string;
+  buttonText: string;
+}
+
+export default function HighlightedCard({
+  heading,
+  subHeading,
+  buttonText,
+}: HighlightedCardProps) {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -22,10 +31,10 @@ export default function HighlightedCard() {
           gutterBottom
           sx={{ fontWeight: '600' }}
         >
-          Explore your data
+          {heading}
         </Typography>
         <Typography sx={{ color: 'text.secondary', mb: '8px' }}>
-          Uncover performance and visitor insights with our data wizardry.
+          {subHeading}
         </Typography>
         <Button
           variant="contained"
@@ -34,7 +43,7 @@ export default function HighlightedCard() {
           endIcon={<ChevronRightRoundedIcon />}
           fullWidth={isSmallScreen}
         >
-          Get insights
+          {buttonText}
         </Button>
       </CardContent>
     </Card>
