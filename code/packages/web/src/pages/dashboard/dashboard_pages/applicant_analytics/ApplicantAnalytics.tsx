@@ -5,12 +5,12 @@ import Typography from '@mui/material/Typography';
 import Copyright from 'src/internals/components/Copyright';
 import ChartApplicantByCountry from 'src/components/ChartApplicantByCountry';
 import CustomizedTreeView from 'src/components/CustomizedTreeView';
-import CustomizedDataGrid from 'src/components/CustomizedDataGrid';
 import HighlightedCard from 'src/components/HighlightedCard';
 import StatCard, { StatCardProps } from 'src/components/StatCard';
 import { getLast7Days } from 'src/utils/DateTimeUtils';
 import ResumeScoreChart from 'src/components/ResumeScoreChart';
 import ResumeUploadsBarChart from 'src/components/ResumeUploadsBarChart';
+import ResumeUploadsDataGrid from 'src/components/ResumeUploadsDataGrid';
 
 const last7Days = getLast7Days();
 
@@ -76,11 +76,11 @@ export const ApplicantAnalytics = () => {
         </Grid>
       </Grid>
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
-        Details
+        Resume Uploads
       </Typography>
       <Grid container spacing={2} columns={12}>
         <Grid size={{ xs: 12, lg: 9 }}>
-          <CustomizedDataGrid />
+          <ResumeUploadsDataGrid />
         </Grid>
         <Grid size={{ xs: 12, lg: 3 }}>
           <Stack gap={2} direction={{ xs: 'column', sm: 'row', lg: 'column' }}>
