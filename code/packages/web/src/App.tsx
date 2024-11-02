@@ -91,7 +91,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ height: '100vh' }}>
+    <div style={{ height: '100vh', width: '100vw' }}>
       <Router>
         <Routes>
           <Route path="/home" element={<LandingPage />} />

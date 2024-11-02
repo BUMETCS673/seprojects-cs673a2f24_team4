@@ -2,7 +2,6 @@ import { alpha } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import AppNavbar from 'src/components/AppNavbar';
 import Header from 'src/components/Header';
 import SideMenu from 'src/components/SideMenu';
 import AppTheme from 'src/theme/AppTheme';
@@ -34,13 +33,14 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
       themeComponents={xThemeComponents}
     >
       <CssBaseline enableColorScheme />
-      <Box sx={{ width: '100%', display: 'flex' }}>
+      <Box sx={{ width: '100%', height: '100%', display: 'flex' }}>
         <SideMenu />
-        <AppNavbar />
+        {/* <AppNavbar /> */}
         <Box
           component="main"
           sx={(theme) => ({
             width: '100%',
+            height: '100%',
             backgroundColor: alpha(theme.palette.background.default, 1),
             overflow: 'scroll',
           })}

@@ -20,10 +20,13 @@ const getPathSegments = (path: string): string[] => {
   return path.replace(/^\/|\/$/g, '').split('/');
 };
 
-function capitalizeFirstLetters(segments: string[]): string[] {
-  return segments.map(
-    (segment) => segment.charAt(0).toUpperCase() + segment.slice(1),
-  );
+function processSegments(segments: string[]): string[] {
+  return segments.map((segment) => {
+    const wordsInSegment = segment.split('-');
+    return wordsInSegment
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  });
 }
 
 export default function NavbarBreadcrumbs() {
@@ -31,7 +34,7 @@ export default function NavbarBreadcrumbs() {
 
   const pathSegments = useMemo(() => {
     const segment = getPathSegments(location.pathname);
-    return capitalizeFirstLetters(segment);
+    return processSegments(segment);
   }, [location.pathname]);
 
   return (
