@@ -3,14 +3,14 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Copyright from 'src/internals/components/Copyright';
-import ChartUserByCountry from 'src/components/ChartUserByCountry';
+import ChartApplicantByCountry from 'src/components/ChartApplicantByCountry';
 import CustomizedTreeView from 'src/components/CustomizedTreeView';
 import CustomizedDataGrid from 'src/components/CustomizedDataGrid';
 import HighlightedCard from 'src/components/HighlightedCard';
 import PageViewsBarChart from 'src/components/PageViewsBarChart';
-import SessionsChart from 'src/components/SessionsChart';
 import StatCard, { StatCardProps } from 'src/components/StatCard';
 import { getLast7Days } from 'src/utils/DateTimeUtils';
+import ResumeScoreChart from 'src/components/ResumeScoreChart';
 
 const last7Days = getLast7Days();
 
@@ -69,7 +69,7 @@ export const ApplicantAnalytics = () => {
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SessionsChart />
+          <ResumeScoreChart />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <PageViewsBarChart />
@@ -85,7 +85,7 @@ export const ApplicantAnalytics = () => {
         <Grid size={{ xs: 12, lg: 3 }}>
           <Stack gap={2} direction={{ xs: 'column', sm: 'row', lg: 'column' }}>
             <CustomizedTreeView />
-            <ChartUserByCountry />
+            <ChartApplicantByCountry />
           </Stack>
         </Grid>
       </Grid>

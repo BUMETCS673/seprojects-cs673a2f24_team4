@@ -127,9 +127,10 @@ const colors = [
   'hsl(220, 20%, 42%)',
   'hsl(220, 20%, 35%)',
   'hsl(220, 20%, 25%)',
+  'hsl(220, 20%, 15%)',
 ];
 
-export default function ChartUserByCountry() {
+export default function ChartApplicantByCountry() {
   return (
     <Card
       variant="outlined"
@@ -137,7 +138,7 @@ export default function ChartUserByCountry() {
     >
       <CardContent>
         <Typography component="h2" variant="subtitle2">
-          Users by country
+          Applicants by country
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <PieChart

@@ -3,47 +3,44 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Copyright from 'src/internals/components/Copyright';
-import ChartUserByCountry from 'src/components/ChartUserByCountry';
+import ChartApplicantByCountry from 'src/components/ChartApplicantByCountry';
 import CustomizedTreeView from 'src/components/CustomizedTreeView';
 import CustomizedDataGrid from 'src/components/CustomizedDataGrid';
 import HighlightedCard from 'src/components/HighlightedCard';
 import PageViewsBarChart from 'src/components/PageViewsBarChart';
-import SessionsChart from 'src/components/SessionsChart';
 import StatCard, { StatCardProps } from 'src/components/StatCard';
+import { getLast7Days } from 'src/utils/DateTimeUtils';
+import ResumeScoreChart from 'src/components/ResumeScoreChart';
+
+const last7Days = getLast7Days();
 
 const data: StatCardProps[] = [
   {
-    title: 'Resumes Shortlisted',
-    value: '350',
-    interval: 'Last 30 days',
-    trendText: '+600%',
-    trend: 'up',
-    data: [
-      5, 6, 7, 8, 9, 10, 10, 11, 12, 12, 13, 13, 14, 15, 15, 16, 17, 18, 18, 19, 20,
-      21, 22, 23, 24, 25, 26, 27, 28, 30,
-    ],
+    title: 'Resumes Analyzed',
+    value: '17',
+    interval: 'Last 7 days',
+    trendText: '-30%',
+    trend: 'down',
+    data: [13, 9, 10, 12, 11, 12, 9],
+    xAxis: last7Days,
   },
   {
-    title: 'Jobs Listed',
-    value: '73',
-    interval: 'Last 30 days',
-    trendText: '+2%',
+    title: 'Overall Resume Score',
+    value: '92',
+    interval: 'Last 7 days',
+    trendText: '+68',
     trend: 'up',
-    data: [
-      1, 2, 1, 3, 2, 4, 1, 5, 3, 6, 5, 3, 6, 4, 7, 3, 6, 8, 6, 8, 7, 4, 8, 5, 9, 6,
-      2, 3, 2, 2,
-    ],
+    data: [24, 46, 66, 62, 78, 86, 92],
+    xAxis: last7Days,
   },
   {
-    title: 'Applications Received',
-    value: '1768',
-    interval: 'Last 30 days',
-    trendText: '0%',
+    title: 'Jobs Applied',
+    value: '54',
+    interval: 'Last 7 days',
+    trendText: '+0.6%',
     trend: 'neutral',
-    data: [
-      58, 60, 59, 62, 59, 60, 57, 61, 60, 59, 60, 58, 59, 57, 58, 60, 59, 58, 60, 61,
-      58, 59, 60, 57, 58, 59, 57, 58, 57, 58,
-    ],
+    data: [10, 0, 8, 5, 0, 12, 19],
+    xAxis: last7Days,
   },
 ];
 
@@ -72,7 +69,7 @@ export const RecruiterAnalytics = () => {
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SessionsChart />
+          <ResumeScoreChart />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <PageViewsBarChart />
@@ -88,7 +85,7 @@ export const RecruiterAnalytics = () => {
         <Grid size={{ xs: 12, lg: 3 }}>
           <Stack gap={2} direction={{ xs: 'column', sm: 'row', lg: 'column' }}>
             <CustomizedTreeView />
-            <ChartUserByCountry />
+            <ChartApplicantByCountry />
           </Stack>
         </Grid>
       </Grid>

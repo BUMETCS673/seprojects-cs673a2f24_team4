@@ -358,6 +358,108 @@ export const inputsCustomizations: Components<Theme> = {
             outlineOffset: '2px',
           },
         }),
+        variants: [
+          {
+            props: {
+              color: 'info',
+            },
+            style: {
+              '&:hover': {
+                borderColor: theme.palette.info.light,
+              },
+              '&.Mui-focusVisible': {
+                outline: `3px solid ${theme.palette.info.light}`,
+                outlineOffset: '6px',
+                borderColor: theme.palette.info.light,
+              },
+              '&.Mui-checked': {
+                color: theme.palette.info.dark,
+                backgroundColor: theme.palette.info.light,
+                borderColor: theme.palette.info.light,
+                boxShadow: `none`,
+                '&:hover': {
+                  color: theme.palette.info.light,
+                  backgroundColor: theme.palette.info.main,
+                },
+              },
+            },
+          },
+          {
+            props: {
+              color: 'success',
+            },
+            style: {
+              '&:hover': {
+                borderColor: theme.palette.success.light,
+              },
+              '&.Mui-focusVisible': {
+                outline: `3px solid ${theme.palette.success.light}`,
+                outlineOffset: '6px',
+                borderColor: theme.palette.success.light,
+              },
+              '&.Mui-checked': {
+                color: theme.palette.success.dark,
+                backgroundColor: theme.palette.success.light,
+                borderColor: theme.palette.success.light,
+                boxShadow: `none`,
+                '&:hover': {
+                  color: theme.palette.success.light,
+                  backgroundColor: theme.palette.success.main,
+                },
+              },
+            },
+          },
+          {
+            props: {
+              color: 'warning',
+            },
+            style: {
+              '&:hover': {
+                borderColor: theme.palette.warning.light,
+              },
+              '&.Mui-focusVisible': {
+                outline: `3px solid ${theme.palette.warning.light}`,
+                outlineOffset: '6px',
+                borderColor: theme.palette.warning.light,
+              },
+              '&.Mui-checked': {
+                color: theme.palette.warning.dark,
+                backgroundColor: theme.palette.warning.light,
+                borderColor: theme.palette.warning.light,
+                boxShadow: `none`,
+                '&:hover': {
+                  color: theme.palette.warning.light,
+                  backgroundColor: theme.palette.warning.main,
+                },
+              },
+            },
+          },
+          {
+            props: {
+              color: 'error',
+            },
+            style: {
+              '&:hover': {
+                borderColor: theme.palette.error.light,
+              },
+              '&.Mui-focusVisible': {
+                outline: `3px solid ${theme.palette.error.light}`,
+                outlineOffset: '6px',
+                borderColor: theme.palette.error.light,
+              },
+              '&.Mui-checked': {
+                color: theme.palette.error.dark,
+                backgroundColor: theme.palette.error.light,
+                borderColor: theme.palette.error.light,
+                boxShadow: `none`,
+                '&:hover': {
+                  color: theme.palette.error.light,
+                  backgroundColor: theme.palette.error.main,
+                },
+              },
+            },
+          },
+        ],
       }),
     },
   },
