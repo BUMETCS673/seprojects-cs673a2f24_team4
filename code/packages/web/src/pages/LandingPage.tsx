@@ -20,7 +20,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/external/path-to-hero-image.png" alt="AI Illustration" />
+          <img src="src/assets/external/icons1512-g8lh.svg" alt="AI Illustration" />
         </div>
       </section>
 

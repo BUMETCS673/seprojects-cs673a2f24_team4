@@ -15,6 +15,9 @@ html {
 .landing-page {
   padding: 20px;
   color: #333;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .hero-section {
