@@ -23,13 +23,15 @@ const profileData = {
       company: 'Tech Solutions Inc.',
       role: 'Frontend Developer',
       duration: 'Jan 2020 - Present',
-      description: 'Developed and maintained web applications with a focus on user experience and performance.',
+      description:
+        'Developed and maintained web applications with a focus on user experience and performance.',
     },
     {
       company: 'Creative Agency',
       role: 'Junior Developer',
       duration: 'Aug 2017 - Dec 2019',
-      description: 'Worked on multiple client projects, contributing to UI/UX improvements and feature development.',
+      description:
+        'Worked on multiple client projects, contributing to UI/UX improvements and feature development.',
     },
   ],
   education: [
@@ -41,9 +43,16 @@ const profileData = {
   ],
 };
 
-export const ProfilePage = () => {
+export const Profile = () => {
   return (
-    <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1200px' }, mx: 'auto', p: 2 }}>
+    <Box
+      sx={{
+        width: '100%',
+        maxWidth: { sm: '100%', md: '1200px' },
+        mx: 'auto',
+        p: 2,
+      }}
+    >
       <Typography component="h2" variant="h4" sx={{ mb: 3 }}>
         Profile
       </Typography>
@@ -51,7 +60,11 @@ export const ProfilePage = () => {
         <CardContent>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 4 }}>
-              <Avatar sx={{ width: 128, height: 128, mb: 2 }} src="/path/to/dummy/avatar.jpg" alt={profileData.name} />
+              <Avatar
+                sx={{ width: 128, height: 128, mb: 2 }}
+                src="/path/to/dummy/avatar.jpg"
+                alt={profileData.name}
+              />
               <Typography variant="h5">{profileData.name}</Typography>
               <Typography variant="body1" color="text.secondary">
                 {profileData.email}
@@ -76,7 +89,16 @@ export const ProfilePage = () => {
               </Typography>
               <Stack direction="row" spacing={1} flexWrap="wrap">
                 {profileData.skills.map((skill, index) => (
-                  <Box key={index} sx={{ px: 2, py: 1, bgcolor: 'primary.light', borderRadius: 1, mb: 1 }}>
+                  <Box
+                    key={index}
+                    sx={{
+                      px: 2,
+                      py: 1,
+                      bgcolor: 'primary.light',
+                      borderRadius: 1,
+                      mb: 1,
+                    }}
+                  >
                     {skill}
                   </Box>
                 ))}

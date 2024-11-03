@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-// App.tsx
-=======
 import { useMemo } from 'react';
->>>>>>> 46dad895873dda89801af2d2d62109bfc5de5893
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
-<<<<<<< HEAD
-import './App.css';
-=======
 import DashboardLayout from 'src/pages/dashboard/DashboardLayout';
 import {
   ApplicantAnalytics,
@@ -91,7 +84,6 @@ const applicantRoutes: React.ReactElement[] = [
     }
   />,
 ];
->>>>>>> 46dad895873dda89801af2d2d62109bfc5de5893
 
 function App() {
   const routes = useMemo(() => {
