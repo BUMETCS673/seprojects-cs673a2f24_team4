@@ -10221,8 +10221,6 @@ react-router@6.27.0:
   dependencies:
     "@remix-run/router" "1.20.0"
 
-<<<<<<< HEAD
-=======
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"
@@ -10233,7 +10231,6 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
->>>>>>> 46dad895873dda89801af2d2d62109bfc5de5893
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
