@@ -1,10 +1,27 @@
-/* General page styling */
 .signup-page {
   display: flex;
   height: 100vh;
   background: linear-gradient(135deg, #cfd9df, #e2ebf0);
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-page input[type="text"],
+.signup-page input[type="password"] {
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.signup-page input[type="text"]:focus,
+.signup-page input[type="password"]:focus {
+  border-color: #0077ff;
 }
 
 .left-section {
@@ -59,27 +76,6 @@
 .signup-box p {
   color: #666;
   margin: 5px 0 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input[type="text"],
-input[type="password"] {
-  padding: 12px;
-  margin: 10px 0;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
-  transition: 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  border-color: #0077ff;
 }
 
 .signup-btn {

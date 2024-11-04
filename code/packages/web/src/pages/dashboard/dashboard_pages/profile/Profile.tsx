@@ -1,7 +1,5 @@
-import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -10,10 +8,8 @@ import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Copyright from 'src/internals/components/Copyright';
-import { styled } from '@mui/system';
 
 const profileData = {
-  id: '12345',
   username: 'johndoe',
   email: 'john.doe@example.com',
   firstName: 'John',
@@ -22,11 +18,6 @@ const profileData = {
   phone: '+1 123-456-7890',
 };
 
-const StyledCard = styled(Card)(({ theme }) => ({
-  borderRadius: theme.spacing(2),
-  boxShadow: theme.shadows[5],
-  overflow: 'hidden',
-}));
 
 export const Profile = () => {
   return (
@@ -47,16 +38,12 @@ export const Profile = () => {
           Edit Profile
         </Button>
       </CardContent>
-      <StyledCard sx={{ mb: 3 }}>
         <CardContent>
           <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'medium' }}>
             Contact Information
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <List disablePadding>
-            <ListItem>
-              <ListItemText primary="ID" secondary={profileData.id} />
-            </ListItem>
             <ListItem>
               <ListItemText primary="Username" secondary={profileData.username} />
             </ListItem>
@@ -68,8 +55,6 @@ export const Profile = () => {
             </ListItem>
           </List>
         </CardContent>
-      </StyledCard>
-      <StyledCard>
         <CardContent>
           <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'medium' }}>
             Personal Details
@@ -87,7 +72,6 @@ export const Profile = () => {
             </ListItem>
           </List>
         </CardContent>
-      </StyledCard>
       <Copyright sx={{ mt: 4, textAlign: 'center' }} />
     </Box>
   );
