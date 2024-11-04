@@ -30,7 +30,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 export const Profile = () => {
   return (
-    <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '800px' }, mx: 'auto', p: 3, bgcolor: '#f9f9f9', borderRadius: 2 }}>
+    <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '800px' }, mx: 'auto', p: 3, borderRadius: 2 }}>
       <CardContent sx={{ textAlign: 'center', mb: 3 }}>
         <Avatar
           alt={profileData.firstName + ' ' + profileData.lastName}
