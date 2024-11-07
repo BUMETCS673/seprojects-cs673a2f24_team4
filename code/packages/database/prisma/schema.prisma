@@ -5,7 +5,7 @@ generator client {
   provider        = "prisma-client-js"
   output          = "../dist"
   binaryTargets   = ["native", "linux-musl"]
-  previewFeatures = ["omitApi"]
+  previewFeatures = ["omitApi", "fullTextSearch"]
 }
 
 generator dbml {
