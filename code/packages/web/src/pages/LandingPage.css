@@ -42,27 +42,52 @@ html {
   margin-bottom: 30px;
 }
 
-.cta-buttons button {
-  margin-right: 15px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+.cta-buttons .signup-btn,
+.cta-buttons .login-btn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #333;
+  margin-right: 20px;
 }
 
-/* Features, Pricing, Testimonials */
-.features-section, .pricing-section, .testimonials-section {
+.features-section,
+.pricing-section,
+.testimonials-section {
   text-align: center;
   margin: 60px 0;
 }
 
-.features-list, .pricing-plans, .testimonials {
+.features-list,
+.pricing-plans,
+.testimonials {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
 }
 
-.plan, .feature-item, .testimonial {
+
+.feature-item,
+.plan,
+.testimonial {
   width: 30%;
+  padding: 20px;
+}
+
+.feature-item img,
+.plan img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.pricing-section .pricing-plans .plan {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .plan h3, .feature-item h3 {

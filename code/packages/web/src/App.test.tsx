@@ -7,7 +7,7 @@ test('renders LandingPage, LoginPage, SignupPage and ForgotPasswordPage routes c
   render(
     <Router>
       <App />
-    </Router>
+    </Router>,
   );
 
   // Test for elements in the LandingPage
@@ -25,7 +25,7 @@ test('navigates to LoginPage when clicking on Login button', () => {
   render(
     <Router>
       <App />
-    </Router>
+    </Router>,
   );
 
   const loginButton = screen.getByRole('button', { name: /Login/i });
@@ -39,7 +39,7 @@ test('navigates to SignupPage when clicking on Sign up button', () => {
   render(
     <Router>
       <App />
-    </Router>
+    </Router>,
   );
 
   const signUpButton = screen.getByRole('button', { name: /Sign up for free/i });
@@ -53,7 +53,7 @@ test('navigates to ForgotPasswordPage when clicking on Forgot Password link in L
   render(
     <Router>
       <App />
-    </Router>
+    </Router>,
   );
 
   // Navigate to Login page
