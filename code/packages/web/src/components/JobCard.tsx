@@ -1,4 +1,6 @@
+// JobCard.tsx
 import { Card, CardContent, Typography, Button, Box } from '@mui/material';
+import styles from './JobCard.module.css';
 
 type JobCardProps = {
   title: string;
@@ -10,7 +12,7 @@ type JobCardProps = {
 
 export default function JobCard({ title, subtitle, description, actionText, onActionClick }: JobCardProps) {
   return (
-    <Card variant="outlined" sx={{ height: '100%', flexGrow: 1 }}>
+    <Card variant="outlined" className={styles.card}>
       <CardContent>
         <Typography variant="h6" component="div" gutterBottom>
           {title}
@@ -18,10 +20,10 @@ export default function JobCard({ title, subtitle, description, actionText, onAc
         <Typography variant="subtitle1" color="text.secondary">
           {subtitle}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+        <Typography variant="body2" color="text.secondary" className={styles.description}>
           {description}
         </Typography>
-        <Box mt={2}>
+        <Box className={styles.buttonBox}>
           <Button variant="contained" onClick={onActionClick}>
             {actionText}
           </Button>
