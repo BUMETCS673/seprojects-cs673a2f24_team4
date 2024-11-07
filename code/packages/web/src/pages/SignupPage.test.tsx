@@ -1,21 +1,46 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import SignupPage from './SignupPage';
 
-test('renders SignupPage with form fields and submit button', () => {
+test('renders Signup page with title and form fields', () => {
   render(<SignupPage />);
+  expect(screen.getByText(/Roll the Carpet/i)).toBeInTheDocument();
+  expect(screen.getByText(/Signup/i)).toBeInTheDocument();
+  expect(screen.getByPlaceholderText(/Username/i)).toBeInTheDocument();
+  expect(screen.getByPlaceholderText(/Email \/ Phone/i)).toBeInTheDocument();
+  expect(screen.getByPlaceholderText(/Password/i)).toBeInTheDocument();
+  expect(screen.getByPlaceholderText(/Confirm Password/i)).toBeInTheDocument();
+  expect(screen.getByText(/Signup/i)).toBeInTheDocument();
+});
 
-  const usernameLabel = screen.getByText(/Username:/i);
-  expect(usernameLabel).toBeInTheDocument();
+test('updates input fields on change', () => {
+  render(<SignupPage />);
+  const usernameInput = screen.getByPlaceholderText(/Username/i);
+  const emailInput = screen.getByPlaceholderText(/Email \/ Phone/i);
+  const passwordInput = screen.getByPlaceholderText(/Password/i);
+  const confirmPasswordInput = screen.getByPlaceholderText(/Confirm Password/i);
 
-  const emailLabel = screen.getByText(/Email:/i);
-  expect(emailLabel).toBeInTheDocument();
+  fireEvent.change(usernameInput, { target: { value: 'newUser' } });
+  fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
+  fireEvent.change(passwordInput, { target: { value: 'password123' } });
+  fireEvent.change(confirmPasswordInput, { target: { value: 'password123' } });
 
-  const passwordLabel = screen.getByText(/Password:/i);
-  expect(passwordLabel).toBeInTheDocument();
+  expect(usernameInput).toHaveValue('newUser');
+  expect(emailInput).toHaveValue('test@example.com');
+  expect(passwordInput).toHaveValue('password123');
+  expect(confirmPasswordInput).toHaveValue('password123');
+});
 
-  const confirmPasswordLabel = screen.getByText(/Confirm Password:/i);
-  expect(confirmPasswordLabel).toBeInTheDocument();
+test('submits form on Signup button click', () => {
+  render(<SignupPage />);
+  const signupButton = screen.getByText(/Signup/i);
 
-  const signupButton = screen.getByRole('button', { name: /Sign Up/i });
-  expect(signupButton).toBeInTheDocument();
+  fireEvent.click(signupButton);
+  // Add assertions here to check if form submission logic is handled correctly
+});
+
+test('renders social login buttons', () => {
+  render(<SignupPage />);
+  expect(screen.getByAltText(/Google/i)).toBeInTheDocument(); // Google login
+  expect(screen.getByAltText(/Facebook/i)).toBeInTheDocument(); // Facebook login
+  expect(screen.getByAltText(/GitHub/i)).toBeInTheDocument(); // GitHub login
 });
