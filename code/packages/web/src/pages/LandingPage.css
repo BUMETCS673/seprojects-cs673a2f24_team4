@@ -31,7 +31,8 @@
   margin-top: 40px;
 }
 
-.cta-buttons .signup-btn, .cta-buttons .login-btn {
+.cta-buttons .signup-btn,
+.cta-buttons .login-btn {
   padding: 12px 25px;
   font-size: 1.1rem;
   border-radius: 5px;
@@ -40,24 +41,31 @@
   margin-right: 20px;
 }
 
-.features-section, .pricing-section, .testimonials-section {
+.features-section,
+.pricing-section,
+.testimonials-section {
   text-align: center;
   margin: 80px 0;
   padding: 0 40px;
 }
 
-.features-list, .pricing-plans, .testimonials {
+.features-list,
+.pricing-plans,
+.testimonials {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
 }
 
-.feature-item, .plan, .testimonial {
+.feature-item,
+.plan,
+.testimonial {
   width: 30%;
   padding: 20px;
 }
 
-.feature-item img, .plan img {
+.feature-item img,
+.plan img {
   width: 80px;
   height: auto;
   margin-bottom: 20px;
@@ -67,7 +75,7 @@
   background-color: #fafafa;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .plan h3 {
@@ -111,5 +119,3 @@
 .footer-links a:hover {
   color: #f0f4ff;
 }
-
-  
