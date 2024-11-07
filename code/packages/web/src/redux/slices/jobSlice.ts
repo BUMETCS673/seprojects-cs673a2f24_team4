@@ -71,7 +71,7 @@ export const deleteJob = createAsyncThunk(
   async (jobId: String, thunkAPI) => {},
 );
 
-const getJobSlice = createSlice({
+const jobSlice = createSlice({
   name: 'job',
   initialState,
   extraReducers: (builder) => {
@@ -117,4 +117,4 @@ const getJobSlice = createSlice({
 });
 
 export const getJobSelector = (state: RootState) => state.job;
-export default getJobSlice.reducer;
+export default jobSlice.reducer;
