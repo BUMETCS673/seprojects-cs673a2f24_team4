@@ -40,7 +40,7 @@ test('submits form on Signup button click', () => {
 
 test('renders social login buttons', () => {
   render(<SignupPage />);
-  expect(screen.getByAltText(/Google/i)).toBeInTheDocument();  // Google login
-  expect(screen.getByAltText(/Facebook/i)).toBeInTheDocument();  // Facebook login
-  expect(screen.getByAltText(/GitHub/i)).toBeInTheDocument();  // GitHub login
+  expect(screen.getByAltText(/Google/i)).toBeInTheDocument(); // Google login
+  expect(screen.getByAltText(/Facebook/i)).toBeInTheDocument(); // Facebook login
+  expect(screen.getByAltText(/GitHub/i)).toBeInTheDocument(); // GitHub login
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LandingPage.css'; 
+import './LandingPage.css';
 
 const LandingPage = () => {
   return (
@@ -9,7 +9,10 @@ const LandingPage = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1>AI-Powered Resume Shortlisting Made Easy</h1>
-          <p>Automate your hiring process by finding the best-fit candidates in seconds.</p>
+          <p>
+            Automate your hiring process by finding the best-fit candidates in
+            seconds.
+          </p>
           <div className="cta-buttons">
             <Link to="/signup">
               <button className="signup-btn">Sign up for free</button>
@@ -40,7 +43,10 @@ const LandingPage = () => {
           <div className="feature-item">
             <img src="path-to-icon2.png" alt="Goal Setting and Tracking" />
             <h3>Goal Setting and Tracking</h3>
-            <p>Define and track your goals, breaking down objectives into achievable tasks.</p>
+            <p>
+              Define and track your goals, breaking down objectives into achievable
+              tasks.
+            </p>
           </div>
         </div>
       </section>
@@ -88,11 +94,17 @@ const LandingPage = () => {
         <h2>What our users say</h2>
         <div className="testimonials">
           <div className="testimonial">
-            <p>"Our team's productivity has skyrocketed since we started using this tool."</p>
+            <p>
+              "Our team's productivity has skyrocketed since we started using this
+              tool."
+            </p>
             <span>— Josh Smith</span>
           </div>
           <div className="testimonial">
-            <p>"The customizability and integration capabilities of this app are top-notch."</p>
+            <p>
+              "The customizability and integration capabilities of this app are
+              top-notch."
+            </p>
             <span>— Riley Smith</span>
           </div>
         </div>
@@ -101,7 +113,10 @@ const LandingPage = () => {
       {/* Footer Section */}
       <footer className="footer-section">
         <h2>Sign up for free today</h2>
-        <p>Celebrate the joy of accomplishment with an app designed to track your progress and motivate your efforts.</p>
+        <p>
+          Celebrate the joy of accomplishment with an app designed to track your
+          progress and motivate your efforts.
+        </p>
         <Link to="/signup">
           <button className="signup-footer-btn">Get started for free</button>
         </Link>

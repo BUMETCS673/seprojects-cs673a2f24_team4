@@ -18,10 +18,17 @@ const profileData = {
   phone: '+1 123-456-7890',
 };
 
-
 export const Profile = () => {
   return (
-    <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '800px' }, mx: 'auto', p: 3, borderRadius: 2 }}>
+    <Box
+      sx={{
+        width: '100%',
+        maxWidth: { sm: '100%', md: '800px' },
+        mx: 'auto',
+        p: 3,
+        borderRadius: 2,
+      }}
+    >
       <CardContent sx={{ textAlign: 'center', mb: 3 }}>
         <Avatar
           alt={profileData.firstName + ' ' + profileData.lastName}
@@ -38,40 +45,48 @@ export const Profile = () => {
           Edit Profile
         </Button>
       </CardContent>
-        <CardContent>
-          <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'medium' }}>
-            Contact Information
-          </Typography>
-          <Divider sx={{ mb: 2 }} />
-          <List disablePadding>
-            <ListItem>
-              <ListItemText primary="Username" secondary={profileData.username} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Email" secondary={profileData.email} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Phone" secondary={profileData.phone} />
-            </ListItem>
-          </List>
-        </CardContent>
-        <CardContent>
-          <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'medium' }}>
-            Personal Details
-          </Typography>
-          <Divider sx={{ mb: 2 }} />
-          <List disablePadding>
-            <ListItem>
-              <ListItemText primary="First Name" secondary={profileData.firstName} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Last Name" secondary={profileData.lastName} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Company" secondary={profileData.company} />
-            </ListItem>
-          </List>
-        </CardContent>
+      <CardContent>
+        <Typography
+          variant="h6"
+          color="primary"
+          sx={{ mb: 2, fontWeight: 'medium' }}
+        >
+          Contact Information
+        </Typography>
+        <Divider sx={{ mb: 2 }} />
+        <List disablePadding>
+          <ListItem>
+            <ListItemText primary="Username" secondary={profileData.username} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Email" secondary={profileData.email} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Phone" secondary={profileData.phone} />
+          </ListItem>
+        </List>
+      </CardContent>
+      <CardContent>
+        <Typography
+          variant="h6"
+          color="primary"
+          sx={{ mb: 2, fontWeight: 'medium' }}
+        >
+          Personal Details
+        </Typography>
+        <Divider sx={{ mb: 2 }} />
+        <List disablePadding>
+          <ListItem>
+            <ListItemText primary="First Name" secondary={profileData.firstName} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Last Name" secondary={profileData.lastName} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Company" secondary={profileData.company} />
+          </ListItem>
+        </List>
+      </CardContent>
       <Copyright sx={{ mt: 4, textAlign: 'center' }} />
     </Box>
   );

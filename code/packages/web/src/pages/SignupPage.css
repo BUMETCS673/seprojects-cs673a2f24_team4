@@ -8,8 +8,8 @@
   flex-direction: column;
 }
 
-.signup-page input[type="text"],
-.signup-page input[type="password"] {
+.signup-page input[type='text'],
+.signup-page input[type='password'] {
   padding: 12px;
   margin: 10px 0;
   font-size: 1em;
@@ -19,8 +19,8 @@
   transition: 0.3s;
 }
 
-.signup-page input[type="text"]:focus,
-.signup-page input[type="password"]:focus {
+.signup-page input[type='text']:focus,
+.signup-page input[type='password']:focus {
   border-color: #0077ff;
 }
 

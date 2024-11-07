@@ -42,7 +42,7 @@ Table JobListings {
   id String [pk]
   title String [not null]
   description String [not null]
-  active Boolean [not null, default: true]
+  active Boolean [not null, default: false]
   coreRequirements String [not null]
   user Users [not null]
   createdAt DateTime [default: `now()`, not null]
