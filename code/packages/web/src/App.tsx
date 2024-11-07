@@ -1,9 +1,5 @@
 import { useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import DashboardLayout from 'src/pages/dashboard/DashboardLayout';
 import {
   ApplicantAnalytics,
@@ -14,6 +10,7 @@ import {
   Profile,
   RecruiterShortlists,
 } from 'src/pages/dashboard/dashboard_pages';
+import LandingPage from 'src/pages/landing_page/LandingPage';
 import { ROUTES } from 'src/react_router/routes';
 
 const commonRoutes: React.ReactElement[] = [
@@ -95,9 +92,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/home" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           {routes.map((route) => route)}
         </Routes>
       </Router>
