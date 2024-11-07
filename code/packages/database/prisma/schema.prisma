@@ -69,7 +69,7 @@ model JobListings {
   id               String  @id @default(cuid())
   title            String
   description      String
-  active           Boolean @default(true)
+  active           Boolean @default(false)
   coreRequirements String
 
   user Users @relation(fields: [userId], references: [id])
