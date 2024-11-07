@@ -1,47 +1,107 @@
-import { useCallback } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
-import { decrement, increment, selectCount } from 'src/redux/slices/counterSlice';
+import { useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import DashboardLayout from 'src/pages/dashboard/DashboardLayout';
+import {
+  ApplicantAnalytics,
+  ApplicantJobListings,
+  ApplicantResumeAnalysis,
+  Billing,
+  ManageSubscription,
+  Profile,
+  RecruiterShortlists,
+} from 'src/pages/dashboard/dashboard_pages';
+import { ROUTES } from 'src/react_router/routes';
+
+const commonRoutes: React.ReactElement[] = [
+  <Route
+    key={ROUTES.profile}
+    path={ROUTES.profile}
+    element={
+      <DashboardLayout>
+        <Profile />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.billing}
+    path={ROUTES.billing}
+    element={
+      <DashboardLayout>
+        <Billing />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.subscription}
+    path={ROUTES.subscription}
+    element={
+      <DashboardLayout>
+        <ManageSubscription />
+      </DashboardLayout>
+    }
+  />,
+];
+
+const applicantRoutes: React.ReactElement[] = [
+  <Route
+    key={ROUTES.analytics}
+    path={ROUTES.analytics}
+    element={
+      <DashboardLayout>
+        <ApplicantAnalytics />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.resumeAnalysis}
+    path={ROUTES.resumeAnalysis}
+    element={
+      <DashboardLayout>
+        <ApplicantResumeAnalysis />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.jobListings}
+    path={ROUTES.jobListings}
+    element={
+      <DashboardLayout>
+        <ApplicantJobListings />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.shortlists}
+    path={ROUTES.shortlists}
+    element={
+      <DashboardLayout>
+        <RecruiterShortlists />
+      </DashboardLayout>
+    }
+  />,
+];
 
 function App() {
-  const count = useAppSelector(selectCount);
-  const dispatch = useAppDispatch();
-
-  const decrementCounter = useCallback(() => {
-    dispatch(decrement());
-  }, []);
-
-  const incrementCounter = useCallback(() => {
-    dispatch(increment());
+  const routes = useMemo(() => {
+    return [...applicantRoutes, ...commonRoutes];
   }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={decrementCounter}>-</button>
-        &nbsp;
-        <span> Current count is {count} </span>
-        &nbsp;
-        <button onClick={incrementCounter}>+</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div style={{ height: '100vh', width: '100vw' }}>
+      <Router>
+        <Routes>
+          <Route path="/home" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          {routes.map((route) => route)}
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

@@ -1,28 +1,69 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 
-test('renders Vite and React logos and a button', () => {
-  render(<App />);
-  
-  const viteLogo = screen.getByAltText('Vite logo');
-  expect(viteLogo).toBeInTheDocument();
-  
-  const reactLogo = screen.getByAltText('React logo');
-  expect(reactLogo).toBeInTheDocument();
+test('renders LandingPage, LoginPage, SignupPage and ForgotPasswordPage routes correctly', () => {
+  // Render the App component wrapped in Router
+  render(
+    <Router>
+      <App />
+    </Router>,
+  );
 
-  const button = screen.getByRole('button', { name: /count is 0/i });
-  expect(button).toBeInTheDocument();
+  // Test for elements in the LandingPage
+  const landingHeading = screen.getByText(/AI-Powered Resume Shortlisting/i);
+  expect(landingHeading).toBeInTheDocument();
 
-  const heading = screen.getByText(/Vite \+ React/i);
-  expect(heading).toBeInTheDocument();
+  const signUpButton = screen.getByRole('button', { name: /Sign up for free/i });
+  expect(signUpButton).toBeInTheDocument();
+
+  const loginButton = screen.getByRole('button', { name: /Login/i });
+  expect(loginButton).toBeInTheDocument();
 });
 
-test('increments count on button click', () => {
-  render(<App />);
+test('navigates to LoginPage when clicking on Login button', () => {
+  render(
+    <Router>
+      <App />
+    </Router>,
+  );
 
-  const button = screen.getByRole('button', { name: /count is 0/i });
+  const loginButton = screen.getByRole('button', { name: /Login/i });
+  loginButton.click();
 
-  fireEvent.click(button);
+  const loginHeading = screen.getByText(/Login/i);
+  expect(loginHeading).toBeInTheDocument();
+});
 
-  expect(button).toHaveTextContent('count is 1');
+test('navigates to SignupPage when clicking on Sign up button', () => {
+  render(
+    <Router>
+      <App />
+    </Router>,
+  );
+
+  const signUpButton = screen.getByRole('button', { name: /Sign up for free/i });
+  signUpButton.click();
+
+  const signupHeading = screen.getByText(/Sign Up/i);
+  expect(signupHeading).toBeInTheDocument();
+});
+
+test('navigates to ForgotPasswordPage when clicking on Forgot Password link in LoginPage', () => {
+  render(
+    <Router>
+      <App />
+    </Router>,
+  );
+
+  // Navigate to Login page
+  const loginButton = screen.getByRole('button', { name: /Login/i });
+  loginButton.click();
+
+  // Click on 'Forgot Password?' link
+  const forgotPasswordLink = screen.getByText(/Forgot Password?/i);
+  forgotPasswordLink.click();
+
+  const forgotPasswordHeading = screen.getByText(/Forgot Password?/i);
+  expect(forgotPasswordHeading).toBeInTheDocument();
 });
