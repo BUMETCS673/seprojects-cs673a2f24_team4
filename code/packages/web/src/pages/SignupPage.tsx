@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SignupPage.css'; // Ensure the CSS file is correctly linked
+import './SignupPage.css'; 
 
 const SignupPage = () => {
   const handleSignupSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -11,7 +11,7 @@ const SignupPage = () => {
     const password = formData.get('password');
     const confirmPassword = formData.get('confirmPassword');
     
-    // Perform signup logic here (e.g., API call)
+    
     console.log('Signup submitted', { username, emailOrPhone, password, confirmPassword });
   };
 
