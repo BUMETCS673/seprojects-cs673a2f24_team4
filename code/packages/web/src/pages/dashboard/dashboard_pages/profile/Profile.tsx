@@ -1,3 +1,4 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
@@ -8,8 +9,18 @@ import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Copyright from 'src/internals/components/Copyright';
+import styles from './Profile.module.css';
 
-const profileData = {
+interface ProfileData {
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  company: string;
+  phone: string;
+}
+
+const profileData: ProfileData = {
   username: 'johndoe',
   email: 'john.doe@example.com',
   firstName: 'John',
@@ -18,15 +29,14 @@ const profileData = {
   phone: '+1 123-456-7890',
 };
 
-
-export const Profile = () => {
+export const Profile: React.FC = () => {
   return (
-    <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '800px' }, mx: 'auto', p: 3, borderRadius: 2 }}>
-      <CardContent sx={{ textAlign: 'center', mb: 3 }}>
+    <Box className={styles.profileContainer}>
+      <CardContent className={styles.cardContentCentered}>
         <Avatar
-          alt={profileData.firstName + ' ' + profileData.lastName}
-          src="/path/to/avatar.jpg"
-          sx={{ width: 120, height: 120, margin: '0 auto', mb: 2 }}
+          src="/code/packages/web/src/pages/dashboard/dashboard_pages/profile/avatar.jpg"
+          alt={`${profileData.firstName} ${profileData.lastName}`}
+          className={styles.avatar}
         />
         <Typography component="h2" variant="h4" fontWeight="bold">
           {profileData.firstName} {profileData.lastName}
@@ -34,45 +44,45 @@ export const Profile = () => {
         <Typography variant="subtitle1" color="text.secondary">
           {profileData.company}
         </Typography>
-        <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+        <Button variant="contained" color="primary" className={styles.editButton}>
           Edit Profile
         </Button>
       </CardContent>
-        <CardContent>
-          <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'medium' }}>
-            Contact Information
-          </Typography>
-          <Divider sx={{ mb: 2 }} />
-          <List disablePadding>
-            <ListItem>
-              <ListItemText primary="Username" secondary={profileData.username} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Email" secondary={profileData.email} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Phone" secondary={profileData.phone} />
-            </ListItem>
-          </List>
-        </CardContent>
-        <CardContent>
-          <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'medium' }}>
-            Personal Details
-          </Typography>
-          <Divider sx={{ mb: 2 }} />
-          <List disablePadding>
-            <ListItem>
-              <ListItemText primary="First Name" secondary={profileData.firstName} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Last Name" secondary={profileData.lastName} />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Company" secondary={profileData.company} />
-            </ListItem>
-          </List>
-        </CardContent>
-      <Copyright sx={{ mt: 4, textAlign: 'center' }} />
+      <CardContent>
+        <Typography variant="h6" color="primary" className={styles.sectionTitle}>
+          Contact Information
+        </Typography>
+        <Divider className={styles.divider} />
+        <List disablePadding>
+          <ListItem>
+            <ListItemText primary="Username" secondary={profileData.username} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Email" secondary={profileData.email} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Phone" secondary={profileData.phone} />
+          </ListItem>
+        </List>
+      </CardContent>
+      <CardContent>
+        <Typography variant="h6" color="primary" className={styles.sectionTitle}>
+          Personal Details
+        </Typography>
+        <Divider className={styles.divider} />
+        <List disablePadding>
+          <ListItem>
+            <ListItemText primary="First Name" secondary={profileData.firstName} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Last Name" secondary={profileData.lastName} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Company" secondary={profileData.company} />
+          </ListItem>
+        </List>
+      </CardContent>
+      <Copyright className={styles.copyright} />
     </Box>
   );
 };
