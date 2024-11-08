@@ -1,5 +1,5 @@
 import { DataGrid } from '@mui/x-data-grid';
-import { resumeDataColumns, resumeDataRows } from '../internals/data/gridData';
+import { resumeDataColumns, resumeDataRows } from 'src/internals';
 
 export default function ResumeUploadsDataGrid() {
   return (

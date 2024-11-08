@@ -5,10 +5,10 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import SelectContent from './SelectContent';
-import MenuContent from './MenuContent';
-import CardAlert from './CardAlert';
-import OptionsMenu from './OptionsMenu';
+import CardAlert from 'src/components/card_alert/CardAlert';
+import MenuContent from 'src/components/menu_content/MenuContent';
+import OptionsMenu from 'src/components/options_menu/OptionsMenu';
+import SelectContent from 'src/components/select_content/SelectContent';
 
 const drawerWidth = 240;
 

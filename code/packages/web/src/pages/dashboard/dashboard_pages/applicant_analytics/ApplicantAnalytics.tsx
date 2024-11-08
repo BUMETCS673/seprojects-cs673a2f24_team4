@@ -2,15 +2,15 @@ import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Copyright from 'src/internals/components/Copyright';
-import ChartApplicantByCountry from 'src/components/ChartApplicantByCountry';
-import CustomizedTreeView from 'src/components/CustomizedTreeView';
-import HighlightedCard from 'src/components/HighlightedCard';
-import StatCard, { StatCardProps } from 'src/components/StatCard';
 import { getLast7Days } from 'src/utils/DateTimeUtils';
-import ResumeScoreChart from 'src/components/ResumeScoreChart';
-import ResumeUploadsBarChart from 'src/components/ResumeUploadsBarChart';
-import ResumeUploadsDataGrid from 'src/components/ResumeUploadsDataGrid';
+import { Copyright } from '@mui/icons-material';
+import ChartApplicantByCountry from 'src/components/chart_applicant_by_country/ChartApplicantByCountry';
+import CustomizedTreeView from 'src/components/customized_tree_view/CustomizedTreeView';
+import HighlightedCard from 'src/components/highlighted_card/HighlightedCard';
+import ResumeScoreChart from 'src/components/resume_score_chart/ResumeScoreChart';
+import ResumeUploadsBarChart from 'src/components/resume_uploads_bar_chart/ResumeUploadsBarChart';
+import ResumeUploadsDataGrid from 'src/components/resume_uploads_data_grid/ResumeUploadsDataGrid';
+import StatCard, { StatCardProps } from 'src/components/stat_card/StatCard';
 
 const last7Days = getLast7Days();
 

@@ -8,14 +8,13 @@ import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-
 import {
-  IndiaFlag,
   UsaFlag,
+  IndiaFlag,
   BrazilFlag,
+  CustomIcons,
   GlobeFlag,
-} from '../internals/components/CustomIcons';
-import { CustomIcon } from 'src/components/AppNavbar';
+} from 'src/components/custom_icons/CustomIcons';
 
 const data = [
   { label: 'USA', value: 45000 },
@@ -47,7 +46,7 @@ const countries = [
   {
     name: 'Custom',
     value: 10,
-    flag: <CustomIcon />,
+    flag: <CustomIcons />,
     color: 'hsl(220, 25%, 20%)',
   },
   {

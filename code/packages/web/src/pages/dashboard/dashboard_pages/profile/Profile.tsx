@@ -7,7 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import Copyright from 'src/internals/components/Copyright';
+import Copyright from 'src/components/copyright/Copyright';
 
 const profileData = {
   username: 'johndoe',

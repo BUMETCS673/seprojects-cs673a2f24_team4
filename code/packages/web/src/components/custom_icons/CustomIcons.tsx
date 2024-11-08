@@ -1,6 +1,6 @@
 import SvgIcon from '@mui/material/SvgIcon';
 
-export function CustomIcon() {
+export function CustomIcons() {
   return (
     <SvgIcon sx={{ height: 21, width: 100 }}>
       <svg

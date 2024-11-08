@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
@@ -7,10 +6,9 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
-
-import MenuButton from './MenuButton';
-import MenuContent from './MenuContent';
-import CardAlert from './CardAlert';
+import CardAlert from 'src/components/card_alert/CardAlert';
+import MenuButton from 'src/components/menu_button/MenuButton';
+import MenuContent from 'src/components/menu_content/MenuContent';
 
 interface SideMenuMobileProps {
   open: boolean | undefined;

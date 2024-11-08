@@ -2,15 +2,15 @@ import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Copyright from 'src/internals/components/Copyright';
-import ChartApplicantByCountry from 'src/components/ChartApplicantByCountry';
-import CustomizedTreeView from 'src/components/CustomizedTreeView';
-import CustomizedDataGrid from 'src/components/CustomizedDataGrid';
-import HighlightedCard from 'src/components/HighlightedCard';
-import PageViewsBarChart from 'src/components/PageViewsBarChart';
-import StatCard, { StatCardProps } from 'src/components/StatCard';
 import { getLast7Days } from 'src/utils/DateTimeUtils';
-import ResumeScoreChart from 'src/components/ResumeScoreChart';
+import { Copyright } from '@mui/icons-material';
+import ChartApplicantByCountry from 'src/components/chart_applicant_by_country/ChartApplicantByCountry';
+import CustomizedDataGrid from 'src/components/customized_data_grid/CustomizedDataGrid';
+import CustomizedTreeView from 'src/components/customized_tree_view/CustomizedTreeView';
+import HighlightedCard from 'src/components/highlighted_card/HighlightedCard';
+import PageViewsBarChart from 'src/components/page_views_bar_chart/PageViewsBarChart';
+import ResumeScoreChart from 'src/components/resume_score_chart/ResumeScoreChart';
+import StatCard, { StatCardProps } from 'src/components/stat_card/StatCard';
 
 const last7Days = getLast7Days();
 

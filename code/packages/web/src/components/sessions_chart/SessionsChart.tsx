@@ -72,7 +72,7 @@ export default function SessionsChart() {
             {
               scaleType: 'point',
               data,
-              tickInterval: (index, i) => (i + 1) % 5 === 0,
+              tickInterval: (_index, i) => (i + 1) % 5 === 0,
             },
           ]}
           series={[

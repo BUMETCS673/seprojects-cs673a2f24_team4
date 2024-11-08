@@ -2,8 +2,8 @@ import { alpha } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Header from 'src/components/Header';
-import SideMenu from 'src/components/SideMenu';
+import Header from 'src/components/header/Header';
+import SideMenu from 'src/components/side_menu/SideMenu';
 import AppTheme from 'src/theme/AppTheme';
 import {
   chartsCustomizations,
