@@ -1,5 +1,3 @@
-import '@testing-library/jest-dom/extend-expect';
-
 export default {
     rootDir: '.',
     collectCoverage: true,
@@ -14,7 +12,12 @@ export default {
     moduleNameMapper: {
         '^.+\\.(css|less|scss|sass)$': 'identity-obj-proxy',
         '^.+\\.(png|jpg|jpeg|gif|svg)$': 'jest-transform-stub',
+        '^src/(.*)$': '<rootDir>/src/$1',
     },
+    testMatch: [
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[tj]s?(x)',
+      ],
     coveragePathIgnorePatterns: [
     "/node_modules/",
     "/coverage",

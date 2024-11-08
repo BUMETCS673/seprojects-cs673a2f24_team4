@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import ResumeUploadsDataGrid from 'src/components/ResumeUploadsDataGrid';
+// import ResumeUploadsDataGrid from 'src/components/ResumeUploadsDataGrid';
 import { applicationDataColumns, applicationsData } from 'src/internals/data/gridData';
 import { DataGrid } from '@mui/x-data-grid';
-import { resumeDataColumns, resumeDataRows } from '../../../../internals/data/gridData';
+// import { resumeDataColumns, resumeDataRows } from '../../../../internals/data/gridData';
 
 export const RecruiterShortlists = () => {
   // State to store shortlisted applications
@@ -16,7 +16,7 @@ export const RecruiterShortlists = () => {
   const [toShortlistApplications, setToShortlistApplications] = useState([]);
 
   // Use applicationsData as the source for the Job Applications table
-  const jobApplicationsData = applicationsData;
+  // const jobApplicationsData = applicationsData;
 
   // Handle row selection in Job Applications table
   const handleRowSelection = (selectedRows:any) => {
