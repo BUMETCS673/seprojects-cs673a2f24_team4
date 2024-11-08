@@ -23,7 +23,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src="path-to-hero-image.png" alt="AI Illustration" />
+          <img src="src/assets/external/icons1512-g8lh.svg" alt="AI Illustration" />
         </div>
       </section>
 
@@ -32,16 +32,16 @@ const LandingPage = () => {
         <h2>Smart Resume Matching</h2>
         <p>Uses advanced AI algorithms to find the most suitable candidates.</p>
         <div className="features-image">
-          <img src="path-to-tool-mockup.png" alt="Smart Resume Matching" />
+          <img src="/external/path-to-tool-mockup.png" alt="Smart Resume Matching" />
         </div>
         <div className="features-list">
           <div className="feature-item">
-            <img src="path-to-icon1.png" alt="Integration Ecosystem" />
+            <img src="/external/path-to-icon1.png" alt="Integration Ecosystem" />
             <h3>Integration Ecosystem</h3>
             <p>Enhance your productivity by connecting with your favorite tools.</p>
           </div>
           <div className="feature-item">
-            <img src="path-to-icon2.png" alt="Goal Setting and Tracking" />
+            <img src="/external/path-to-icon2.png" alt="Goal Setting and Tracking" />
             <h3>Goal Setting and Tracking</h3>
             <p>
               Define and track your goals, breaking down objectives into achievable
@@ -56,7 +56,7 @@ const LandingPage = () => {
         <h2>Fast and Scalable</h2>
         <p>Process up to 500 resumes in minutes, saving you hours of manual work.</p>
         <div className="pricing-plans">
-          <div className="plan free-plan">
+          <div className="plan">
             <h3>Free</h3>
             <p>$0/month</p>
             <ul>
@@ -66,7 +66,7 @@ const LandingPage = () => {
             </ul>
             <button className="pricing-btn">Get started for free</button>
           </div>
-          <div className="plan pro-plan">
+          <div className="plan popular">
             <h3>Pro</h3>
             <p>$9/month</p>
             <ul>
@@ -76,7 +76,7 @@ const LandingPage = () => {
             </ul>
             <button className="pricing-btn">Sign up now</button>
           </div>
-          <div className="plan business-plan">
+          <div className="plan">
             <h3>Business</h3>
             <p>$19/month</p>
             <ul>
@@ -130,3 +130,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+

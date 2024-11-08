@@ -1,0 +1,26 @@
+
+.container {
+    width: 100%;
+    max-width: 1700px;
+  }
+  
+  .title {
+    margin-bottom: 16px;
+  }
+  
+  .stack {
+    margin-bottom: 24px;
+  }
+  
+  .gridContainer {
+    flex-grow: 1;
+  }
+  
+  footerStack {
+    margin-top: 32px;
+  }
+  
+  copyright {
+    margin: 32px 0;
+  }
+  
