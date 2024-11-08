@@ -27,7 +27,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
 
 3. **Set Up Keycloak**<br >
     - Make sure that the Keycloak container is running on the Docker Desktop
-    - Go to localhost:8080/. This is where Keycloak is hosted
+    - Go to `localhost:8080/`. This is where Keycloak is hosted
     - Keycloak will ask for a one-time setup asking for an admin username and password.
     - Enter any username and password you like and sign in. We recommend `username: admin@admin.com` and `password: password1`
     - In the console, use the dropdown in the top left corner to create a new realm. We recommend naming it `t4`
@@ -38,7 +38,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
     - Navigate to Groups and create 2 new Groups
         - First Group should be named `recruiter` *!!! IMPORTANT*
         - Second Group should be named `user` *!!! IMPORTANT*
-    - Navigate to Users and create a User with username and password of your choice. *We will use this later to sign in
+    - Navigate to Users and create a User with username and password of your choice. *We will use this later to sign in*
 
 4. **Set Up Postgres and PGAdmin**<br >
     - Download PgAdmin from https://www.pgadmin.org/
@@ -63,6 +63,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
 5. **Set Up Environment Variables**<br >
    We will be creating some `.env` files to configure our project
    - Go to `code/` folder and create a `.env` file with the following contents
+     
        ```
         KEYCLOAK_ADMIN={username goes here} # This is the admin username you created during the Keycloak setup
         KEYCLOAK_ADMIN_PASSWORD={password goes here} # This is the password you created during the Keycloak setup
@@ -74,6 +75,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
         POSTGRES_PASSWORD=password1
         ```
    - Go to `code/packages/api` folder and create a `.env` file with the following contents
+     
        ```
         REDIS_HOST=localhost
         REDIS_PORT=6379
@@ -86,6 +88,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
         KEYCLOAK_AUTH_REALM=t4
         ```
    - Go to `code/packages/database` folder and create a `.env` file with the following contents
+  
        ```
         DATABASE_URL=postgresql://{username}:{password}@localhost:5432/{db-name}?schema=public
 
@@ -93,6 +96,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
         DATABASE_URL=postgresql://t4:password1@localhost:5432/t4-db?schema=public
         ```
    - Go to `code/packages/web` folder and create a `.env` file with the following contents
+     
        ```
         VITE_BASE_URL=http://localhost:3000/api/v1
         VITE_KEYCLOAK_URL=http://localhost:8080
@@ -101,7 +105,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
     Open Docker Desktop and start all containers under the `code/` folder
 
 7. **Database Migration**<br >
-    Run Prisma migrations to update your database schema:
+    Run Prisma migrations to update your database schema:<br />
     ```
     cd code
     yarn prisma migrate dev
