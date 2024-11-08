@@ -6,14 +6,14 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
 
 ## Setup Instructions
 
-1. **Install Dependencies**
+1. **Install Dependencies**<br >
     Navigate to the project directory and install the required dependencies:
     ```
     cd code
     yarn install
     ```
 
-2. **Docker Setup**
+2. **Docker Setup**<br >
     Navigate to the project directory and build docker images <br /> <br />
     _**Prerequisite**: You should have Docker and Docker Desktop installed already._
     <br />
@@ -25,7 +25,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
     ```
     This will install the preconfigured docker images for POSTGRES db, REDIS, and KEYCLOAK
 
-3. **Set Up Keycloak**
+3. **Set Up Keycloak**<br >
     - Make sure that the Keycloak container is running on the Docker Desktop
     - Go to localhost:8080/. This is where Keycloak is hosted
     - Keycloak will ask for a one-time setup asking for an admin username and password.
@@ -40,7 +40,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
         - Second Group should be named `user` *!!! IMPORTANT*
     - Navigate to Users and create a User with username and password of your choice. *We will use this later to sign in
 
-4. **Set Up Postgres and PGAdmin**
+4. **Set Up Postgres and PGAdmin**<br >
     - Download PgAdmin from https://www.pgadmin.org/
     - Open PgAdmin and follow setup prompts
     - Once PgAdmin is running, you will see a template server and database. If server does not exist, create a new one
@@ -60,7 +60,7 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
     - Open the *Owner* dropdown under the DB name and select the admin user you created in the previous step.
     - Click Save to create the new DB
 
-5. **Set Up Environment Variables**
+5. **Set Up Environment Variables**<br >
    We will be creating some `.env` files to configure our project
    - Go to `code/` folder and create a `.env` file with the following contents
        ```
@@ -97,28 +97,28 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
         VITE_BASE_URL=http://localhost:3000/api/v1
         VITE_KEYCLOAK_URL=http://localhost:8080
         ```
-6. **Start Docker**
+6. **Start Docker**<br >
     Open Docker Desktop and start all containers under the `code/` folder
 
-7. **Database Migration**
+7. **Database Migration**<br >
     Run Prisma migrations to update your database schema:
     ```
     cd code
     yarn prisma migrate dev
     ```
 
-8. **Start Development Server**
+8. **Start Development Server**<br >
     ```
     cd code
     yarn dev
     ```
-9. **Start Web app**
+9. **Start Web app**<br >
     Open a new terminal, head over to the web folder, and start the web app:
     ```
     cd code/packages/web
     yarn dev
     ```
-10. **View Dashboard**
+10. **View Dashboard**<br >
     - In your browser, go to `localhost:5173`
     - You will see the login page
     - Login using the **USER (Not Admin)** credentials you created while creating the user during Keycloak setup
