@@ -27,17 +27,12 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     { ...getRequestQueryString },
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
+      const searchTerm = request.query.searchTerm ? request.query.searchTerm : '';
       if (request.authUser.group.includes('user')) {
         const jobListings = await dbClient.jobListings.findMany({
           where: {
-            userId: request.userId,
             active: true,
-            title: {
-              search: request.query.searchTerm,
-            },
-          },
-          include: {
-            Applications: true,
+            ...(searchTerm ? { title: { search: searchTerm } } : {}),
           },
         });
         reply.send(jobListings);

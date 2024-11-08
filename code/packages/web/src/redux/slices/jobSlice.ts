@@ -32,6 +32,14 @@ export const getJob = createAsyncThunk('job/getJobAsync', async (_, thunkAPI) =>
   return response.data;
 });
 
+export const getJobUser = createAsyncThunk(
+  'job/getJobPublic',
+  async (searchTerm: String, thunkAPI) => {
+    const response = await axiosClient.get(`/job/public?searchTerm=${searchTerm}`);
+    return response.data;
+  },
+);
+
 export const createJob = createAsyncThunk(
   'job/createJob',
   async (
@@ -83,6 +91,19 @@ const jobSlice = createSlice({
       state.response = action.payload;
     });
     builder.addCase(getJob.rejected, (state, action: PayloadAction<any>) => {
+      state.loading = false;
+      state.response = [];
+      state.error = action.payload.error.message;
+    });
+
+    builder.addCase(getJobUser.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(getJobUser.fulfilled, (state, action: PayloadAction<any>) => {
+      state.loading = false;
+      state.response = action.payload;
+    });
+    builder.addCase(getJobUser.rejected, (state, action: PayloadAction<any>) => {
       state.loading = false;
       state.response = [];
       state.error = action.payload.error.message;

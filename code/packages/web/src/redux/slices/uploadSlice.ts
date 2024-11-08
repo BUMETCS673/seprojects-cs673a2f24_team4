@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { axiosClient } from 'src/services/api';
-import { RootState } from '../store';
 
 export interface UploadedFile {
   status: string | null;
