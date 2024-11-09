@@ -13,7 +13,7 @@ const _kc = new Keycloak(keycloakConfig);
  *
  * @param onAuthenticatedCallback
  */
-const initKeycloak = (onAuthenticatedCallback) => {
+const initKeycloak = (onAuthenticatedCallback: any) => {
   _kc
     .init({
       onLoad: 'login-required',
@@ -37,7 +37,7 @@ const getTokenParsed = () => _kc.tokenParsed;
 
 const isLoggedIn = () => !!_kc.token;
 
-const updateToken = (successCallback) =>
+const updateToken = (successCallback: any) =>
   _kc.updateToken(5).then(successCallback).catch(doLogin);
 
 const getUsername = () => _kc.tokenParsed?.preferred_username;
