@@ -6,7 +6,7 @@ const SignupPage: React.FC = () => {
     username: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +22,8 @@ const SignupPage: React.FC = () => {
     <div className="signup-page">
       <div className="left-section">
         {/* Logo Image */}
-        <img src="/public/logo.png" alt="Logo" className="logo" /> {/* Update path as needed */}
+        <img src="/public/logo.png" alt="Logo" className="logo" />{' '}
+        {/* Update path as needed */}
         <h1>Roll the Carpet</h1>
         <button className="skip-btn">Skip the lag</button>
       </div>
@@ -63,20 +64,25 @@ const SignupPage: React.FC = () => {
               onChange={handleChange}
               required
             />
-            <button type="submit" className="signup-btn">Signup</button>
+            <button type="submit" className="signup-btn">
+              Signup
+            </button>
           </form>
           <div className="social-login">
             <p>Or</p>
             <div className="social-icons">
               {/* Social Login Icons */}
               <button className="google-login">
-                <img src="/public/google-icon.png" alt="Google" /> {/* Update path as needed */}
+                <img src="/public/google-icon.png" alt="Google" />{' '}
+                {/* Update path as needed */}
               </button>
               <button className="facebook-login">
-                <img src="/public/facebook-icon.png" alt="Facebook" /> {/* Update path as needed */}
+                <img src="/public/facebook-icon.png" alt="Facebook" />{' '}
+                {/* Update path as needed */}
               </button>
               <button className="github-login">
-                <img src="/public/github-icon.png" alt="GitHub" /> {/* Update path as needed */}
+                <img src="/public/github-icon.png" alt="GitHub" />{' '}
+                {/* Update path as needed */}
               </button>
             </div>
           </div>

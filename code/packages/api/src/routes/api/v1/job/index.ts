@@ -22,10 +22,36 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     }
   });
 
+  fastify.get<{ Querystring: { searchTerm?: string } }>(
+    '/public',
+    { ...getRequestQueryString },
+    async (request, reply) => {
+      const dbClient = fastify.container<PrismaClient>('PrismaClient');
+      if (request.authUser.group.includes('user')) {
+        const jobListings = await dbClient.jobListings.findMany({
+          where: {
+            userId: request.userId,
+            active: true,
+            title: {
+              search: request.query.searchTerm,
+            },
+          },
+          include: {
+            Applications: true,
+          },
+        });
+        reply.send(jobListings);
+      } else {
+        reply.status(400).send({ message: 'Not authorized' });
+      }
+    },
+  );
+
   type JobListingsPostBody = {
     title: string;
     description: string;
     coreRequirements: string;
+    active?: boolean;
   };
 
   fastify.post<{ Body: JobListingsPostBody }>(
@@ -40,6 +66,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
             title: body.title,
             description: body.description,
             coreRequirements: body.coreRequirements,
+            active: body.active,
             user: {
               connect: {
                 id: request.userId,
@@ -58,6 +85,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     title?: string;
     description?: string;
     coreRequirements?: string;
+    active?: boolean;
   };
 
   fastify.put<{ Body: JobListingsPutBody; Querystring: { jobListingId: string } }>(
@@ -73,6 +101,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
             title: body.title,
             description: body.description,
             coreRequirements: body.coreRequirements,
+            active: body.active,
           },
         });
         reply.send(jobListings);

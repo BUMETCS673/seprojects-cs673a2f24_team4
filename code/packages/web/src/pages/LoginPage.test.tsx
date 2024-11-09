@@ -6,7 +6,7 @@ test('renders LoginPage with form and link to signup', () => {
   render(
     <Router>
       <LoginPage />
-    </Router>
+    </Router>,
   );
 
   const usernameLabel = screen.getByText(/Username:/i);

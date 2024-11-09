@@ -18,7 +18,9 @@ const ForgotPasswordPage = () => {
         <input type="email" name="email" required />
         <button type="submit">Reset Password</button>
       </form>
-      <a href="/" className="take-me-back">Take me back</a>
+      <a href="/" className="take-me-back">
+        Take me back
+      </a>
       <footer>
         <a href="#">Terms & Conditions</a>
         <a href="#">Support</a>
