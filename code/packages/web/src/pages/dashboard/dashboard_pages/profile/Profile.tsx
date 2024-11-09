@@ -9,7 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Copyright from 'src/internals/components/Copyright';
-import styles from './Profile.module.css';
+import avatar from 'src/assets/avatar.jpg';
+import './Profile.css';
 
 interface ProfileData {
   username: string;
@@ -31,12 +32,12 @@ const profileData: ProfileData = {
 
 export const Profile: React.FC = () => {
   return (
-    <Box className={styles.profileContainer}>
-      <CardContent className={styles.cardContentCentered}>
+    <Box className="profileContainer">
+      <CardContent className="cardContentCentered">
         <Avatar
-          src="/code/packages/web/src/pages/dashboard/dashboard_pages/profile/avatar.jpg"
+          src={avatar}
           alt={`${profileData.firstName} ${profileData.lastName}`}
-          className={styles.avatar}
+          className="avatar"
         />
         <Typography component="h2" variant="h4" fontWeight="bold">
           {profileData.firstName} {profileData.lastName}
@@ -44,15 +45,15 @@ export const Profile: React.FC = () => {
         <Typography variant="subtitle1" color="text.secondary">
           {profileData.company}
         </Typography>
-        <Button variant="contained" color="primary" className={styles.editButton}>
+        <Button variant="contained" color="primary" className="editButton">
           Edit Profile
         </Button>
       </CardContent>
       <CardContent>
-        <Typography variant="h6" color="primary" className={styles.sectionTitle}>
+        <Typography variant="h6" color="primary" className="sectionTitle">
           Contact Information
         </Typography>
-        <Divider className={styles.divider} />
+        <Divider className="divider" />
         <List disablePadding>
           <ListItem>
             <ListItemText primary="Username" secondary={profileData.username} />
@@ -66,10 +67,10 @@ export const Profile: React.FC = () => {
         </List>
       </CardContent>
       <CardContent>
-        <Typography variant="h6" color="primary" className={styles.sectionTitle}>
+        <Typography variant="h6" color="primary" className="sectionTitle">
           Personal Details
         </Typography>
-        <Divider className={styles.divider} />
+        <Divider className="divider" />
         <List disablePadding>
           <ListItem>
             <ListItemText primary="First Name" secondary={profileData.firstName} />
@@ -82,7 +83,7 @@ export const Profile: React.FC = () => {
           </ListItem>
         </List>
       </CardContent>
-      <Copyright className={styles.copyright} />
+      <Copyright className="copyright" />
     </Box>
   );
 };
