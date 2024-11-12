@@ -1,0 +1,342 @@
+﻿Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Description,Environment,Watchers,Watchers,Watchers Id,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Inward issue link (Duplicate),Outward issue link (Duplicate),Inward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Attachment,Custom field (Actual end),Custom field (Actual start),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Development),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Goals),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Project overview key),Custom field (Project overview status),Custom field (Rank),Custom field (Request Type),Custom field (Sentiment),Sprint,Sprint,Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field (Total forms),Custom field (Vulnerability),Custom field ([CHART] Date of First Response),Custom field ([CHART] Time in Status),Comment,Comment,Comment,Parent,Parent summary,Status Category,Status Category Changed
+Fix breaking test cases,SCRUM-96,10095,Bug,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,03/Nov/24 8:52 PM,03/Nov/24 8:52 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000jz:,,,,,,,1.0,,,,,,,,,,,,,,To Do,03/Nov/24 8:52 PM
+Refactor code to remove unnecessary components,SCRUM-95,10094,Task,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,03/Nov/24 8:51 PM,03/Nov/24 8:52 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000jr:,,,,,,,1.0,,,,,,,,,,,,,,To Do,03/Nov/24 8:51 PM
+Add jest testing check in husky to make sure all test cases are passing,SCRUM-94,10093,Task,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,03/Nov/24 8:41 PM,03/Nov/24 8:52 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000jj:,,,,,,,2.0,,,,,,,,,,,,,,To Do,03/Nov/24 8:41 PM
+Fix Jest configs,SCRUM-93,10092,Bug,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,03/Nov/24 8:39 PM,03/Nov/24 8:40 PM,05/Nov/24 4:29 PM,,,0,,"* Move to {{code}} folder for stack-wide test cases and coverage.
+* yarn test is failing",,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000jb:,,,,,,,1.0,,,,,,,,,,,,,,To Do,03/Nov/24 8:39 PM
+Create UI for Applicant Analytics page with dummy data,SCRUM-92,10091,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,01/Nov/24 4:43 PM,02/Nov/24 4:22 AM,05/Nov/24 4:29 PM,02/Nov/24 4:22 AM,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000j3:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,10000_*:*_1_*:*_13731_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_41926278,,,,10003,Dashboard Layout & Analysis,Done,02/Nov/24 4:22 AM
+Create UI for Applicant Analytics page with dummy data,SCRUM-91,10090,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,01/Nov/24 4:25 PM,02/Nov/24 4:22 AM,05/Nov/24 4:29 PM,02/Nov/24 4:22 AM,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000iv:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,10000_*:*_1_*:*_14702_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_42991757,,,,10003,Dashboard Layout & Analysis,Done,02/Nov/24 4:22 AM
+Integrate React Router - UploadResume,SCRUM-90,10089,Task,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,25/Oct/24 10:44 AM,25/Oct/24 10:45 AM,05/Nov/24 4:29 PM,,,0,,,,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000in:,,,SCRUM Sprint 2,,,,3.0,,,,,,,,,,,,,,To Do,25/Oct/24 10:44 AM
+Create Frontend UI to update user profile,SCRUM-89,10088,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,24/Oct/24 2:37 PM,24/Oct/24 2:37 PM,05/Nov/24 4:29 PM,,,0,,,,Shubh Gupta,,712020:a6754d88-9476-4974-bcb0-60f6f708325e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000if:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,,,,,10010,Profile Management,To Do,24/Oct/24 2:37 PM
+Integrate FE and BE,SCRUM-88,10087,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:20 PM,20/Oct/24 3:20 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000i7:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10009,View Resume Analysis (Applicant),To Do,20/Oct/24 3:20 PM
+Integrate FE with Backend,SCRUM-87,10086,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:19 PM,20/Oct/24 3:19 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000hz:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10078,View Resume Analysis (Recruiter),To Do,20/Oct/24 3:19 PM
+Create Frontend UI for Analysis,SCRUM-86,10085,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:19 PM,20/Oct/24 3:19 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000hr:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10078,View Resume Analysis (Recruiter),To Do,20/Oct/24 3:19 PM
+Configure and setup Node tap,SCRUM-85,10084,Task,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:18 PM,20/Oct/24 3:19 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000hj:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,,,To Do,20/Oct/24 3:18 PM
+Create Me login api call,SCRUM-84,10083,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:17 PM,20/Oct/24 3:17 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000hb:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10007,User Authentication and Login,To Do,20/Oct/24 3:17 PM
+Create Me signup api call,SCRUM-83,10082,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:14 PM,20/Oct/24 3:17 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000h3:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10006,User Account Creation (Signup),To Do,20/Oct/24 3:14 PM
+Create Bulk API to create Tables rows at once,SCRUM-82,10081,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:11 PM,20/Oct/24 3:11 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000gv:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10032,Bulk Resume Upload (Recruiter),To Do,20/Oct/24 3:11 PM
+CRUD API for Resume Match,SCRUM-81,10080,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:05 PM,20/Oct/24 3:05 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000gn:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10078,View Resume Analysis (Recruiter),To Do,20/Oct/24 3:05 PM
+Crud API for resume,SCRUM-80,10079,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:03 PM,20/Oct/24 3:03 PM,05/Nov/24 4:29 PM,,,0,Backend,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000gf:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10004,Upload Resume ,To Do,20/Oct/24 3:03 PM
+View Resume Analysis (Recruiter),SCRUM-79,10078,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 3:00 PM,20/Oct/24 3:24 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000cx:i,,,SCRUM Sprint 2,,,,3.0,,,,,,,,,,,,,,To Do,20/Oct/24 3:00 PM
+Create Smart Resume section,SCRUM-78,10077,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 2:53 PM,20/Oct/24 2:53 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000g7:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10075,View Landing Page,To Do,20/Oct/24 2:53 PM
+Create First Section (Navbar + Cover) ,SCRUM-77,10076,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 2:53 PM,20/Oct/24 2:53 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000fz:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10075,View Landing Page,To Do,20/Oct/24 2:53 PM
+View Landing Page,SCRUM-76,10075,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 2:46 PM,25/Oct/24 10:43 AM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,SCRUM-69,,,,,,,,,,,,,,,,,,,0|i000d1:r,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,,,In Progress,20/Oct/24 3:27 PM
+User Forgot/Reset Password,SCRUM-75,10074,Story,Rejected/Abandoned,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 2:41 PM,31/Oct/24 1:00 PM,05/Nov/24 4:29 PM,20/Oct/24 2:45 PM,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,SCRUM-40,SCRUM-73,,,,,,,,,,,,,,,,,,,,0|i000d1:i,,,,,,,,,,,,,,,10000_*:*_1_*:*_217826_*|*_10002_*:*_1_*:*_4167_*|*_10003_*:*_2_*:*_944117702,,,,,,Done,20/Oct/24 2:45 PM
+Create Dashboard Layout with Sidebar,SCRUM-74,10073,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,20/Oct/24 2:40 PM,02/Nov/24 4:22 AM,05/Nov/24 4:29 PM,02/Nov/24 4:22 AM,,0,,* Sidebar items should be based on User type (User vs Recruiter),,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000fr:,,,SCRUM Sprint 2,,,,3.0,,,,,,,,10000_*:*_1_*:*_884021878_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_202082890,,,,10003,Dashboard Layout & Analysis,Done,02/Nov/24 4:22 AM
+Integrate react router -Forgot password page,SCRUM-73,10072,Task,PR Review,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,17/Oct/24 10:02 AM,20/Oct/24 2:44 PM,31/Oct/24 1:00 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,SCRUM-75,SCRUM-40,,,,,,,,,,,,,,,,,,0|i000cx:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,,,,,,,,In Progress,17/Oct/24 10:03 AM
+Integrate react router -signup page,SCRUM-72,10071,Task,PR Review,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,17/Oct/24 10:02 AM,20/Oct/24 2:44 PM,31/Oct/24 1:01 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,SCRUM-7,,,,,,,,,,,,,,,,,,,,0|i000fb:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,,,,,,,,In Progress,17/Oct/24 10:03 AM
+Integrate react router - App.tsx,SCRUM-71,10070,Task,PR Review,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,17/Oct/24 10:01 AM,20/Oct/24 2:38 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000f3:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,,,,,,,,In Progress,17/Oct/24 10:03 AM
+Integrate react router - Login page,SCRUM-70,10069,Task,PR Review,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,17/Oct/24 10:01 AM,20/Oct/24 2:38 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,SCRUM-8,,,,,,,,,,,,,,,,,,,,0|i000ev:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,,,,,,,,In Progress,17/Oct/24 10:03 AM
+Integrate react router - Landing page,SCRUM-69,10068,Task,PR Review,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,17/Oct/24 10:00 AM,20/Oct/24 2:46 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,SCRUM-76,,,,,,,,,,,,,,,,,,,,0|i000en:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,,,,,,,,In Progress,17/Oct/24 10:03 AM
+Figma pages,SCRUM-67,10066,Task,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,17/Oct/24 9:53 AM,17/Oct/24 9:43 PM,05/Nov/24 4:29 PM,17/Oct/24 10:03 AM,,0,,"create landing page, login page, signup page, forgot password, upload, payment page, dashboard page",,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000e7:,,,SCRUM Sprint 1,,,,7.0,,,,,,,,10000_*:*_1_*:*_567401_*|*_10002_*:*_1_*:*_0,,,,,,Done,17/Oct/24 10:03 AM
+Figma components / upload jd page,SCRUM-66,10065,Task,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,16/Oct/24 12:17 PM,16/Oct/24 12:19 PM,05/Nov/24 4:29 PM,16/Oct/24 12:18 PM,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000dz:,,,SCRUM Sprint 1,,,,3.0,,,,,,,,10000_*:*_1_*:*_11001_*|*_10002_*:*_1_*:*_0,,,,,,Done,16/Oct/24 12:18 PM
+Create Initial DB Design,SCRUM-65,10064,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,15/Oct/24 6:31 PM,15/Oct/24 7:00 PM,05/Nov/24 4:29 PM,15/Oct/24 6:44 PM,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000dr:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,,10000_*:*_1_*:*_3627_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_810575,,,,10059,Create tables in Postgres through Prisma,Done,15/Oct/24 6:44 PM
+Create Forgot Password Component,SCRUM-64,10063,Subtask,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,15/Oct/24 6:21 PM,15/Oct/24 6:21 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000dj:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,1.0,,,,,,,,,,,,10039,Reset Password,In Progress,15/Oct/24 6:21 PM
+Database diagram review,SCRUM-63,10062,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,15/Oct/24 3:12 PM,16/Oct/24 1:02 PM,05/Nov/24 4:29 PM,16/Oct/24 1:02 PM,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000d7:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,10000_*:*_1_*:*_78594803_*|*_10002_*:*_1_*:*_0,,,,10059,Create tables in Postgres through Prisma,Done,16/Oct/24 1:02 PM
+Creating entities and models in prisma,SCRUM-62,10061,Subtask,PR Review,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,15/Oct/24 3:12 PM,16/Oct/24 1:02 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000db:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10059,Create tables in Postgres through Prisma,In Progress,16/Oct/24 1:02 PM
+Incorporate an Event Stream for async tasks,SCRUM-61,10060,Task,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,15/Oct/24 2:56 PM,15/Oct/24 2:56 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000d3:,,,,,,,,,,,,,,,,,,,,,To Do,15/Oct/24 2:56 PM
+Create tables in Postgres through Prisma,SCRUM-60,10059,Task,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,15/Oct/24 2:49 PM,20/Oct/24 2:38 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,Tushar Kendre,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000fj:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,2.0,,,,,,,2024-10-15 19:13:45.413,,"15/Oct/24 3:13 PM;712020:e3719cf1-3a50-4382-856f-673496718591;[~accountid:712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf], post a link to our dbdiagram here, I will keep updating it as changes are made in future","15/Oct/24 6:44 PM;712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf;[https://dbdiagram.io/d/CS673-DB-design-66ec578aa0828f8aa66a7c14|https://dbdiagram.io/d/CS673-DB-design-66ec578aa0828f8aa66a7c14|smart-link] 
+
+Here is the link to the DB Design. [~accountid:712020:e3719cf1-3a50-4382-856f-673496718591] ","16/Oct/24 1:02 PM;712020:e3719cf1-3a50-4382-856f-673496718591;[https://dbdiagram.io/d/Copy-of-CS673-DB-design-670ff07297a66db9a3392148|https://dbdiagram.io/d/Copy-of-CS673-DB-design-670ff07297a66db9a3392148|smart-link] 
+
+Current DB Design",,,In Progress,15/Oct/24 3:09 PM
+Integrate JEST and React testing library,SCRUM-57,10056,Task,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,15/Oct/24 2:33 PM,15/Oct/24 2:59 PM,05/Nov/24 4:29 PM,15/Oct/24 2:59 PM,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000c7:,,,SCRUM Sprint 1,,,,1.0,,,,,,,,10000_*:*_1_*:*_1501219_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_35640,,,,,,Done,15/Oct/24 2:59 PM
+Integrate React Redux,SCRUM-56,10055,Task,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,15/Oct/24 2:32 PM,20/Oct/24 2:38 PM,05/Nov/24 4:29 PM,15/Oct/24 2:59 PM,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000ef:,,,SCRUM Sprint 1,,,,2.0,,,,,,,,10000_*:*_1_*:*_1538937_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_36081,,,,,,Done,15/Oct/24 2:59 PM
+Create Frontend UI with validation,SCRUM-51,10050,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 10:17 PM,20/Oct/24 3:25 PM,05/Nov/24 4:29 PM,,,0,,"* Create FE component
+* Use form for validation",,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000av:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10048,Recruiter Upload Job Listing,To Do,10/Oct/24 10:17 PM
+create job listing crud apis,SCRUM-50,10049,Subtask,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 10:17 PM,20/Oct/24 2:56 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i000an:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10048,Recruiter Upload Job Listing,In Progress,16/Oct/24 1:58 PM
+Recruiter Upload Job Listing,SCRUM-49,10048,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 10:12 PM,20/Oct/24 2:38 PM,05/Nov/24 4:29 PM,,,0,,"As a recruiter, I want to upload a new job listing to the system so that candidates can view and apply for the position.
+
+h3. Acceptance Test 1: Successful Job Listing Submission
+
+* *Given* the recruiter is logged into the system,
+* *When* the recruiter fills out all required job listing fields (e.g., title, description, requirements, location) and submits the form,
+* *Then* the system should store the job listing in the database and display a confirmation message that the listing has been successfully created.
+
+h3. Acceptance Test 2: Validation of Job Listing Fields
+
+* *Given* the recruiter is filling out the job listing form,
+* *When* the recruiter tries to submit the form with missing required fields (e.g., title, description),
+* *Then* the system should display error messages next to the missing fields and prevent submission until all required fields are completed.
+
+
+
+!image-20241011-022129.png|width=1359,height=736,alt=""image-20241011-022129.png""!",,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,10/Oct/24 10:21 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-022129.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10018,,,,,,,,,,,,,,,,,0|i000d1:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,3.0,,,,,,,,,,,,,,In Progress,16/Oct/24 1:58 PM
+View Billing History ,SCRUM-48,10047,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,10/Oct/24 9:30 PM,10/Oct/24 10:04 PM,05/Nov/24 4:29 PM,,,0,,"Title: View Billing History  
+   Description: As a user or recruiter, I want to view my billing history so that I can track all my past payments and subscription details.  
+     - Task 1: As a developer, I want to implement an API that retrieves billing history from the database using Fastify and Prisma.
+     - Task 2: As a frontend developer, I want to display billing history in a table format using React and Material UI, so that users can view their past payments.
+
+
+
+!image-20241011-020402.png|width=1174,height=851,alt=""image-20241011-020402.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 10:04 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-020402.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10013,,,,,,,,,,,,,,,,,0|i000af:,,,,,,,,,,,,,,,,,,,,,To Do,10/Oct/24 9:30 PM
+⁠Resume Analysis Against JD  ,SCRUM-47,10046,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,10/Oct/24 9:29 PM,10/Oct/24 10:15 PM,05/Nov/24 4:29 PM,,,0,,"Title: Analyze Resumes Against Job Description  
+   Description: As a recruiter, I want to view the analysis results of resumes against a specific job description so that I can easily identify the most suitable candidates.  
+     - Task 1: As a developer, I want to implement a backend service that analyzes and ranks resumes based on job descriptions using Fastify and Prisma.
+     - Task 2: As a frontend developer, I want to create a UI to display the analysis and ranking of resumes using React and Material UI.
+
+
+
+!image-20241011-021554.png|width=1128,height=887,alt=""image-20241011-021554.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 10:15 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-021554.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10016,,,,,,,,,,,,,,,,,0|i000a7:,,,,,,,,,,,,,,,,,,,,,To Do,10/Oct/24 9:29 PM
+Resume Upload Against Job Description (JD),SCRUM-46,10045,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,10/Oct/24 9:28 PM,10/Oct/24 10:15 PM,05/Nov/24 4:29 PM,,,0,,"Title: Upload Resume Against Job Description  
+   Description: As a recruiter, I want to upload a job description and then upload multiple resumes against it, so that the system can match and analyze the resumes according to the job requirements.  
+     - Task 1: As a developer, I want to create an API that allows recruiters to upload job descriptions and resumes using Fastify.
+     - Task 2: As a frontend developer, I want to create a form that allows recruiters to upload job descriptions and resumes using React.
+
+!image-20241011-021531.png|width=1008,height=993,alt=""image-20241011-021531.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 10:15 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-021531.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10015,,,,,,,,,,,,,,,,,0|i0009z:,,,,,,,,,,,,,,,,,,,,,To Do,10/Oct/24 9:28 PM
+Integrate SMTP service to send links via email,SCRUM-45,10044,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:27 PM,10/Oct/24 9:27 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0009r:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10039,Reset Password,To Do,10/Oct/24 9:27 PM
+Integrate Reset password API from keycloak into login,SCRUM-44,10043,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:27 PM,10/Oct/24 9:27 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0009j:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10039,Reset Password,To Do,10/Oct/24 9:27 PM
+Create UI for uploading in bulk,SCRUM-43,10042,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:27 PM,20/Oct/24 3:21 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0009b:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10032,Bulk Resume Upload (Recruiter),To Do,10/Oct/24 9:27 PM
+Create database entries according to uploaded documents,SCRUM-42,10041,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:26 PM,10/Oct/24 9:26 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00093:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10032,Bulk Resume Upload (Recruiter),To Do,10/Oct/24 9:26 PM
+Create APIs to accept bulk file contents,SCRUM-41,10040,Subtask,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:26 PM,20/Oct/24 3:11 PM,05/Nov/24 4:29 PM,,,0,,,,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0008v:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,,,,,,,,,,,,,10032,Bulk Resume Upload (Recruiter),In Progress,15/Oct/24 3:14 PM
+Reset Password,SCRUM-40,10039,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:23 PM,20/Oct/24 3:27 PM,31/Oct/24 1:00 PM,,,0,,"As a user, I want to reset my password if I forget it, so that I can regain access to my account.
+
+*Acceptance Test 1: Password Reset Request*
+
+* *Given* a user is on the login page and clicks the ""Forgot Password"" link,
+* *When* the user provides their registered email and submits the form,
+* *Then* the system should send a password reset link to the provided email address and display a confirmation message.
+
+*Acceptance Test 2: Password Reset Confirmation*
+
+* *Given* the user has received the password reset email and clicked the reset link,
+* *When* the user is redirected to the password reset form and enters a new password,
+* *Then* the system should validate the password, update it successfully, and display a confirmation message that the password has been reset.
+
+!image-20241011-013329.png|width=922,height=1085,alt=""image-20241011-013329.png""!",,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,SCRUM-75,,SCRUM-73,,,10/Oct/24 9:33 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-013329.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10008,,,,,,,,,,,,,,,,,0|i000d2:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,1.0,,,,,,,,,,,,,,In Progress,20/Oct/24 3:27 PM
+"Task 2: As a frontend developer, I want to create a search interface with filters using React and Material UI, so that users can easily search for jobs.",SCRUM-39,10038,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,10/Oct/24 9:22 PM,10/Oct/24 9:22 PM,05/Nov/24 4:29 PM,,,0,,,,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0008f:,,,,,,,,,,,,,,,,,,,10005,Search for Job Opportunities  ,To Do,10/Oct/24 9:22 PM
+"Task 1: As a developer, I want to implement job search functionality using Fastify and Prisma. ",SCRUM-38,10037,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,10/Oct/24 9:22 PM,10/Oct/24 9:22 PM,05/Nov/24 4:29 PM,,,0,,,,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00087:,,,,,,,,,,,,,,,,,,,10005,Search for Job Opportunities  ,To Do,10/Oct/24 9:22 PM
+"Task 2: As a frontend developer, I want to design the resume upload form using React and Material UI, so that users can submit their resumes conveniently.",SCRUM-37,10036,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,10/Oct/24 9:22 PM,10/Oct/24 9:22 PM,05/Nov/24 4:29 PM,,,0,,,,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0007z:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10004,Upload Resume ,To Do,10/Oct/24 9:22 PM
+"Task 1: As a developer, I want to create an API endpoint for resume uploads using Fastify, so that users can upload their resumes.",SCRUM-36,10035,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,10/Oct/24 9:22 PM,10/Oct/24 9:22 PM,05/Nov/24 4:29 PM,,,0,,,,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0007r:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10004,Upload Resume ,To Do,10/Oct/24 9:22 PM
+"Task 2: As a developer, I want to fetch user specific data from the backend using Prisma, so that the dashboard displays relevant information.",SCRUM-35,10034,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,10/Oct/24 9:21 PM,10/Oct/24 9:21 PM,05/Nov/24 4:29 PM,,,0,,,,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0007j:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10003,Dashboard Layout & Analysis,To Do,10/Oct/24 9:21 PM
+"Task 1: As a frontend developer, I want to design the dashboard layout using React and Material UI, so that the user interface is user friendly.",SCRUM-34,10033,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,10/Oct/24 9:21 PM,02/Nov/24 4:22 AM,05/Nov/24 4:29 PM,02/Nov/24 4:22 AM,,0,,,,amrreddy,Faizan Ahmad,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0007b:,,,SCRUM Sprint 2,,,,,,,,,,,,10000_*:*_1_*:*_1920481655_*|*_10002_*:*_1_*:*_0_*|*_10001_*:*_1_*:*_5575779,,,,10003,Dashboard Layout & Analysis,Done,02/Nov/24 4:22 AM
+Bulk Resume Upload (Recruiter),SCRUM-33,10032,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,10/Oct/24 9:16 PM,20/Oct/24 2:38 PM,05/Nov/24 4:29 PM,,,0,,"As a recruiter, I want to be able to upload multiple resumes to the system so that I can efficiently analyze and shortlist candidates.
+
+
+
+*Acceptance Test 1: Backend Bulk Resume Upload*
+
+* *Given* the Fastify backend service is running,
+* *When* a recruiter uploads multiple resumes in a single request,
+* *Then* the backend should successfully process the files, store them securely, and return a confirmation response indicating the success of the upload.
+
+*Acceptance Test 2: Frontend Bulk Resume Upload Interface*
+
+* *Given* the bulk resume upload interface is displayed,
+* *When* a recruiter selects or drags and drops multiple resumes and clicks the upload button,
+* *Then* the system should display a progress bar, and after upload completion, show a success or failure message for each file uploaded.
+
+
+
+!image-20241011-013227.png|width=1091,height=917,alt=""image-20241011-013227.png""!",,Tushar Kendre,,712020:e3719cf1-3a50-4382-856f-673496718591,,,,,,,,,,,,,,,10/Oct/24 9:32 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-013227.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10007,,,,,,,,,,,,,,,,,0|i000cz:,,,SCRUM Sprint 1,SCRUM Sprint 2,,,5.0,,,,,,,,,,,,,,In Progress,15/Oct/24 3:10 PM
+"As a frontend developer, I want to create an ""Apply"" button on job listing pages using React and Material UI, so that users can easily apply to jobs.",SCRUM-32,10031,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,10/Oct/24 9:03 PM,10/Oct/24 9:03 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0006v:,,,,,,,,,,,,,,,,,,,10008,Apply to Job Listings ,To Do,10/Oct/24 9:03 PM
+"As a developer, I want to implement an API that allows users to apply to job listings using Fastify.",SCRUM-31,10030,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,10/Oct/24 9:03 PM,10/Oct/24 9:03 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0006n:,,,,,,,,,,,,,,,,,,,10008,Apply to Job Listings ,To Do,10/Oct/24 9:03 PM
+"As a frontend developer, I want to design the login page using React and Material UI, so that users can log in easily.",SCRUM-30,10029,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,10/Oct/24 9:03 PM,10/Oct/24 9:03 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0006f:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10007,User Authentication and Login,To Do,10/Oct/24 9:03 PM
+"As a developer, I want to set up user authentication with Keycloak and OAuth 2.0, so that secure login is enabled.",SCRUM-29,10028,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,10/Oct/24 9:03 PM,10/Oct/24 9:03 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00067:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10007,User Authentication and Login,To Do,10/Oct/24 9:03 PM
+Implement Frontend for Signup,SCRUM-28,10027,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,10/Oct/24 9:03 PM,20/Oct/24 3:22 PM,05/Nov/24 4:29 PM,,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0005z:,,,SCRUM Sprint 2,,,,,,,,,,,,,,,,10006,User Account Creation (Signup),To Do,10/Oct/24 9:03 PM
+Signup backend,SCRUM-27,10026,Subtask,Done,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,Done,Tushar Kendre,712020:e3719cf1-3a50-4382-856f-673496718591,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,10/Oct/24 9:02 PM,20/Oct/24 3:22 PM,05/Nov/24 4:29 PM,20/Oct/24 3:22 PM,,0,,,,Jaindra Parvathaneni,,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0005r:,,,SCRUM Sprint 2,,,,,,,,,,,,10000_*:*_1_*:*_843574135_*|*_10002_*:*_1_*:*_0,,,,10006,User Account Creation (Signup),Done,20/Oct/24 3:22 PM
+Frontend Payment Form  ,SCRUM-26,10025,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,10/Oct/24 8:23 PM,10/Oct/24 8:23 PM,05/Nov/24 4:29 PM,,,0,,,,Hemant Krishnakumar,,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0005j:,,,,,,,,,,,,,,,,,,,10002,Make a Payment  ,To Do,10/Oct/24 8:23 PM
+API for Payment  ,SCRUM-25,10024,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,10/Oct/24 8:23 PM,10/Oct/24 8:23 PM,05/Nov/24 4:29 PM,,,0,,,,Hemant Krishnakumar,,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0005b:,,,,,,,,,,,,,,,,,,,10002,Make a Payment  ,To Do,10/Oct/24 8:23 PM
+Frontend Unsubscription Interface  ,SCRUM-24,10023,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,10/Oct/24 8:23 PM,10/Oct/24 8:23 PM,05/Nov/24 4:29 PM,,,0,,,,Hemant Krishnakumar,,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00053:,,,,,,,,,,,,,,,,,,,10001,Unsubscribe from a Plan ,To Do,10/Oct/24 8:23 PM
+API for Unsubscription  ,SCRUM-23,10022,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,10/Oct/24 8:23 PM,10/Oct/24 8:23 PM,05/Nov/24 4:29 PM,,,0,,,,Hemant Krishnakumar,,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0004v:,,,,,,,,,,,,,,,,,,,10001,Unsubscribe from a Plan ,To Do,10/Oct/24 8:23 PM
+Frontend Subscription Management ,SCRUM-22,10021,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,10/Oct/24 8:22 PM,10/Oct/24 8:22 PM,05/Nov/24 4:29 PM,,,0,,,,Hemant Krishnakumar,,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0004n:,,,,,,,,,,,,,,,,,,,10000,Subscribe to a Plan ,To Do,10/Oct/24 8:22 PM
+ API for Subscription,SCRUM-21,10020,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,10/Oct/24 8:22 PM,10/Oct/24 8:22 PM,05/Nov/24 4:29 PM,,,0,,,,Hemant Krishnakumar,,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0004f:,,,,,,,,,,,,,,,,,,,10000,Subscribe to a Plan ,To Do,10/Oct/24 8:22 PM
+Create Backend API to get shortlist,SCRUM-20,10019,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:28 PM,09/Oct/24 9:28 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00047:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,,,,,10011,Shortlist Resumes for Job Listings,To Do,09/Oct/24 9:28 PM
+Create Frontend UI table to view shortlist,SCRUM-19,10018,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:28 PM,09/Oct/24 9:28 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0003z:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,,,,,10011,Shortlist Resumes for Job Listings,To Do,09/Oct/24 9:28 PM
+Create Frontend UI icon to add a resume to shortlist,SCRUM-18,10017,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:28 PM,09/Oct/24 9:28 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0003r:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,,,,,10011,Shortlist Resumes for Job Listings,To Do,09/Oct/24 9:28 PM
+Create Backend API to create resume shortlist for a recruiter,SCRUM-17,10016,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:27 PM,09/Oct/24 9:28 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0003j:,,,SCRUM Sprint 2,,,,1.0,,,,,,,,,,,,10011,Shortlist Resumes for Job Listings,To Do,09/Oct/24 9:27 PM
+Create Frontend UI to show user profile,SCRUM-16,10015,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Shubh Gupta,712020:a6754d88-9476-4974-bcb0-60f6f708325e,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:24 PM,24/Oct/24 2:36 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0003b:,,,SCRUM Sprint 2,,,,2.0,,,,,,,,,,,,10010,Profile Management,To Do,09/Oct/24 9:24 PM
+Create Backend API to update user profile,SCRUM-15,10014,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:24 PM,09/Oct/24 9:24 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i00033:,,,SCRUM Sprint 2,,,,2.0,,,,,,,,,,,,10010,Profile Management,To Do,09/Oct/24 9:24 PM
+Create Frontend UI to show resume analysis,SCRUM-14,10013,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:22 PM,09/Oct/24 9:22 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0002v:,,,SCRUM Sprint 2,,,,2.0,,,,,,,,,,,,10009,View Resume Analysis (Applicant),To Do,09/Oct/24 9:22 PM
+Implement Backend to analyze resumes against job description,SCRUM-13,10012,Subtask,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:12 PM,09/Oct/24 9:22 PM,05/Nov/24 4:29 PM,,,0,,,,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i0002n:,,,SCRUM Sprint 2,,,,2.0,,,,,,,,,,,,10009,View Resume Analysis (Applicant),To Do,09/Oct/24 9:12 PM
+Shortlist Resumes for Job Listings,SCRUM-12,10011,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:09 PM,20/Oct/24 3:23 PM,05/Nov/24 4:29 PM,,,0,,"As a recruiter, I want to shortlist resumes that match my job listings to identify the most qualified candidates for the role.
+
+
+
+*Acceptance Tests:* 
+
+
+
+# First Acceptance Test: 
+
+Given  that the recruiter is on the List Resumes page with multiple resumes displayed
+
+When  they select some resumes and press the shortlist icon
+
+Then the selected resumes should be added to their shortlist, and a confirmation message should appear
+
+
+
+# Second Acceptance Test: 
+
+Given  that the recruiter has not selected any resumes
+
+When  they press the shortlist icon
+
+Then they should receive a message indicating no resumes were selected, and no action should be taken
+
+
+
+
+
+!image-20241011-023403.png|width=1166,height=857,alt=""image-20241011-023403.png""!",,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,10/Oct/24 10:34 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-023403.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10022,,,,,,,,,,,,,,,,,0|i000hp:,,,SCRUM Sprint 2,,,,4.0,,,,,,,,,,,,,,To Do,09/Oct/24 9:09 PM
+Profile Management,SCRUM-11,10010,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:06 PM,24/Oct/24 2:37 PM,04/Nov/24 10:54 AM,,,0,,"As a user, I want to be able to manage and update my profile details, so that my information is accurate and up to date within the system.
+
+ *Acceptance Tests:* 
+
+# First Acceptance Test: 
+
+Given that the user is on the Manage Profile page
+
+When they update their account details (name, date of birth) and press the update button
+
+Then their profile should be updated, and a confirmation message should display the updated information.
+
+
+# Second Acceptance Test: 
+
+Given  that the user leaves the required fields blank
+
+When they press the update button
+
+Then they should see validation error messages, and the profile should not be updated.
+
+
+
+!image-20241011-003059.png|width=922,height=1085,alt=""image-20241011-003059.png""!",,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,10/Oct/24 8:31 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-003059.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10002,,,,,,,,,,,,,,,,,0|i000fn:,,,SCRUM Sprint 2,,,,4.0,,,,,,,,,,,,,,In Progress,24/Oct/24 2:37 PM
+View Resume Analysis (Applicant),SCRUM-10,10009,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,Faizan Ahmad,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,09/Oct/24 9:04 PM,20/Oct/24 3:00 PM,05/Nov/24 4:29 PM,,,0,,"As a user, I want to view the analysis of my uploaded resume to understand how my profile matches my job requirements and areas for improvement
+
+ *Acceptance Tests:* 
+
+# First Acceptance Test: 
+
+Given  that the user is on the View Resume Analysis page and has uploaded resumes
+
+When  the user selects an existing resume
+
+Then they should see the analysis results for that resume, including optimization suggestions
+
+
+# Second Acceptance Test: 
+
+Given  that the user uploads a new resume on the View Resume Analysis page
+
+When  the upload is complete
+
+Then they should see the analysis for the new resume without navigating away from the page
+
+
+
+!image-20241011-020622.png|width=1295,height=772,alt=""image-20241011-020622.png""!",,Faizan Ahmad,,712020:d22ea834-7c2b-424e-bb29-7ea02fa2ecbf,,,,,,,,,,,,,,,10/Oct/24 10:06 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-020622.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10014,,,,,,,,,,,,,,,,,0|i000cy:,,,SCRUM Sprint 2,,,,4.0,,,,,,,,,,,,,,To Do,09/Oct/24 9:04 PM
+Apply to Job Listings ,SCRUM-9,10008,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,09/Oct/24 2:43 PM,10/Oct/24 10:31 PM,05/Nov/24 4:29 PM,,,0,," Description: As a job seeker, I want to be able to apply to job listings with my uploaded resume so that I can increase my chances of being considered for a role.  
+     - Task 1: As a developer, I want to implement an API that allows users to apply to job listings using Fastify.
+     - Task 2: As a frontend developer, I want to create an ""Apply"" button on job listing pages using React and Material UI, so that users can easily apply to jobs.
+
+
+
+!image-20241011-023134.png|width=1081,height=925,alt=""image-20241011-023134.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 10:31 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-023134.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10021,,,,,,,,,,,,,,,,,0|i0001r:,,,,,,,4.0,,,,,,,,,,,,,,To Do,09/Oct/24 2:43 PM
+User Authentication and Login,SCRUM-8,10007,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,09/Oct/24 2:42 PM,20/Oct/24 3:27 PM,05/Nov/24 4:29 PM,,,0,,"Description: As a registered user, I want to log in using my credentials so that I can access my personalized dashboard and other features securely.  
+     - Task 1: As a developer, I want to set up user authentication with Keycloak and OAuth 2.0, so that secure login is enabled.
+     - Task 2: As a frontend developer, I want to design the login page using React and Material UI, so that users can log in easily.
+
+
+
+
+
+!image-20241011-003020.png|width=922,height=1085,alt=""image-20241011-003020.png""!",,,,,,,,,,,,,,,,,SCRUM-70,,10/Oct/24 8:30 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-003020.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10001,,,,,,,,,,,,,,,,,0|i000d1:9,,,SCRUM Sprint 2,,,,3.0,,,,,,,,,,,,,,In Progress,20/Oct/24 3:27 PM
+User Account Creation (Signup),SCRUM-7,10006,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,Jaindra Parvathaneni,712020:f96baa6b-c9a0-4748-a4f1-cfc870253d55,09/Oct/24 2:42 PM,20/Oct/24 3:27 PM,05/Nov/24 4:29 PM,,,0,,"
+Description: As a potential user, I want to be able to create an account by providing my basic information, so that I can gain access to the system's features and manage my profile.  
+
+# Task 1: As a developer, I want to implement an API endpoint for user creation using Fastify, so that users can register to the system.
+# Task 2: As a frontend developer, I want to design and integrate the user registration form using React and Material UI, so that the user can input their information easily.
+
+
+
+
+
+!image-20241011-002844.png|width=922,height=1085,alt=""image-20241011-002844.png""!",,,,,,,,,,,,,,,,,SCRUM-72,,10/Oct/24 8:29 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-002844.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10000,,,,,,,,,,,,,,,,,0|i000d0:,,,SCRUM Sprint 2,,,,3.0,,,,,,,,,,,,,,In Progress,20/Oct/24 3:27 PM
+Search for Job Opportunities  ,SCRUM-6,10005,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,08/Oct/24 8:35 PM,10/Oct/24 10:22 PM,05/Nov/24 4:29 PM,,,0,,"Description: As a job seeker, I want to search for available job opportunities based on my skills and preferences, so that I can apply to relevant positions.
+
+
+
+Task 1: As a developer, I want to implement job search functionality using Fastify and Prisma. 
+
+Task 2: As a frontend developer, I want to create a search interface with filters using React and Material UI, so that users can easily search for jobs.
+
+!image-20241011-022221.png|width=1255,height=797,alt=""image-20241011-022221.png""!",,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,10/Oct/24 10:22 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-022221.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10019,,,,,,,,,,,,,,,,,0|i00013:,,,,,,,3.0,,,,,,,,,,,,,,To Do,08/Oct/24 8:35 PM
+Upload Resume ,SCRUM-5,10004,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,08/Oct/24 8:34 PM,20/Oct/24 3:27 PM,09/Oct/24 4:15 PM,,,0,,"Description: As a user, I want to be able to upload my resume in a standard format, so that the system can analyze my information and provide relevant insights for potential job opportunities.
+
+
+
+Task 1: As a developer, I want to create an API endpoint for resume uploads using Fastify, so that users can upload their resumes.
+
+Task 2: As a frontend developer, I want to design the resume upload form using React and Material UI, so that users can submit their resumes conveniently.
+
+
+
+!image-20241011-014910.png|width=1091,height=917,alt=""image-20241011-014910.png""!",,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,10/Oct/24 9:49 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-014910.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10011,,,,,,,,,,,,,,,,,0|i000cx:9,,,SCRUM Sprint 2,,,,3.0,,,,,,,,,,,,,,In Progress,20/Oct/24 3:27 PM
+Dashboard Layout & Analysis,SCRUM-4,10003,Story,In Progress,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,amrreddy,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,08/Oct/24 8:32 PM,01/Nov/24 4:27 PM,05/Nov/24 4:29 PM,,,0,Frontend,"Description: As a user, I want to see a clear and intuitive dashboard layout upon logging in, so that I can easily navigate through the system's features and access relevant information.
+
+
+
+Task 1: As a frontend developer, I want to design the dashboard layout using React and Material UI, so that the user interface is user friendly.
+
+Task 2: As a developer, I want to fetch user specific data from the backend using Prisma, so that the dashboard displays relevant information.
+
+
+!image-20241011-050136.png|width=1239,height=807,alt=""image-20241011-050136.png""!",,amrreddy,,712020:7b2e8c0f-c75e-4452-8954-649f9f9e4e78,,,,,,,,,,,,,,,11/Oct/24 1:01 AM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-050136.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10023,,,,,,,,,,,,,,,,,0|i000cx:4,,,SCRUM Sprint 2,,,,5.0,,,,,,,,,,,,,,In Progress,30/Oct/24 6:12 PM
+Make a Payment  ,SCRUM-3,10002,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,08/Oct/24 7:40 PM,10/Oct/24 9:00 PM,10/Oct/24 8:32 PM,,,0,,"As a user or recruiter, I want to make payments securely for the chosen subscription plan so that I can continue using the services without interruption.
+
+ 
+
+Task 1: API for Payment  
+
+As a developer, I want to integrate a payment gateway (Stripe/PayPal) with Fastify, so that users can make payments securely.
+
+  
+
+Task 2: Frontend Payment Form  
+
+As a frontend developer, I want to create a payment form using React and Material UI, so that users can input their payment details.
+
+
+
+!image-20241011-010007.png|width=1110,height=901,alt=""image-20241011-010007.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 9:00 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-010007.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10005,,,,,,,,,,,,,,,,,0|i0000f:,,,,,,,2.0,,,,,,,,,,,,,,To Do,08/Oct/24 7:40 PM
+Unsubscribe from a Plan ,SCRUM-2,10001,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,08/Oct/24 7:40 PM,10/Oct/24 8:59 PM,10/Oct/24 8:32 PM,,,0,,"As a user or recruiter, I want to be able to unsubscribe from my current plan when I no longer need it, so that I stop recurring payments.
+
+ 
+
+Task 1: API for Unsubscription  
+
+As a developer, I want to create an API to handle unsubscriptions using Fastify.
+
+ 
+
+Task 2: Frontend Unsubscription Interface  
+
+As a front-end developer, I want to add an ""Unsubscribe"" button to the user’s profile page using React and Material UI, so that users can easily unsubscribe from their plan.
+
+
+
+
+
+!image-20241011-005940.png|width=1110,height=901,alt=""image-20241011-005940.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 8:59 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-005940.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10004,,,,,,,,,,,,,,,,,0|i00007:,,,,,,,3.0,,,,,,,,,,,,,,To Do,08/Oct/24 7:40 PM
+Subscribe to a Plan ,SCRUM-1,10000,Story,To Do,SCRUM,ResumAI,software,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,,Medium,,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,Hemant Krishnakumar,712020:d2315bc4-13c9-4eb5-8323-0fe97bca7f84,08/Oct/24 7:39 PM,10/Oct/24 8:50 PM,04/Nov/24 10:52 AM,,,0,,"As a user or recruiter, I want to be able to subscribe to a suitable plan so that I can access premium features and functionalities offered by the platform.
+
+ 
+
+ 
+
+Task 1: API for Subscription  
+
+As a developer, I want to implement subscription functionality using Fastify, integrating with a payment gateway (Stripe/PayPal).
+
+ 
+
+Task 2: Frontend Subscription Management  
+
+As a front-end developer, I want to design a subscription management interface using React and Material UI, so that users can easily subscribe to different plans.
+
+
+
+!image-20241011-005023.png|width=1245,height=803,alt=""image-20241011-005023.png""!",,,,,,,,,,,,,,,,,,,10/Oct/24 8:50 PM;ug:254aada0-aaac-4ca7-957e-358a72aa43d1;image-20241011-005023.png;https://bu-se-team-4.atlassian.net/rest/api/3/attachment/content/10003,,,,,,,,,,,,,,,,,0|hzzzzz:,,,,,,,3.0,,,,,,,,,,,,,,To Do,08/Oct/24 7:39 PM
