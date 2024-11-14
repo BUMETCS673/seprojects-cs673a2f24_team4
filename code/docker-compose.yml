@@ -19,3 +19,7 @@ services:
     env_file:
       - .env
     command: start-dev
+
+  resumeai:
+    build: .
+
