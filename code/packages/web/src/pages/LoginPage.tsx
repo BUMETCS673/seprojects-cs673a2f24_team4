@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LoginPage.css'; 
+import './LoginPage.css';
 
 const LoginPage = () => {
   const handleLoginSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -8,8 +8,7 @@ const LoginPage = () => {
     const formData = new FormData(event.currentTarget);
     const username = formData.get('username');
     const password = formData.get('password');
-    
-    
+
     console.log('Login submitted', { username, password });
   };
 
@@ -29,7 +28,7 @@ const LoginPage = () => {
 
           <label htmlFor="password">Password</label>
           <input type="password" name="password" id="password" required />
-          
+
           <div className="remember-forgot">
             <label>
               <input type="checkbox" name="rememberMe" /> Remember me
@@ -37,7 +36,9 @@ const LoginPage = () => {
             <Link to="/forgot-password">Forgot password?</Link>
           </div>
 
-          <button type="submit" className="login-btn">Login</button>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
 
           <div className="social-login">
             <p>Or</p>
@@ -49,7 +50,9 @@ const LoginPage = () => {
           </div>
         </form>
 
-        <p className="signup-text">Don't have an account? <Link to="/signup">Signup</Link></p>
+        <p className="signup-text">
+          Don't have an account? <Link to="/signup">Signup</Link>
+        </p>
         <div className="footer-links">
           <Link to="/terms">Terms & Conditions</Link>
           <Link to="/support">Support</Link>
@@ -61,5 +64,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
-
