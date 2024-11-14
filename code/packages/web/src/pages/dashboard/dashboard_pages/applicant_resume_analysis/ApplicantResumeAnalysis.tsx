@@ -17,6 +17,8 @@ import { RootState } from 'src/redux/store';
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from 'src/redux/hooks';
 import { getResume } from 'src/redux/slices/resumeSlice';
+import { uploadFile } from 'src/redux/slices/uploadSlice';
+import { createResume } from 'src/redux/slices/resumeSlice';
 import moment from 'moment';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CloseIcon from '@mui/icons-material/Close';
@@ -41,10 +43,14 @@ export const ApplicantResumeAnalysis = () => {
     setSelectedFile(null);
   };
 
-  const handleProceed = () => {
+  const handleProceed = async () => {
     setIsLoading(true);
-    alert(`Proceeding with file: ${selectedFile.name}`);
-    console.log(selectedFile);
+    const blob = new Blob([selectedFile], { type: selectedFile.type });
+    const uploadResponse = await dispatch(
+      uploadFile({ fileData: blob, fileName: selectedFile.name }),
+    );
+    console.log(uploadResponse);
+    dispatch(createResume({ storageId: uploadResponse.payload.id }));
     handleCloseDialog();
     setIsLoading(false);
   };

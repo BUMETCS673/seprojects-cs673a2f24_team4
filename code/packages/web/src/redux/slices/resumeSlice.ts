@@ -47,15 +47,15 @@ export const getResume = createAsyncThunk(
   },
 );
 
-const createResume = createAsyncThunk(
+export const createResume = createAsyncThunk(
   'resume/createResume',
   async (ResumePostBody: { storageId: String }, thunkAPI) => {
     const createResumeResponse = await axiosClient.post('/resume', ResumePostBody);
-    return createResumeResponse;
+    return createResumeResponse.data;
   },
 );
 
-const deleteResume = createAsyncThunk(
+export const deleteResume = createAsyncThunk(
   'resume/deleteResume',
   async (resumeId: String, thunkAPI) => {
     await axiosClient.delete(`/resume?resumeId=${resumeId}`);
