@@ -39,10 +39,13 @@ const initialState: InitialState = {
   error: undefined,
 };
 
-const getResume = createAsyncThunk('resume/getResume', async (_, thunkAPI) => {
-  const response = await axiosClient.get(`/resume`);
-  return response.data;
-});
+export const getResume = createAsyncThunk(
+  'resume/getResume',
+  async (_, thunkAPI) => {
+    const response = await axiosClient.get(`/resume`);
+    return response.data;
+  },
+);
 
 const createResume = createAsyncThunk(
   'resume/createResume',
