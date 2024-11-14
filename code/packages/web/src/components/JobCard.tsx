@@ -5,7 +5,7 @@ import styles from './JobCard.module.css';
 type JobCardProps = {
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   actionText: string;
   onActionClick: () => void;
 };

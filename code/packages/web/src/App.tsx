@@ -18,6 +18,7 @@ import { ROUTES } from 'src/react_router/routes';
 import { useAppDispatch } from './redux/hooks';
 import UserService from './services/UserService';
 import { getMe } from './redux/slices/meSlice';
+import JobDetails from './pages/dashboard/dashboard_pages/job_details';
 
 const commonRoutes: React.ReactElement[] = [
   <Route
@@ -83,6 +84,15 @@ const applicantRoutes: React.ReactElement[] = [
     element={
       <DashboardLayout>
         <RecruiterShortlists />
+      </DashboardLayout>
+    }
+  />,
+  <Route
+    key={ROUTES.jobDetails}
+    path={ROUTES.jobDetails}
+    element={
+      <DashboardLayout>
+        <JobDetails />
       </DashboardLayout>
     }
   />,

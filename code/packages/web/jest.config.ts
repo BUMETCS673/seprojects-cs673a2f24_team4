@@ -1,5 +1,3 @@
-import '@testing-library/jest-dom/extend-expect';
-
 export default {
   rootDir: '.',
   collectCoverage: true,

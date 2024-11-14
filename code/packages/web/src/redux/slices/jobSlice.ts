@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from 'src/redux/store';
-import { axiosClient } from 'src/services/api';
+import { RootState } from '../store';
+import { axiosClient } from '../../services/api';
 
 interface JobResponse {
   id: String;
@@ -27,14 +27,14 @@ const initialState: InitialState = {
   error: undefined,
 };
 
-export const getJob = createAsyncThunk('job/getJobAsync', async (_, thunkAPI) => {
+export const getJob = createAsyncThunk('job/getJobAsync', async (_, _thunkAPI) => {
   const response = await axiosClient.get(`/job`);
   return response.data;
 });
 
 export const getJobUser = createAsyncThunk(
   'job/getJobPublic',
-  async (searchTerm: String, thunkAPI) => {
+  async (searchTerm: string | undefined | null, _thunkAPI) => {
     const response = await axiosClient.get(`/job/public?searchTerm=${searchTerm}`);
     return response.data;
   },
@@ -44,11 +44,11 @@ export const createJob = createAsyncThunk(
   'job/createJob',
   async (
     JobListingsPostBody: {
-      title: String;
-      description: String;
-      coreRequirements: String;
+      title: string;
+      description: string;
+      coreRequirements: string;
     },
-    thunkAPI,
+    _thunkAPI,
   ) => {
     const jobCreationResponse = await axiosClient.post('/job', JobListingsPostBody);
     return jobCreationResponse.data;
@@ -64,7 +64,7 @@ export const updateJob = createAsyncThunk(
       description?: String;
       coreRequirements?: String;
     },
-    thunkAPI,
+    _thunkAPI,
   ) => {
     const jobUpdationResponse = await axiosClient.put(
       `/job?jobListingId=${JobListingsPutBody.id}`,
@@ -76,7 +76,7 @@ export const updateJob = createAsyncThunk(
 
 export const deleteJob = createAsyncThunk(
   'job/deleteJob',
-  async (jobId: String, thunkAPI) => {},
+  async (_jobId: String, _thunkAPI) => {},
 );
 
 const jobSlice = createSlice({
