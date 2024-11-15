@@ -10,6 +10,11 @@ import {
   DialogContent,
   IconButton,
   CircularProgress,
+  Pagination,
+  MenuItem,
+  Select,
+  FormControl,
+  InputLabel,
 } from '@mui/material';
 import './ApplicantResumeAnalysis.css';
 import { useSelector } from 'react-redux';
@@ -34,6 +39,11 @@ export const ApplicantResumeAnalysis = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const [page, setPage] = useState(1);
+  const cardsPerPage = 5;
+
+  const [sortOption, setSortOption] = useState('name');
+
   const handleImportResume = () => {
     setOpenDialog(true);
   };
@@ -50,9 +60,11 @@ export const ApplicantResumeAnalysis = () => {
       uploadFile({ fileData: blob, fileName: selectedFile.name }),
     );
     console.log(uploadResponse);
-    dispatch(createResume({ storageId: uploadResponse.payload.id }));
-    handleCloseDialog();
+    await dispatch(createResume({ storageId: uploadResponse.payload.id }));
+    await dispatch(getResume());
     setIsLoading(false);
+    setOpenDialog(false);
+    setSelectedFile(null);
   };
 
   const onDrop = (acceptedFiles: any) => {
@@ -65,17 +77,58 @@ export const ApplicantResumeAnalysis = () => {
     accept: { 'application/pdf': ['.pdf'], 'application/msword': ['.doc', '.docx'] },
   });
 
+  const handleChangePage = (event, value) => {
+    setPage(value);
+  };
+
+  const handleSortChange = (event) => {
+    setSortOption(event.target.value);
+    setPage(1);
+  };
+
+  const sortedResumes = [...resumes.response].sort((a, b) => {
+    if (sortOption === 'name') {
+      return a.storage.name.localeCompare(b.storage.name);
+    } else if (sortOption === 'date') {
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    }
+    return 0;
+  });
+
+  const indexOfLastCard = page * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = sortedResumes.slice(indexOfFirstCard, indexOfLastCard);
+
   return (
     <Container maxWidth="lg" className="container">
-      <div className="import-button-container">
-        <Button variant="contained" color="primary" onClick={handleImportResume}>
-          Import Resume
-        </Button>
+      <div className="toolbar">
+        <div className="toolbar-actions">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleImportResume}
+            style={{ marginRight: 10 }}
+          >
+            Import Resume
+          </Button>
+
+          <FormControl variant="outlined" style={{ minWidth: 120 }}>
+            <InputLabel>Sort By</InputLabel>
+            <Select value={sortOption} onChange={handleSortChange} label="Sort By">
+              <MenuItem value="name">Name</MenuItem>
+              <MenuItem value="date">Date Uploaded</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
       </div>
 
+      <Typography variant="subtitle1" style={{ margin: '20px 0' }}>
+        Showing {currentCards.length} of {sortedResumes.length} results
+      </Typography>
+
       <Grid container spacing={3}>
-        {resumes.response.map((resume) => (
-          <Grid item xs={12}>
+        {currentCards.map((resume) => (
+          <Grid item xs={12} key={resume.storage.name}>
             <Card className="card">
               <CardContent className="card-content">
                 <div>
@@ -83,7 +136,8 @@ export const ApplicantResumeAnalysis = () => {
                     {resume.storage.name}
                   </Typography>
                   <Typography className="card-subtitle">
-                    Date Uploaded: {moment(resume.createdAt).format('D MMM YYYY')}
+                    Date Uploaded:{' '}
+                    {moment(resume.createdAt).format('D MMM YYYY hh:mm:ss')}
                   </Typography>
                 </div>
                 <KeyboardArrowRightIcon />
@@ -92,6 +146,14 @@ export const ApplicantResumeAnalysis = () => {
           </Grid>
         ))}
       </Grid>
+
+      <Pagination
+        count={Math.ceil(sortedResumes.length / cardsPerPage)}
+        page={page}
+        onChange={handleChangePage}
+        color="primary"
+        style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}
+      />
 
       <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
         <DialogTitle>Select a Resume to Upload</DialogTitle>
@@ -105,10 +167,10 @@ export const ApplicantResumeAnalysis = () => {
                 <div className="file-info">
                   <div className="file-info-text">
                     <Typography variant="body1">
-                      <strong>File Name:</strong> {selectedFile.name}
+                      <strong>File Name:</strong> {selectedFile?.name}
                     </Typography>
                     <Typography variant="body2">
-                      <strong>Size:</strong> {(selectedFile.size / 1024).toFixed(2)}{' '}
+                      <strong>Size:</strong> {(selectedFile?.size / 1024).toFixed(2)}{' '}
                       KB
                     </Typography>
                   </div>

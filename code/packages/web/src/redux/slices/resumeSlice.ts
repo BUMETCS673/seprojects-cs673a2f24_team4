@@ -83,10 +83,6 @@ const resumeSlice = createSlice({
     builder.addCase(createResume.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(createResume.fulfilled, (state, action: PayloadAction<any>) => {
-      state.loading = false;
-      state.response.push(action.payload);
-    });
     builder.addCase(createResume.rejected, (state, action: PayloadAction<any>) => {
       state.loading = false;
       state.error = action.payload.error.message;
