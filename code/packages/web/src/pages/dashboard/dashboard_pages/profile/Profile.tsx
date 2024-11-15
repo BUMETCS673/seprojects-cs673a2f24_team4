@@ -1,3 +1,4 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
@@ -8,8 +9,19 @@ import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Copyright from 'src/internals/components/Copyright';
+import avatar from 'src/assets/avatar.jpg';
+import './Profile.css';
 
-const profileData = {
+interface ProfileData {
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  company: string;
+  phone: string;
+}
+
+const profileData: ProfileData = {
   username: 'johndoe',
   email: 'john.doe@example.com',
   firstName: 'John',
@@ -18,22 +30,14 @@ const profileData = {
   phone: '+1 123-456-7890',
 };
 
-export const Profile = () => {
+export const Profile: React.FC = () => {
   return (
-    <Box
-      sx={{
-        width: '100%',
-        maxWidth: { sm: '100%', md: '800px' },
-        mx: 'auto',
-        p: 3,
-        borderRadius: 2,
-      }}
-    >
-      <CardContent sx={{ textAlign: 'center', mb: 3 }}>
+    <Box className="profileContainer">
+      <CardContent className="cardContentCentered">
         <Avatar
-          alt={profileData.firstName + ' ' + profileData.lastName}
-          src="/path/to/avatar.jpg"
-          sx={{ width: 120, height: 120, margin: '0 auto', mb: 2 }}
+          src={avatar}
+          alt={`${profileData.firstName} ${profileData.lastName}`}
+          className="avatar"
         />
         <Typography component="h2" variant="h4" fontWeight="bold">
           {profileData.firstName} {profileData.lastName}
@@ -41,19 +45,15 @@ export const Profile = () => {
         <Typography variant="subtitle1" color="text.secondary">
           {profileData.company}
         </Typography>
-        <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+        <Button variant="contained" color="primary" className="editButton">
           Edit Profile
         </Button>
       </CardContent>
       <CardContent>
-        <Typography
-          variant="h6"
-          color="primary"
-          sx={{ mb: 2, fontWeight: 'medium' }}
-        >
+        <Typography variant="h6" color="primary" className="sectionTitle">
           Contact Information
         </Typography>
-        <Divider sx={{ mb: 2 }} />
+        <Divider className="divider" />
         <List disablePadding>
           <ListItem>
             <ListItemText primary="Username" secondary={profileData.username} />
@@ -67,14 +67,10 @@ export const Profile = () => {
         </List>
       </CardContent>
       <CardContent>
-        <Typography
-          variant="h6"
-          color="primary"
-          sx={{ mb: 2, fontWeight: 'medium' }}
-        >
+        <Typography variant="h6" color="primary" className="sectionTitle">
           Personal Details
         </Typography>
-        <Divider sx={{ mb: 2 }} />
+        <Divider className="divider" />
         <List disablePadding>
           <ListItem>
             <ListItemText primary="First Name" secondary={profileData.firstName} />
@@ -87,7 +83,7 @@ export const Profile = () => {
           </ListItem>
         </List>
       </CardContent>
-      <Copyright sx={{ mt: 4, textAlign: 'center' }} />
+      <Copyright className="copyright" />
     </Box>
   );
 };

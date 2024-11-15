@@ -10,7 +10,13 @@ type JobCardProps = {
   onActionClick: () => void;
 };
 
-export default function JobCard({ title, subtitle, description, actionText, onActionClick }: JobCardProps) {
+export default function JobCard({
+  title,
+  subtitle,
+  description,
+  actionText,
+  onActionClick,
+}: JobCardProps) {
   return (
     <Card variant="outlined" className={styles.card}>
       <CardContent>
@@ -20,7 +26,11 @@ export default function JobCard({ title, subtitle, description, actionText, onAc
         <Typography variant="subtitle1" color="text.secondary">
           {subtitle}
         </Typography>
-        <Typography variant="body2" color="text.secondary" className={styles.description}>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          className={styles.description}
+        >
           {description}
         </Typography>
         <Box className={styles.buttonBox}>
