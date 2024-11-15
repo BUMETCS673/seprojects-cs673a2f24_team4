@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    /* Basic Options */
     "baseUrl": ".",
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -7,7 +8,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Module Resolution for Bundlers */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
@@ -16,11 +17,21 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
 
-    /* Linting */
+    /* Linting and Strict Type-Checking Options */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Jest and Testing */
+    "types": ["jest", "@testing-library/jest-dom"], // Ensure Jest types are available globally
+    "resolveJsonModule": true, // Allows importing JSON files, useful for testing configurations
+
+    /* Paths (if needed for imports) */
+    "paths": {
+      /* Add any path mappings you might need for package resolution */
+      "@src/*": ["src/*"]
+    }
   },
   "include": ["src/**/*"],
   "references": [

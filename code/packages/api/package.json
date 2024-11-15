@@ -47,5 +47,8 @@
     "tap": "^16.1.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
+  },
+  "prisma": {
+    "schema": "packages/api/prisma/schema.prisma"
   }
 }

@@ -10,7 +10,8 @@
     "lint": "lerna run lint",
     "serve": "lerna run --parallel serve",
     "prisma": "yarn workspace @se-t4/database prisma",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "lerna run test"
   },
   "workspaces": {
     "packages": [
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.11.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
     "@typescript-eslint/parser": "^8.6.0",
     "eslint": "^9.11.0",
@@ -29,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.12",
     "husky": "^9.1.6",
+    "jest": "^29.0.0",
     "lerna": "^5.1.8",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",

@@ -22,4 +22,6 @@ services:
 
   resumeai:
     build: .
+    env_file:
+      - .env.production
 

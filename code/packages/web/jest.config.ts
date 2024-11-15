@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom/extend-expect';
+import type { Config } from 'jest';
 
-export default {
+const config: Config = {
   rootDir: '.',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!**/vendor/**'],
@@ -23,5 +23,12 @@ export default {
     'setupTests.ts',
     'main.tsx',
   ],
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'], // Load custom setup file
+  globals: {
+    'ts-jest': {
+      isolatedModules: true,
+    },
+  },
 };
+
+export default config;
