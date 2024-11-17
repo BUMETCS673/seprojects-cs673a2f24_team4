@@ -25,15 +25,36 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
+      # Runs a single command using the runner's shell
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
+      # Runs a set of commands using the runner's shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
       
+      # Set up Node.js for the workflow
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Install dependencies using Yarn
       - name: Install all packages
         run: cd code && yarn install
+      
+      # Lint the codebase to ensure code quality
+      - name: Run linting
+        run: cd code && yarn lint
+
+      # Run tests to verify functionality
+      - name: Run tests
+        run: cd code && yarn test
+
+      # Validate Prisma schema for consistency
+      - name: Validate Prisma schema
+        run: |
+          cd code
+          npx prisma validate

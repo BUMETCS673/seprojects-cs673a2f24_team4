@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository
+      - uses: actions/checkout@v4
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # Install dependencies
+      - name: Install dependencies with Yarn
+        run: |
+          cd code
+          yarn install
+
+      # Lint code
+      - name: Lint codebase
+        run: |
+          cd code
+          yarn lint
+
+      # Run tests
+      - name: Run tests
+        run: |
+          cd code
+          yarn test
+
+      # Validate Prisma schema
+      - name: Validate Prisma schema
+        run: |
+          cd code
+          npx prisma validate
+
+      # Build Docker image
+      - name: Build Docker image
+        run: |
+          docker build -t resumeai:latest .
+
+      # Run Docker Compose to test services
+      - name: Test services with Docker Compose
+        run: docker-compose up --build --abort-on-container-exit --exit-code-from resumeai
