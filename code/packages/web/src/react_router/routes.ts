@@ -6,4 +6,5 @@ export const ROUTES = {
   resumeAnalysis: '/dashboard/resume-analysis',
   jobListings: '/dashboard/job-listings',
   shortlists: '/dashboard/shortlists',
+  jobDetails: '/dashboard/job/:jobId',
 };

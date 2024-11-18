@@ -7,7 +7,7 @@ import { applicationsData } from 'src/internals/data/gridData';
 describe('RecruiterShortlists Component', () => {
   it('renders Job Applications and Shortlisted Applications tables', () => {
     render(<RecruiterShortlists />);
-    
+
     // Check if the headings for the tables are rendered
     expect(screen.getByText('Job Applications')).toBeInTheDocument();
     expect(screen.getByText('Shortlisted Applications')).toBeInTheDocument();
@@ -15,7 +15,7 @@ describe('RecruiterShortlists Component', () => {
 
   it('selects and shortlists applications', () => {
     render(<RecruiterShortlists />);
-    
+
     // Mock a row selection event
     const rowCheckboxes = screen.getAllByRole('checkbox');
     fireEvent.click(rowCheckboxes[1]); // Select first application
@@ -28,9 +28,9 @@ describe('RecruiterShortlists Component', () => {
     fireEvent.click(shortlistButton);
 
     // Verify that the row is now in the "Shortlisted Applications" table
-    const shortlistedApplicationRow = screen.getAllByRole('row').find((row:any) => 
-      row.textContent.includes(applicationsData[0].id)
-    );
+    const shortlistedApplicationRow = screen
+      .getAllByRole('row')
+      .find((row: any) => row.textContent.includes(applicationsData[0].id));
     expect(shortlistedApplicationRow).toBeInTheDocument();
 
     // Check if selection is cleared

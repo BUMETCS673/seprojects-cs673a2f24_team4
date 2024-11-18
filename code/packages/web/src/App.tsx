@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
@@ -15,6 +15,10 @@ import {
   RecruiterShortlists,
 } from 'src/pages/dashboard/dashboard_pages';
 import { ROUTES } from 'src/react_router/routes';
+import { useAppDispatch } from './redux/hooks';
+import UserService from './services/UserService';
+import { getMe } from './redux/slices/meSlice';
+import JobDetails from './pages/dashboard/dashboard_pages/job_details';
 
 const commonRoutes: React.ReactElement[] = [
   <Route
@@ -83,9 +87,25 @@ const applicantRoutes: React.ReactElement[] = [
       </DashboardLayout>
     }
   />,
+  <Route
+    key={ROUTES.jobDetails}
+    path={ROUTES.jobDetails}
+    element={
+      <DashboardLayout>
+        <JobDetails />
+      </DashboardLayout>
+    }
+  />,
 ];
 
 function App() {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    if (UserService.isLoggedIn()) {
+      dispatch(getMe());
+    }
+  }, []);
+
   const routes = useMemo(() => {
     return [...applicantRoutes, ...commonRoutes];
   }, []);

@@ -1017,7 +1017,6 @@ export const resumeDataRows: GridRowsProp = [
   },
 ];
 
-
 export const applicationDataColumns: GridColDef[] = [
   { field: 'id', headerName: 'Application Id', flex: 1, minWidth: 50 },
   {
@@ -1046,7 +1045,13 @@ export const applicationDataColumns: GridColDef[] = [
     renderCell: (params) => (
       <Chip
         label={params.value}
-        color={params.value === 'High' ? 'error' : params.value === 'Medium' ? 'warning' : 'default'}
+        color={
+          params.value === 'High'
+            ? 'error'
+            : params.value === 'Medium'
+              ? 'warning'
+              : 'default'
+        }
       />
     ),
   },
@@ -1061,9 +1066,13 @@ export const applicationDataColumns: GridColDef[] = [
       <Chip
         label={params.value}
         color={
-          params.value === 'Full-Time' ? 'success' :
-          params.value === 'Part-Time' ? 'secondary' :
-          params.value === 'Internship' ? 'primary' : 'default'
+          params.value === 'Full-Time'
+            ? 'success'
+            : params.value === 'Part-Time'
+              ? 'secondary'
+              : params.value === 'Internship'
+                ? 'primary'
+                : 'default'
         }
       />
     ),

@@ -8,9 +8,7 @@ import UserService from './services/UserService.ts';
 const renderApp = () =>
   createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
-      <StrictMode>
-        <App />
-      </StrictMode>
+      <App />
     </Provider>,
   );
 

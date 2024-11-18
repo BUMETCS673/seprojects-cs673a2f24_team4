@@ -15,10 +15,10 @@
   flex-grow: 1;
 }
 
-footerStack {
+.footerStack {
   margin-top: 32px;
 }
 
-copyright {
+.copyright {
   margin: 32px 0;
 }

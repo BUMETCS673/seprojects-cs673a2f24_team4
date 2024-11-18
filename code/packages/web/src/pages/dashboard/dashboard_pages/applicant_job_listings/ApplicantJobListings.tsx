@@ -1,15 +1,21 @@
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import CustomizedTreeView from 'src/components/CustomizedTreeView';
+import Typography from '@mui/material/Typography';
 import JobCard from 'src/components/JobCard';
 import Copyright from 'src/internals/components/Copyright';
-import useJobListings from './useJobListings';
 import styles from './ApplicantJobListings.module.css';
+import useJobListings from './useJobListings';
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from 'src/react_router/routes';
 
 export const ApplicantJobListings = () => {
   const jobListings = useJobListings();
+  const navigate = useNavigate();
+
+  const goToJobDetails = (jobId: string) => () => {
+    navigate(ROUTES.jobDetails.replaceAll(':jobId', jobId));
+  };
 
   return (
     <Box className={styles.container}>
@@ -18,17 +24,15 @@ export const ApplicantJobListings = () => {
       </Typography>
 
       <Stack direction="row" spacing={2} className={styles.stack}>
-        <CustomizedTreeView />
         <Box className={styles.gridContainer}>
           <Grid container spacing={2} columns={12}>
-            {jobListings.map((job, index) => (
+            {jobListings.map((job: any, index) => (
               <Grid key={index} item xs={12} sm={6} lg={4}>
                 <JobCard
                   title={job.title}
-                  subtitle={job.company}
-                  description={`${job.location} - ${job.datePosted}`}
+                  subtitle={job.coreRequirements}
                   actionText="View Details"
-                  onActionClick={() => console.log(`Viewing job: ${job.id}`)}
+                  onActionClick={goToJobDetails(job.id)}
                 />
               </Grid>
             ))}
