@@ -1,0 +1,37 @@
+.profileContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.cardContentCentered {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 120px !important;
+  height: 120px !important;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.editButton {
+  margin-top: 16px;
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.divider {
+  margin-bottom: 16px;
+}
+
+.copyright {
+  margin-top: 32px;
+  text-align: center;
+}
