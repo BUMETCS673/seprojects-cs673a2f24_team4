@@ -8,19 +8,12 @@ const keycloakConfig = {
 
 const _kc = new Keycloak(keycloakConfig);
 
-/**
- * Initializes Keycloak instance and calls the provided callback function if successfully authenticated.
- *
- * @param onAuthenticatedCallback
- */
-const initKeycloak = (onAuthenticatedCallback) => {
+const initKeycloak = (onAuthenticatedCallback: () => void): void => {
   _kc
-    .init({
-      onLoad: 'login-required',
-    })
-    .then((authenticated: any) => {
+    .init({ onLoad: 'login-required' })
+    .then((authenticated: boolean) => {
       if (!authenticated) {
-        console.log('user is not authenticated..!');
+        console.warn('User is not authenticated!');
       }
       onAuthenticatedCallback();
     })
@@ -37,12 +30,14 @@ const getTokenParsed = () => _kc.tokenParsed;
 
 const isLoggedIn = () => !!_kc.token;
 
-const updateToken = (successCallback) =>
+const updateToken = (successCallback: () => void): void => {
   _kc.updateToken(5).then(successCallback).catch(doLogin);
+};
 
 const getUsername = () => _kc.tokenParsed?.preferred_username;
 
-const hasRole = (roles: any) => roles.some((role: any) => _kc.hasRealmRole(role));
+const hasRole = (roles: string[]): boolean =>
+  roles.some((role) => _kc.hasRealmRole(role));
 
 const UserService = {
   initKeycloak,

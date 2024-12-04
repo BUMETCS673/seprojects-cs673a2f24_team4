@@ -1,14 +1,19 @@
-// src/hooks/useJobListings.ts
 import { useState, useEffect } from 'react';
 
-const useJobListings = () => {
-  const [jobListings, setJobListings] = useState([]);
+interface JobListing {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  datePosted: string;
+}
+
+const useJobListings = (): JobListing[] => {
+  const [jobListings, setJobListings] = useState<JobListing[]>([]);
 
   useEffect(() => {
-    // Fetch job listings data from an API or use dummy data for now
     const fetchJobListings = async () => {
-      // Dummy data as an example
-      const data = [
+      const data: JobListing[] = [
         {
           id: 1,
           title: 'Software Engineer',
@@ -30,7 +35,6 @@ const useJobListings = () => {
           location: 'Seattle',
           datePosted: '2023-10-30',
         },
-        // Add more job listings here
       ];
       setJobListings(data);
     };
@@ -42,3 +46,4 @@ const useJobListings = () => {
 };
 
 export default useJobListings;
+

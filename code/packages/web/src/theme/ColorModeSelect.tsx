@@ -4,20 +4,24 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectProps } from '@mui/material/Select';
 
 export default function ColorModeSelect(props: SelectProps) {
-  const { mode, setMode } = useColorScheme();
-  if (!mode) {
+  const colorScheme = useColorScheme();
+  if (!colorScheme || !colorScheme.mode) {
     return null;
   }
+  const { mode, setMode } = colorScheme;
+
   return (
     <Select
       value={mode}
       onChange={(event) =>
         setMode(event.target.value as 'system' | 'light' | 'dark')
       }
-      SelectDisplayProps={{
-        // @ts-ignore
-        'data-screenshot': 'toggle-mode',
-      }}
+      // Explicitly cast 'data-screenshot' to bypass TypeScript's strict typing
+      SelectDisplayProps={
+        {
+          'data-screenshot': 'toggle-mode',
+        } as React.HTMLAttributes<HTMLDivElement>
+      }
       {...props}
     >
       <MenuItem value="system">System</MenuItem>

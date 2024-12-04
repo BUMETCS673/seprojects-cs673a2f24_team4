@@ -10,12 +10,13 @@ const client = axios.create({
 client.interceptors.request.use((config) => {
   try {
     const token = UserService.getToken();
-    if (token && config?.headers) {
+    if (token) {
+      config.headers = config.headers || {};
       config.headers.authorization = `Bearer ${token}`;
     }
     return config;
   } catch (error: any) {
-    console.log(error);
+    console.error('Request Interceptor Error:', error);
     return config;
   }
 });

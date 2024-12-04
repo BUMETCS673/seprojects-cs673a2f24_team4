@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
@@ -44,7 +43,7 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
           >
             <Avatar
               sizes="small"
-              alt="Riley Carter"
+              alt="User Avatar"
               src="/static/images/avatar/7.jpg"
               sx={{ width: 24, height: 24 }}
             />
@@ -71,3 +70,4 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
     </Drawer>
   );
 }
+

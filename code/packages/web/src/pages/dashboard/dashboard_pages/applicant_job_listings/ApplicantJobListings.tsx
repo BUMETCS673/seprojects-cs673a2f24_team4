@@ -8,8 +8,17 @@ import Copyright from 'src/internals/components/Copyright';
 import useJobListings from './useJobListings';
 import styles from './ApplicantJobListings.module.css';
 
+// Define the type for job listings
+interface JobListing {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  datePosted: string;
+}
+
 export const ApplicantJobListings = () => {
-  const jobListings = useJobListings();
+  const jobListings: JobListing[] = useJobListings(); // Add proper type here
 
   return (
     <Box className={styles.container}>
@@ -21,8 +30,8 @@ export const ApplicantJobListings = () => {
         <CustomizedTreeView />
         <Box className={styles.gridContainer}>
           <Grid container spacing={2} columns={12}>
-            {jobListings.map((job, index) => (
-              <Grid key={index} item xs={12} sm={6} lg={4}>
+            {jobListings.map((job) => (
+              <Grid key={job.id} item xs={12} sm={6} lg={4}>
                 <JobCard
                   title={job.title}
                   subtitle={job.company}
