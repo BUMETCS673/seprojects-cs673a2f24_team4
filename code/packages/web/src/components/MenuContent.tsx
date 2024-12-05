@@ -26,7 +26,7 @@ type ListItem = {
 };
 
 const mainListItems: ListItem[] = [
-  { text: 'Analytics', icon: <AnalyticsRoundedIcon />, path: ROUTES.analytics },
+  // { text: 'Analytics', icon: <AnalyticsRoundedIcon />, path: ROUTES.analytics },
   { text: 'Job Listings', icon: <WorkRounded />, path: ROUTES.jobListings },
   // { text: 'Shortlists', icon: <AssignmentRoundedIcon />, path: ROUTES.shortlists },
 ];

@@ -16,6 +16,8 @@ import TextField from '@mui/material/TextField';
 import Copyright from 'src/internals/components/Copyright';
 import avatar from 'src/assets/avatar.jpg';
 import './Profile.css';
+import { useAppSelector } from 'src/redux/hooks';
+import { RootState } from 'src/redux/store';
 
 interface ProfileData {
   username: string;
@@ -28,6 +30,8 @@ interface ProfileData {
 
 export const Profile: React.FC = () => {
   // State for profile data
+
+  const userDetails = useAppSelector((state: RootState) => state.me);
   const [profileData, setProfileData] = useState<ProfileData>({
     username: 'johndoe',
     email: 'john.doe@example.com',
@@ -62,14 +66,15 @@ export const Profile: React.FC = () => {
       <CardContent className="cardContentCentered">
         <Avatar
           src={avatar}
-          alt={`${profileData.firstName} ${profileData.lastName}`}
+          alt={`${userDetails.response?.user.firstName} ${userDetails.response?.user.lastName}`}
           className="avatar"
         />
         <Typography component="h2" variant="h4" fontWeight="bold">
-          {profileData.firstName} {profileData.lastName}
+          {userDetails.response?.user.firstName}{' '}
+          {userDetails.response?.user.lastName}
         </Typography>
         <Typography variant="subtitle1" color="text.secondary">
-          {profileData.company}
+          {userDetails.response?.user.company}
         </Typography>
         <Button
           variant="contained"
@@ -87,13 +92,22 @@ export const Profile: React.FC = () => {
         <Divider className="divider" />
         <List disablePadding>
           <ListItem>
-            <ListItemText primary="Username" secondary={profileData.username} />
+            <ListItemText
+              primary="Username"
+              secondary={userDetails.response?.user.username}
+            />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Email" secondary={profileData.email} />
+            <ListItemText
+              primary="Email"
+              secondary={userDetails.response?.user.email}
+            />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Phone" secondary={profileData.phone} />
+            <ListItemText
+              primary="Phone"
+              secondary={userDetails.response?.user.phone}
+            />
           </ListItem>
         </List>
       </CardContent>
@@ -104,13 +118,22 @@ export const Profile: React.FC = () => {
         <Divider className="divider" />
         <List disablePadding>
           <ListItem>
-            <ListItemText primary="First Name" secondary={profileData.firstName} />
+            <ListItemText
+              primary="First Name"
+              secondary={userDetails.response?.user.firstName}
+            />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Last Name" secondary={profileData.lastName} />
+            <ListItemText
+              primary="Last Name"
+              secondary={userDetails.response?.user.lastName}
+            />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Company" secondary={profileData.company} />
+            <ListItemText
+              primary="Company"
+              secondary={userDetails.response?.user.company}
+            />
           </ListItem>
         </List>
       </CardContent>
