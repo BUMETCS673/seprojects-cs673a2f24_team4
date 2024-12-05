@@ -7,4 +7,5 @@ export const ROUTES = {
   jobListings: '/dashboard/job-listings',
   shortlists: '/dashboard/shortlists',
   jobDetails: '/dashboard/job/:jobId',
+  createJob: '/dashboard/createJobListing',
 };

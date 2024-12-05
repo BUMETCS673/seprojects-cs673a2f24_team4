@@ -1,25 +1,57 @@
-// src/hooks/useJobListings.ts
+// useJobListings.ts
 import { useState, useEffect } from 'react';
 import { useAppDispatch } from '../../../../redux/hooks';
-import { getJobUser } from '../../../../redux/slices/jobSlice';
+import {
+  getJobUser,
+  deleteJob,
+  createJob,
+  getJob,
+} from '../../../../redux/slices/jobSlice';
 
 const useJobListings = () => {
   const dispatch = useAppDispatch();
-
   const [jobListings, setJobListings] = useState<any[]>([]);
 
   useEffect(() => {
-    // Fetch job listings data from an API or use dummy data for now
     const fetchJobListings = async () => {
-      const { payload } = await dispatch(getJobUser(''));
-      console.log(payload);
+      try {
+        const { payload } = await dispatch(getJobUser(''));
+        setJobListings(payload);
+      } catch (err) {
+        console.log('Wrong Group');
+        fetchJobListingsRecruiter();
+      }
+    };
+    const fetchJobListingsRecruiter = async () => {
+      const { payload } = await dispatch(getJob());
       setJobListings(payload);
     };
-
     fetchJobListings();
-  }, []);
+  }, [dispatch]);
 
-  return jobListings;
+  const deleteJobListing = async (jobId: string) => {
+    try {
+      await dispatch(deleteJob(jobId));
+      setJobListings((prevJobs) => prevJobs.filter((job) => job.id !== jobId));
+    } catch (error) {
+      console.error('Failed to delete job listing:', error);
+    }
+  };
+
+  const createJobListing = async (JobListingsPostBody: {
+    title: string;
+    description: string;
+    coreRequirements: string;
+  }) => {
+    const { payload } = await dispatch(createJob(JobListingsPostBody));
+    return payload;
+  };
+
+  return {
+    jobListings,
+    deleteJobListing,
+    createJobListing,
+  };
 };
 
 export default useJobListings;
