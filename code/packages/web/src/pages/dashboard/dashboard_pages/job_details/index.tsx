@@ -26,18 +26,22 @@ import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import { getResume } from 'src/redux/slices/resumeSlice';
+import { getShortList, postShortList } from 'src/redux/slices/shortlistSlice';
 import { postApplication } from 'src/redux/slices/applicationSlice';
 
 const JobDetails = () => {
   const { jobId } = useParams();
   const resumes = useSelector((state: RootState) => state.resume);
+  const shortListData = useSelector((state: RootState) => state.shortList);
   const jobs = useSelector((state: RootState) => state.job);
   const jobData = jobs.response?.find((job) => job.id == jobId);
-  console.log(jobData);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(getResume());
+    if (jobId) {
+      dispatch(getShortList(jobId));
+    }
   }, [dispatch]);
 
   const userDetails = useAppSelector((state: RootState) => state.me);
@@ -83,18 +87,26 @@ const JobDetails = () => {
     setOpen(false);
   };
 
-  const handleSelectionChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleSelectionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedEntry(event.target.value);
   };
 
-  const handleShortlist = () => {
+  const handleShortlist = async () => {
     const shortlisted = jobData?.Applications.filter((application) =>
-      selectedApplications.includes(application.id)
+      selectedApplications.includes(application.id),
     );
-    if (shortlisted){
-    setShortlistedApplications(shortlisted);
+    console.log(shortlisted);
+    if (shortlisted && shortlisted.length > 0) {
+      for await (let application of shortlisted) {
+        if (jobId) {
+          const { payload } = await dispatch(
+            postShortList({ jobListingId: jobId, applicationId: application.id }),
+          );
+        }
+      }
+    }
+    if (shortlisted) {
+      setShortlistedApplications(shortlisted);
     }
     // Optionally clear selected applications after shortlisting
     setSelectedApplications([]);
@@ -186,7 +198,7 @@ const JobDetails = () => {
                                   return [...prevSelected, application.id];
                                 } else {
                                   return prevSelected.filter(
-                                    (id) => id !== application.id
+                                    (id) => id !== application.id,
                                   );
                                 }
                               });
@@ -236,9 +248,7 @@ const JobDetails = () => {
                   <TableRow key={application.id}>
                     <TableCell>{application.id || 'N/A'}</TableCell>
                     <TableCell>{application.resume?.id || 'N/A'}</TableCell>
-                    <TableCell>
-                      {application.resume?.impactScore || 'N/A'}
-                    </TableCell>
+                    <TableCell>{application.resume?.impactScore || 'N/A'}</TableCell>
                     <TableCell>
                       {application.resume?.presentationScore || 'N/A'}
                     </TableCell>
