@@ -11,11 +11,11 @@ export default [
     ignores: ['dist'],
   },
   {
-    files: ['packages/api/**/*.{js,jsx,json,css,md,ts,tsx}'],
+    files: ['packages/api/**/*.{js,jsx,css,md,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.node,
-      parser: tsParser
+      parser: tsParser,
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -28,16 +28,18 @@ export default [
       // ...nodePlugin.configs.recommended.rules,
       // Node plugin recommended rules commented out because the latest version isn't compatible with eslint v9
       'prettier/prettier': 'error',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
       'no-console': 'off',
       'func-names': 'off',
       'no-process-exit': 'off',
       'object-shorthand': 'off',
-      'class-methods-use-this': 'off'
-    }
+      'class-methods-use-this': 'off',
+      'no-unused-expressions': 'off',
+      'no-empty-object-type': 'off',
+    },
   },
   {
-    files: ['packages/react-app/**/*.{js,jsx,json,css,md,ts,tsx}'],
+    files: ['packages/web/**/*.{js,jsx,json,css,md,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       parser: tsParser,
@@ -46,7 +48,7 @@ export default [
       '@typescript-eslint': tseslint,
       prettier,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
     },
     settings: {
       react: {
@@ -61,7 +63,7 @@ export default [
         { allowConstantExport: true },
       ],
       'prettier/prettier': 'error',
-      '@typescript-eslint/no-unused-vars': 'warn'
-    }
-  }
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
+  },
 ];
