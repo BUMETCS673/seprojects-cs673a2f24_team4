@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
     "@fastify/autoload": "^5.0.0",
     "@fastify/cors": "^8.1.0",
     "@fastify/redis": "5.0.0",

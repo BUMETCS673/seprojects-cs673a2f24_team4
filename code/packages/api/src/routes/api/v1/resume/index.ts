@@ -2,8 +2,10 @@ import { PrismaClient } from '@se-t4/database';
 import { FastifyPluginAsync } from 'fastify';
 import { getRequestQueryString } from '../../../../swagger/schema';
 import { validatePostResume } from '../../../../validations';
+import Anthropic from '@anthropic-ai/sdk';
+import { BetaTextBlock } from '@anthropic-ai/sdk/resources/beta/messages/messages';
 
-const resume: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
+const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
   fastify.get('/', { ...getRequestQueryString }, async (request, reply) => {
     const dbClient = fastify.container<PrismaClient>('PrismaClient');
     const resumes = await dbClient.resumes.findMany({
@@ -19,6 +21,7 @@ const resume: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
 
   type ResumePostBody = {
     storageId: string;
+    base64Data: string;
   };
 
   fastify.post<{ Body: ResumePostBody }>(
@@ -27,8 +30,49 @@ const resume: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
       const body = await validatePostResume.validate(request.body);
+
+      const anthropic = new Anthropic({apiKey: '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'});
+      const response = await anthropic.beta.messages.create({
+        model: 'claude-3-5-sonnet-20241022',
+        betas: ["pdfs-2024-09-25"],
+        max_tokens: 1024,
+        messages: [
+          {
+            content: [
+              {
+                type: 'document',
+                source: {
+                  media_type: 'application/pdf',
+                  type: 'base64',
+                  data: request.body.base64Data,
+                },
+              },
+              {
+                type: 'text',
+                text: 'I need to review the resume that is uploaded. The resume will be scored on three metrics in double values between 0.0 and 100.0, impact score, presentation score and competency score. You have to return the response in the following JSON format: { impactScore: 20.0, presentationScore: 20.0, competencyScore: 20.0}. I only need the JSON in the response and nothing else',
+              },
+            ],
+            role: 'user',
+          },
+        ],
+      });
+      let impactScore = 0.0;
+      let presentationScore = 0.0;
+      let competencyScore = 0.0;
+      const anthropicContent = response.content;
+      if(anthropicContent.length > 0) {
+        const content = anthropicContent[0] as BetaTextBlock;
+        const scores = JSON.parse(content.text);
+        impactScore = scores['impactScore'];
+        presentationScore = scores['presentationScore'];
+        competencyScore = scores['competencyScore'];
+      }
+
       const createdResume = await dbClient.resumes.create({
         data: {
+          impactScore: impactScore,
+          presentationScore: presentationScore,
+          competencyScore: competencyScore,
           storage: {
             connect: {
               id: body.storageId,

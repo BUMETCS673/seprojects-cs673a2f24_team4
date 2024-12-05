@@ -12,6 +12,7 @@ import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import MenuButton from './MenuButton';
 import { ROUTES } from 'src/react_router/routes';
 import { useNavigate } from 'react-router-dom';
+import UserService from 'src/services/UserService';
 
 const MenuItem = styled(MuiMenuItem)({
   margin: '2px 0',
@@ -44,6 +45,11 @@ export default function OptionsMenu() {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleLogout = () => {
+    setAnchorEl(null);
+    UserService.doLogout();
   };
 
   return (
@@ -87,7 +93,7 @@ export default function OptionsMenu() {
         ))}
         <Divider />
         <MenuItem
-          onClick={handleClose}
+          onClick={handleLogout}
           sx={{
             [`& .${listItemIconClasses.root}`]: {
               ml: 'auto',

@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from 'src/redux/store';
 import { axiosClient } from 'src/services/api';
+import { Buffer } from 'buffer';
 
 interface StorageRelation {
   id: String;
@@ -49,8 +50,15 @@ export const getResume = createAsyncThunk(
 
 export const createResume = createAsyncThunk(
   'resume/createResume',
-  async (ResumePostBody: { storageId: String }, thunkAPI) => {
-    const createResumeResponse = await axiosClient.post('/resume', ResumePostBody);
+  async (ResumePostBody: { storageId: String, fileData: Blob }, thunkAPI) => {
+    const arrayBuffer = await ResumePostBody.fileData.arrayBuffer();
+    const pdfBase64 = Buffer.from(arrayBuffer).toString('base64');
+    const postBody = {
+      storageId: ResumePostBody.storageId,
+      base64Data: pdfBase64
+    };
+
+    const createResumeResponse = await axiosClient.post('/resume', postBody);
     return createResumeResponse.data;
   },
 );

@@ -60,7 +60,7 @@ export const ApplicantResumeAnalysis = () => {
       uploadFile({ fileData: blob, fileName: selectedFile.name }),
     );
     console.log(uploadResponse);
-    await dispatch(createResume({ storageId: uploadResponse.payload.id }));
+    await dispatch(createResume({ storageId: uploadResponse.payload.id, fileData: blob }));
     await dispatch(getResume());
     setIsLoading(false);
     setOpenDialog(false);
