@@ -145,7 +145,7 @@ export const ApplicantResumeAnalysis = () => {
                   <Stack
                     direction="row"
                     sx={{
-                      width: 1000,
+                      width: '100%',
                       justifyContent: 'space-evenly',
                       alignContent: { xs: 'center', sm: 'flex-start' },
                       alignItems: 'center',
@@ -193,7 +193,6 @@ export const ApplicantResumeAnalysis = () => {
                     </Typography>
                   </div>
                 </div>
-                <KeyboardArrowRightIcon />
               </CardContent>
             </Card>
           </Grid>
