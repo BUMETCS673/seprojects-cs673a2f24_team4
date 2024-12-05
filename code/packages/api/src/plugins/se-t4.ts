@@ -7,10 +7,11 @@ import slugify from 'slugify';
 import { ValidationError } from 'yup';
 import container from '../container';
 
-const path = require('path');
+import * as path from 'path';
 
 export interface SeT4PluginOptions {
   // Specify plugin options here
+  id: null;
 }
 
 // The use of fastify-plugin is required to be able
@@ -70,7 +71,7 @@ export default fp<SeT4PluginOptions>(async (fastify, _opts) => {
       }
       params.args.where['deletedAt'] = null;
     }
-    if (params.action == 'findMany') {
+    if (params.action == 'findMany' && params.model != 'RecruiterShortlist') {
       if (!params.args) {
         params.args = {};
       }
