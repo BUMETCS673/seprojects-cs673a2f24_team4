@@ -49,7 +49,7 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
               },
               {
                 type: 'text',
-                text: 'I need to review the resume that is uploaded. The resume will be scored on three metrics in double values between 0.0 and 100.0, impact score, presentation score and competency score. You have to return the response in the following JSON format: { impactScore: 20.0, presentationScore: 20.0, competencyScore: 20.0}. I only need the JSON in the response and nothing else',
+                text: 'I need to review the resume that is uploaded. The resume will be scored on three metrics in double values between 0.0 and 100.0, impact score, presentation score and competency score. I also need a short paragraph for the review and improvements. You have to return the response in the following JSON format: { impactScore: 20.0, presentationScore: 20.0, competencyScore: 20.0, review: sometext}. I only need the JSON in the response and nothing else',
               },
             ],
             role: 'user',
@@ -59,6 +59,7 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
       let impactScore = 0.0;
       let presentationScore = 0.0;
       let competencyScore = 0.0;
+      let review = '';
       const anthropicContent = response.content;
       if (anthropicContent.length > 0) {
         const content = anthropicContent[0] as BetaTextBlock;
@@ -66,6 +67,7 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
         impactScore = scores['impactScore'];
         presentationScore = scores['presentationScore'];
         competencyScore = scores['competencyScore'];
+        review = scores['review'];
       }
 
       const createdResume = await dbClient.resumes.create({
@@ -73,6 +75,7 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
           impactScore: impactScore,
           presentationScore: presentationScore,
           competencyScore: competencyScore,
+          review: review,
           storage: {
             connect: {
               id: body.storageId,

@@ -43,7 +43,7 @@ export const ApplicantResumeAnalysis = () => {
   const [page, setPage] = useState(1);
   const cardsPerPage = 5;
 
-  const [sortOption, setSortOption] = useState('name');
+  const [sortOption, setSortOption] = useState('date');
 
   const handleImportResume = () => {
     setOpenDialog(true);
