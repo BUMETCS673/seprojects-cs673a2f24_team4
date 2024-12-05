@@ -91,7 +91,7 @@ model Resumes {
   impactScore       Float?
   presentationScore Float?
   competencyScore   Float?
-
+  review       String @default("")
   user    Users   @relation(fields: [userId], references: [id])
   storage Storage @relation(fields: [storageId], references: [id])
 
@@ -130,6 +130,7 @@ model Applications {
   applicantId  String
   jobListingId String
   resumeId     String
+  matchScore Float? @default(0.0)
 
   RecruiterShortlist RecruiterShortlist[]
 }

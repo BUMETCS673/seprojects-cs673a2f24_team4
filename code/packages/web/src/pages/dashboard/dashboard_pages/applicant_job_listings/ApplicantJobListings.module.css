@@ -1,3 +1,5 @@
+/* ApplicantJobListings.module.css */
+
 .container {
   width: 100%;
   max-width: 1700px;
@@ -5,6 +7,52 @@
 
 .title {
   margin-bottom: 16px;
+  font-weight: bold !important;
+}
+
+.listContainer {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.jobInfo {
+  flex-grow: 1;
+}
+
+.jobTitle {
+  font-weight: bold;
+}
+
+.jobSubtitle {
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.viewButton {
+  color: #1976d2;
+}
+
+.deleteButton {
+  color: #f44336;
+}
+
+.divider {
+  background-color: #ddd;
+  height: 1px;
+}
+
+.footerStack {
+  margin-top: 32px;
 }
 
 .stack {
@@ -15,10 +63,10 @@
   flex-grow: 1;
 }
 
-.footerStack {
-  margin-top: 32px;
-}
-
 .copyright {
   margin: 32px 0;
+}
+
+.confirmButton {
+  color: #f44336; /* Red color for the confirm delete button */
 }

@@ -41,3 +41,8 @@
   font-weight: bold;
   border-bottom: 1px solid white;
 }
+
+.apply_button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

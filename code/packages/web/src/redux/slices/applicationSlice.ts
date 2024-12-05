@@ -41,6 +41,17 @@ export const getApplications = createAsyncThunk(
   },
 );
 
+export const postApplication = createAsyncThunk(
+  'applications/postApplication',
+  async (
+    applicationPostBody: { jobListingId: string; resumeId: string },
+    thunkAPI,
+  ) => {
+    const response = await axiosClient.post(`/applications`, applicationPostBody);
+    return response.data;
+  },
+);
+
 const applicationSlice = createSlice({
   name: 'applications',
   initialState,
@@ -57,6 +68,25 @@ const applicationSlice = createSlice({
     );
     builder.addCase(
       getApplications.rejected,
+      (state, action: PayloadAction<any>) => {
+        state.loading = false;
+        state.response = [];
+        state.error = action.payload.error.message;
+      },
+    );
+
+    builder.addCase(postApplication.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(
+      postApplication.fulfilled,
+      (state, action: PayloadAction<any>) => {
+        state.loading = false;
+        state.response.push(action.payload);
+      },
+    );
+    builder.addCase(
+      postApplication.rejected,
       (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.response = [];
