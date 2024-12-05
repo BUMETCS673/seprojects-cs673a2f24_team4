@@ -46,7 +46,8 @@ export default function MenuContent() {
   const navigate = useNavigate();
   const userDetails = useSelector((state: RootState) => state.me);
   const userGroup = userDetails.response?.user?.group;
-  if (userGroup == 'user') {
+  const exists = mainListItems.some((item) => item.text == 'Resume Analysis');
+  if (userGroup == 'user' && !exists) {
     mainListItems.push({
       text: 'Resume Analysis',
       icon: <DocumentScannerRounded />,
