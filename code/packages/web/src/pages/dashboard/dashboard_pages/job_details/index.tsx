@@ -110,9 +110,13 @@ const JobDetails = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button variant="contained" onClick={handleApply}>
-            Apply
-          </Button>
+          {userGroup == 'user' ? (
+            <Button variant="contained" onClick={handleApply}>
+              Apply
+            </Button>
+          ) : (
+            <></>
+          )}
         </DialogActions>
       </Dialog>
     </div>

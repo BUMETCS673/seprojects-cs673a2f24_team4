@@ -13,7 +13,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       const jobListings = await dbClient.jobListings.findMany({
         where: { userId: request.userId },
         include: {
-          Applications: true,
+          Applications: { include: { resume: true } },
         },
       });
       reply.send(jobListings);
