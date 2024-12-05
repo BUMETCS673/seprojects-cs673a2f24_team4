@@ -33,7 +33,7 @@ const JobDetails = () => {
   const { jobId } = useParams();
   const resumes = useSelector((state: RootState) => state.resume);
   const shortListData = useSelector((state: RootState) => state.shortList);
-  console.log(shortListData)
+  console.log(shortListData);
   const jobs = useSelector((state: RootState) => state.job);
   const jobData = jobs.response?.find((job) => job.id == jobId);
   const dispatch = useAppDispatch();
@@ -174,9 +174,9 @@ const JobDetails = () => {
                     </TableCell>
                     <TableCell>Application ID</TableCell>
                     <TableCell>Resume ID</TableCell>
-                    <TableCell>Impact</TableCell>
-                    <TableCell>Presentation</TableCell>
-                    <TableCell>Competency</TableCell>
+                    <TableCell>Match Score</TableCell>
+                    {/* <TableCell>Presentation</TableCell>
+                    <TableCell>Competency</TableCell> */}
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -204,15 +204,13 @@ const JobDetails = () => {
                         </TableCell>
                         <TableCell>{application.id || 'N/A'}</TableCell>
                         <TableCell>{application.resume?.id || 'N/A'}</TableCell>
-                        <TableCell>
-                          {application.resume?.impactScore || 'N/A'}
-                        </TableCell>
-                        <TableCell>
+                        <TableCell>{application.matchScore || 'N/A'}</TableCell>
+                        {/* <TableCell>
                           {application.resume?.presentationScore || 'N/A'}
                         </TableCell>
                         <TableCell>
                           {application.resume?.competencyScore || 'N/A'}
-                        </TableCell>
+                        </TableCell> */}
                       </TableRow>
                     );
                   })}
@@ -243,10 +241,15 @@ const JobDetails = () => {
                 {shortListData.response?.map((shortListElement) => (
                   <TableRow key={shortListElement.application.id}>
                     <TableCell>{shortListElement.application.id || 'N/A'}</TableCell>
-                    <TableCell>{shortListElement.application.resume?.id || 'N/A'}</TableCell>
-                    <TableCell>{shortListElement.application.resume?.impactScore || 'N/A'}</TableCell>
                     <TableCell>
-                      {shortListElement.application.resume?.presentationScore || 'N/A'}
+                      {shortListElement.application.resume?.id || 'N/A'}
+                    </TableCell>
+                    <TableCell>
+                      {shortListElement.application.resume?.impactScore || 'N/A'}
+                    </TableCell>
+                    <TableCell>
+                      {shortListElement.application.resume?.presentationScore ||
+                        'N/A'}
                     </TableCell>
                     <TableCell>
                       {shortListElement.application.resume?.competencyScore || 'N/A'}

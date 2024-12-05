@@ -83,6 +83,7 @@ Table Applications {
   applicantId String [not null]
   jobListingId String [not null]
   resumeId String [not null]
+  matchScore Float [default: 0]
   RecruiterShortlist RecruiterShortlist [not null]
 }
 

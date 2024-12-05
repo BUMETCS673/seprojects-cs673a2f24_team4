@@ -130,6 +130,7 @@ model Applications {
   applicantId  String
   jobListingId String
   resumeId     String
+  matchScore Float? @default(0.0)
 
   RecruiterShortlist RecruiterShortlist[]
 }
