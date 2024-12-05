@@ -50,7 +50,7 @@ export const createJob = createAsyncThunk(
     },
     _thunkAPI,
   ) => {
-    const jobCreationResponse = await axiosClient.post('/job', JobListingsPostBody);
+    const jobCreationResponse = await axiosClient.post('/job', {active:true,...JobListingsPostBody});
     return jobCreationResponse.data;
   },
 );
@@ -76,7 +76,10 @@ export const updateJob = createAsyncThunk(
 
 export const deleteJob = createAsyncThunk(
   'job/deleteJob',
-  async (_jobId: String, _thunkAPI) => {},
+  async (jobId: string, _thunkAPI) => {
+    await axiosClient.delete(`/job?jobId=${jobId}`,)
+    return jobId;
+  },
 );
 
 const jobSlice = createSlice({
@@ -130,6 +133,19 @@ const jobSlice = createSlice({
       state.response[objIndex] = action.payload;
     });
     builder.addCase(updateJob.rejected, (state, action: PayloadAction<any>) => {
+      state.loading = false;
+      state.error = action.payload.error.message;
+    });
+
+    builder.addCase(deleteJob.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(deleteJob.fulfilled, (state, action: PayloadAction<any>) => {
+      state.loading = false;
+      var objIndex = state.response.findIndex((obj) => obj.id == action.payload);
+      state.response.splice(objIndex,1)
+    });
+    builder.addCase(deleteJob.rejected, (state, action: PayloadAction<any>) => {
       state.loading = false;
       state.error = action.payload.error.message;
     });

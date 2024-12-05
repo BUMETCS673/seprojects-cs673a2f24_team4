@@ -105,5 +105,23 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       }
     },
   );
+
+  fastify.delete<{ Querystring: { jobId: string } }>(
+    '/',
+    { ...getRequestQueryString },
+    async (request, reply) => {
+      const dbClient = fastify.container<PrismaClient>('PrismaClient');
+      if (request.authUser.group.includes('recruiter')) {
+        await dbClient.jobListings.delete({
+          where: {
+            id: request.query.jobId,
+          },
+        });
+        reply.code(204)
+      } else {
+        reply.status(400).send({ message: 'Not authorized' });
+      }
+    },
+  );
 };
 export default job;
