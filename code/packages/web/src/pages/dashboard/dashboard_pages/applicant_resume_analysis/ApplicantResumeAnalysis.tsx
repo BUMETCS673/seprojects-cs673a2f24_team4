@@ -187,6 +187,11 @@ export const ApplicantResumeAnalysis = () => {
                       </Typography>
                     </Stack>
                   </Stack>
+                  <div>
+                    <Typography variant="body">
+                      <>{resume.review}</>
+                    </Typography>
+                  </div>
                 </div>
                 <KeyboardArrowRightIcon />
               </CardContent>

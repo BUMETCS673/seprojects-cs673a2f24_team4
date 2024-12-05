@@ -20,6 +20,7 @@ interface ResumeResponse {
   impactScore?: Number;
   presentationScore?: Number;
   competencyScore?: Number;
+  review?: String;
   createdAt: Date;
   updatedAt: Date;
   deletedAt?: Date;
@@ -50,12 +51,12 @@ export const getResume = createAsyncThunk(
 
 export const createResume = createAsyncThunk(
   'resume/createResume',
-  async (ResumePostBody: { storageId: String, fileData: Blob }, thunkAPI) => {
+  async (ResumePostBody: { storageId: String; fileData: Blob }, thunkAPI) => {
     const arrayBuffer = await ResumePostBody.fileData.arrayBuffer();
     const pdfBase64 = Buffer.from(arrayBuffer).toString('base64');
     const postBody = {
       storageId: ResumePostBody.storageId,
-      base64Data: pdfBase64
+      base64Data: pdfBase64,
     };
 
     const createResumeResponse = await axiosClient.post('/resume', postBody);
