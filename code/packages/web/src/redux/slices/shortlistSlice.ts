@@ -4,9 +4,9 @@ import { axiosClient } from 'src/services/api';
 
 interface ResumeBody {
   id: string;
-  impactScore?: Number;
-  presentationScore?: Number;
-  competencyScore?: Number;
+  impactScore?: string;
+  presentationScore?: string;
+  competencyScore?: string;
   createdAt: Date;
   updatedAt: Date;
   deletedAt?: Date;

@@ -33,6 +33,7 @@ const JobDetails = () => {
   const { jobId } = useParams();
   const resumes = useSelector((state: RootState) => state.resume);
   const shortListData = useSelector((state: RootState) => state.shortList);
+  console.log(shortListData)
   const jobs = useSelector((state: RootState) => state.job);
   const jobData = jobs.response?.find((job) => job.id == jobId);
   const dispatch = useAppDispatch();
@@ -105,11 +106,6 @@ const JobDetails = () => {
         }
       }
     }
-    if (shortlisted) {
-      setShortlistedApplications(shortlisted);
-    }
-    // Optionally clear selected applications after shortlisting
-    setSelectedApplications([]);
   };
 
   return (
@@ -227,7 +223,7 @@ const JobDetails = () => {
         )}
 
       {/* Shortlisted Applications Table */}
-      {shortlistedApplications.length > 0 && (
+      {shortListData.response?.length > 0 && (
         <div style={{ marginTop: '20px' }}>
           <Typography component="h1" variant="h5" className={styles.title}>
             Shortlisted Applications ({shortlistedApplications.length})
@@ -244,16 +240,16 @@ const JobDetails = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {shortlistedApplications.map((application) => (
-                  <TableRow key={application.id}>
-                    <TableCell>{application.id || 'N/A'}</TableCell>
-                    <TableCell>{application.resume?.id || 'N/A'}</TableCell>
-                    <TableCell>{application.resume?.impactScore || 'N/A'}</TableCell>
+                {shortListData.response?.map((shortListElement) => (
+                  <TableRow key={shortListElement.application.id}>
+                    <TableCell>{shortListElement.application.id || 'N/A'}</TableCell>
+                    <TableCell>{shortListElement.application.resume?.id || 'N/A'}</TableCell>
+                    <TableCell>{shortListElement.application.resume?.impactScore || 'N/A'}</TableCell>
                     <TableCell>
-                      {application.resume?.presentationScore || 'N/A'}
+                      {shortListElement.application.resume?.presentationScore || 'N/A'}
                     </TableCell>
                     <TableCell>
-                      {application.resume?.competencyScore || 'N/A'}
+                      {shortListElement.application.resume?.competencyScore || 'N/A'}
                     </TableCell>
                   </TableRow>
                 ))}
