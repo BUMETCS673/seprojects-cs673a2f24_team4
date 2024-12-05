@@ -6,12 +6,17 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  List,
-  ListItem,
-  ListItemText,
   Radio,
   RadioGroup,
   FormControlLabel,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Checkbox,
 } from '@mui/material';
 import styles from './JobDetails.module.css';
 import moment from 'moment';
@@ -26,10 +31,15 @@ import { postApplication } from 'src/redux/slices/applicationSlice';
 const JobDetails = () => {
   const { jobId } = useParams();
   const resumes = useSelector((state: RootState) => state.resume);
+  const jobs = useSelector((state: RootState) => state.job);
+  const jobData = jobs.response?.find((job) => job.id == jobId);
+  console.log(jobData);
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     dispatch(getResume());
-  }, []);
+  }, [dispatch]);
+
   const userDetails = useAppSelector((state: RootState) => state.me);
   const userGroup = userDetails.response?.user?.group;
 
@@ -38,13 +48,24 @@ const JobDetails = () => {
   // State to control the dialog open/close
   const [open, setOpen] = useState(false);
 
-  // State to store the selected entry
+  // State to store the selected resume entry
   const [selectedEntry, setSelectedEntry] = useState<string | null>(null);
 
-  // Sample list entries (replace with your actual data)
-  const resumeNames = resumes.response?.map((resume) => {
-    return { id: resume.id, name: resume.storage.name };
-  });
+  // State to control the visibility of the applications table
+  const [showApplications, setShowApplications] = useState(false);
+
+  // State to keep track of selected applications
+  const [selectedApplications, setSelectedApplications] = useState<string[]>([]);
+
+  // State to store shortlisted applications
+  const [shortlistedApplications, setShortlistedApplications] = useState<any[]>([]);
+
+  // List of resume names
+  const resumeNames =
+    resumes.response?.map((resume) => {
+      return { id: resume.id, name: resume.storage.name };
+    }) || [];
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -54,17 +75,27 @@ const JobDetails = () => {
   };
 
   const handleApply = async () => {
-    console.log('Applying with entry:', selectedEntry);
     if (jobId && selectedEntry) {
-      const { payload } = await dispatch(
+      await dispatch(
         postApplication({ jobListingId: jobId, resumeId: selectedEntry }),
       );
     }
     setOpen(false);
   };
 
-  const handleSelectionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSelectionChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     setSelectedEntry(event.target.value);
+  };
+
+  const handleShortlist = () => {
+    const shortlisted = jobData.Applications.filter((application) =>
+      selectedApplications.includes(application.id)
+    );
+    setShortlistedApplications(shortlisted);
+    // Optionally clear selected applications after shortlisting
+    setSelectedApplications([]);
   };
 
   return (
@@ -93,9 +124,136 @@ const JobDetails = () => {
 
       <div>{jobDetail?.coreRequirements}</div>
 
+      {/* Applications Button - Visible only to recruiters */}
+      {userGroup === 'recruiter' && (
+        <div style={{ marginTop: '20px' }}>
+          <Button
+            variant="contained"
+            onClick={() => setShowApplications((prev) => !prev)}
+          >
+            {showApplications ? 'Hide Applications' : 'Show Applications'}
+          </Button>
+          {showApplications && (
+            <Button
+              variant="contained"
+              onClick={handleShortlist}
+              disabled={selectedApplications.length === 0}
+              style={{ marginLeft: '10px' }}
+            >
+              Shortlist
+            </Button>
+          )}
+        </div>
+      )}
+
+      {/* Applications Table - Visible only to recruiters */}
+      {userGroup === 'recruiter' &&
+        showApplications &&
+        jobData?.Applications &&
+        jobData.Applications.length > 0 && (
+          <div style={{ marginTop: '20px' }}>
+            <Typography component="h1" variant="h5" className={styles.title}>
+              Applications ({jobData.Applications.length})
+            </Typography>
+            <TableContainer component={Paper}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell padding="checkbox">
+                      {/* Optional: Add a "Select All" checkbox here */}
+                    </TableCell>
+                    <TableCell>Application ID</TableCell>
+                    <TableCell>Resume ID</TableCell>
+                    <TableCell>Impact</TableCell>
+                    <TableCell>Presentation</TableCell>
+                    <TableCell>Competency</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {jobData.Applications.map((application) => {
+                    const isSelected = selectedApplications.includes(application.id);
+                    return (
+                      <TableRow key={application.id}>
+                        <TableCell padding="checkbox">
+                          <Checkbox
+                            checked={isSelected}
+                            onChange={(event) => {
+                              const checked = event.target.checked;
+                              setSelectedApplications((prevSelected) => {
+                                if (checked) {
+                                  return [...prevSelected, application.id];
+                                } else {
+                                  return prevSelected.filter(
+                                    (id) => id !== application.id
+                                  );
+                                }
+                              });
+                            }}
+                            inputProps={{ 'aria-label': 'select application' }}
+                          />
+                        </TableCell>
+                        <TableCell>{application.id || 'N/A'}</TableCell>
+                        <TableCell>{application.resume?.id || 'N/A'}</TableCell>
+                        <TableCell>
+                          {application.resume?.impactScore || 'N/A'}
+                        </TableCell>
+                        <TableCell>
+                          {application.resume?.presentationScore || 'N/A'}
+                        </TableCell>
+                        <TableCell>
+                          {application.resume?.competencyScore || 'N/A'}
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
+        )}
+
+      {/* Shortlisted Applications Table */}
+      {shortlistedApplications.length > 0 && (
+        <div style={{ marginTop: '20px' }}>
+          <Typography component="h1" variant="h5" className={styles.title}>
+            Shortlisted Applications ({shortlistedApplications.length})
+          </Typography>
+          <TableContainer component={Paper}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Application ID</TableCell>
+                  <TableCell>Resume ID</TableCell>
+                  <TableCell>Impact</TableCell>
+                  <TableCell>Presentation</TableCell>
+                  <TableCell>Competency</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {shortlistedApplications.map((application) => (
+                  <TableRow key={application.id}>
+                    <TableCell>{application.id || 'N/A'}</TableCell>
+                    <TableCell>{application.resume?.id || 'N/A'}</TableCell>
+                    <TableCell>
+                      {application.resume?.impactScore || 'N/A'}
+                    </TableCell>
+                    <TableCell>
+                      {application.resume?.presentationScore || 'N/A'}
+                    </TableCell>
+                    <TableCell>
+                      {application.resume?.competencyScore || 'N/A'}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
+      )}
+
       {/* Dialog Component */}
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Select an Option</DialogTitle>
+        <DialogTitle>Select a Resume</DialogTitle>
         <DialogContent>
           <RadioGroup value={selectedEntry} onChange={handleSelectionChange}>
             {resumeNames.map((entry) => (
@@ -110,13 +268,11 @@ const JobDetails = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          {userGroup == 'user' ? (
+          {userGroup === 'user' ? (
             <Button variant="contained" onClick={handleApply}>
               Apply
             </Button>
-          ) : (
-            <></>
-          )}
+          ) : null}
         </DialogActions>
       </Dialog>
     </div>
