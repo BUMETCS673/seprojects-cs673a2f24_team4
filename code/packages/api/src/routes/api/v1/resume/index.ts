@@ -56,8 +56,6 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
           },
         ],
       });
-      console.log('here');
-      console.log(response);
       let impactScore = 0.0;
       let presentationScore = 0.0;
       let competencyScore = 0.0;
