@@ -38,7 +38,7 @@
     "yarn": "^1.22.19"
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,json,css,md,ts,tsx}": [
+    "packages/**/*.{js,jsx,css,md,ts,tsx}": [
       "prettier --write",
       "eslint"
     ]
