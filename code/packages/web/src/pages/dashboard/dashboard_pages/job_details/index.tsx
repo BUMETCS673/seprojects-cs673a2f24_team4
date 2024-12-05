@@ -90,10 +90,12 @@ const JobDetails = () => {
   };
 
   const handleShortlist = () => {
-    const shortlisted = jobData.Applications.filter((application) =>
+    const shortlisted = jobData?.Applications.filter((application) =>
       selectedApplications.includes(application.id)
     );
+    if (shortlisted){
     setShortlistedApplications(shortlisted);
+    }
     // Optionally clear selected applications after shortlisting
     setSelectedApplications([]);
   };
