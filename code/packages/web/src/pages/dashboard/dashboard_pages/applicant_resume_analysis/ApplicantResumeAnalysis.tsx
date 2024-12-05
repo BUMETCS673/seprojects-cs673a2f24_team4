@@ -15,6 +15,7 @@ import {
   Select,
   FormControl,
   InputLabel,
+  Stack,
 } from '@mui/material';
 import './ApplicantResumeAnalysis.css';
 import { useSelector } from 'react-redux';
@@ -60,7 +61,9 @@ export const ApplicantResumeAnalysis = () => {
       uploadFile({ fileData: blob, fileName: selectedFile.name }),
     );
     console.log(uploadResponse);
-    await dispatch(createResume({ storageId: uploadResponse.payload.id, fileData: blob }));
+    await dispatch(
+      createResume({ storageId: uploadResponse.payload.id, fileData: blob }),
+    );
     await dispatch(getResume());
     setIsLoading(false);
     setOpenDialog(false);
@@ -139,6 +142,51 @@ export const ApplicantResumeAnalysis = () => {
                     Date Uploaded:{' '}
                     {moment(resume.createdAt).format('D MMM YYYY hh:mm:ss')}
                   </Typography>
+                  <Stack
+                    direction="row"
+                    sx={{
+                      width: 1000,
+                      justifyContent: 'space-evenly',
+                      alignContent: { xs: 'center', sm: 'flex-start' },
+                      alignItems: 'center',
+                      marginTop: 4,
+                      marginBottom: 2,
+                    }}
+                  >
+                    <Stack
+                      direction="column"
+                      sx={{ alignItems: 'center', alignContent: 'flex-start' }}
+                    >
+                      <Typography variant="h6" color="warning">
+                        Impact
+                      </Typography>
+                      <Typography variant="subtitle1">
+                        <>{resume.impactScore ?? 0}%</>
+                      </Typography>
+                    </Stack>
+                    <Stack
+                      direction="column"
+                      sx={{ alignItems: 'center', alignContent: 'flex-start' }}
+                    >
+                      <Typography variant="h6" color="info">
+                        Presentation
+                      </Typography>
+                      <Typography variant="subtitle1">
+                        <>{resume.presentationScore ?? 0}%</>
+                      </Typography>
+                    </Stack>
+                    <Stack
+                      direction="column"
+                      sx={{ alignItems: 'center', alignContent: 'flex-start' }}
+                    >
+                      <Typography variant="h6" color="success">
+                        Competency
+                      </Typography>
+                      <Typography variant="subtitle1">
+                        <>{resume.competencyScore ?? 0}%</>
+                      </Typography>
+                    </Stack>
+                  </Stack>
                 </div>
                 <KeyboardArrowRightIcon />
               </CardContent>
