@@ -31,10 +31,10 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
       const body = await validatePostResume.validate(request.body);
 
-      const anthropic = new Anthropic({apiKey: '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'});
+      const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
       const response = await anthropic.beta.messages.create({
         model: 'claude-3-5-sonnet-20241022',
-        betas: ["pdfs-2024-09-25"],
+        betas: ['pdfs-2024-09-25'],
         max_tokens: 1024,
         messages: [
           {
@@ -56,11 +56,13 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
           },
         ],
       });
+      console.log('here');
+      console.log(response);
       let impactScore = 0.0;
       let presentationScore = 0.0;
       let competencyScore = 0.0;
       const anthropicContent = response.content;
-      if(anthropicContent.length > 0) {
+      if (anthropicContent.length > 0) {
         const content = anthropicContent[0] as BetaTextBlock;
         const scores = JSON.parse(content.text);
         impactScore = scores['impactScore'];
