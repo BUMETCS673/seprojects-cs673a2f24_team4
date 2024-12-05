@@ -49,7 +49,7 @@ const resume: FastifyPluginAsync = async (fastify): Promise<void> => {
               },
               {
                 type: 'text',
-                text: 'I need to review the resume that is uploaded. The resume will be scored on three metrics in double values between 0.0 and 100.0, impact score, presentation score and competency score. I also need a short paragraph for the review and improvements. You have to return the response in the following JSON format: { impactScore: 20.0, presentationScore: 20.0, competencyScore: 20.0, review: sometext}. I only need the JSON in the response and nothing else',
+                text: 'I need to review the resume that is uploaded. The resume will be scored on three metrics in double values between 0.0 and 100.0, impact score(eye catching points), presentation score(overall structure and language) and competency score(skills and other relevant technical points). I also need a short paragraph for the review and improvements. You have to return the response in the following JSON format: { impactScore: 20.0, presentationScore: 20.0, competencyScore: 20.0, review: sometext}. I only need the JSON in the response and nothing else',
               },
             ],
             role: 'user',
