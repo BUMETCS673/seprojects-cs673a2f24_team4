@@ -20,6 +20,12 @@ const JobDetails = () => {
       </span>
 
       <div>{jobDetail?.description}</div>
+
+      <Typography component="h1" variant="h5" className={styles.title}>
+        Core Requirements
+      </Typography>
+
+      <div>{jobDetail?.coreRequirements}</div>
     </div>
   );
 };

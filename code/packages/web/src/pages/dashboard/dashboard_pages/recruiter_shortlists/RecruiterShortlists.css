@@ -1,0 +1,34 @@
+.recruiter-shortlists-container {
+  width: 100%;
+  max-width: 1700px;
+}
+
+.section-title {
+  margin-bottom: 16px; /* Assuming default theme spacing unit is 8px */
+}
+
+.stack-margin-bottom {
+  margin-bottom: 8px;
+}
+
+.grid-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.typography-margin-right {
+  margin-right: 16px;
+}
+
+.grid-margin-bottom {
+  margin-bottom: 16px;
+}
+
+/* Optional styling for even and odd rows in DataGrid
+.even {
+  background-color: #f9f9f9;
+}
+
+.odd {
+  background-color: #ffffff;
+} */

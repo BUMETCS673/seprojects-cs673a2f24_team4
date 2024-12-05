@@ -39,7 +39,7 @@ export default [
     },
   },
   {
-    files: ['packages/web/**/*.{js,jsx,json,css,md,ts,tsx}'],
+    files: ['packages/react-app/**/*.{js,jsx,json,css,md,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       parser: tsParser,
