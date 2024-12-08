@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0; /* Removes any top margin */
+  margin-bottom: 50px; /* Adjusts bottom margin as needed */
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.form {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Add spacing between text fields */
+}
+
+.textField :global(.MuiInputBase-root) {
+  font-size: 1rem;
+  background-color: #2a2a3d;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.textField :global(.MuiOutlinedInput-input) {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.multiline :global(.MuiOutlinedInput-input) {
+  padding: 8px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.multiline :global(textarea) {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+.textField :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: #4b4b5c;
+}
+
+.textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: #6c63ff;
+}
+
+.textField
+  :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}

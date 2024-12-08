@@ -59,6 +59,7 @@ Table Resumes {
   impactScore Float
   presentationScore Float
   competencyScore Float
+  review String [not null, default: '']
   user Users [not null]
   storage Storage [not null]
   createdAt DateTime [default: `now()`, not null]
@@ -82,6 +83,7 @@ Table Applications {
   applicantId String [not null]
   jobListingId String [not null]
   resumeId String [not null]
+  matchScore Float [default: 0]
   RecruiterShortlist RecruiterShortlist [not null]
 }
 

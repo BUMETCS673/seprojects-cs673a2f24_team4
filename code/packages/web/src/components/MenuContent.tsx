@@ -16,6 +16,8 @@ import {
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ROUTES } from 'src/react_router/routes';
 import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from 'src/redux/store';
 
 type ListItem = {
   text: string;
@@ -24,14 +26,9 @@ type ListItem = {
 };
 
 const mainListItems: ListItem[] = [
-  { text: 'Analytics', icon: <AnalyticsRoundedIcon />, path: ROUTES.analytics },
-  {
-    text: 'Resume Analysis',
-    icon: <DocumentScannerRounded />,
-    path: ROUTES.resumeAnalysis,
-  },
+  // { text: 'Analytics', icon: <AnalyticsRoundedIcon />, path: ROUTES.analytics },
   { text: 'Job Listings', icon: <WorkRounded />, path: ROUTES.jobListings },
-  { text: 'Shortlists', icon: <AssignmentRoundedIcon />, path: ROUTES.shortlists },
+  // { text: 'Shortlists', icon: <AssignmentRoundedIcon />, path: ROUTES.shortlists },
 ];
 
 const secondaryListItems: ListItem[] = [
@@ -47,6 +44,16 @@ const secondaryListItems: ListItem[] = [
 export default function MenuContent() {
   const location = useLocation();
   const navigate = useNavigate();
+  const userDetails = useSelector((state: RootState) => state.me);
+  const userGroup = userDetails.response?.user?.group;
+  const exists = mainListItems.some((item) => item.text == 'Resume Analysis');
+  if (userGroup == 'user' && !exists) {
+    mainListItems.push({
+      text: 'Resume Analysis',
+      icon: <DocumentScannerRounded />,
+      path: ROUTES.resumeAnalysis,
+    });
+  }
 
   const menuSelection = useCallback((item: ListItem) => {
     navigate(item.path);

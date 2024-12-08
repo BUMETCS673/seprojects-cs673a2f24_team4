@@ -13,7 +13,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       const jobListings = await dbClient.jobListings.findMany({
         where: { userId: request.userId },
         include: {
-          Applications: true,
+          Applications: { include: { resume: true } },
         },
       });
       reply.send(jobListings);
@@ -100,6 +100,24 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
           },
         });
         reply.send(jobListings);
+      } else {
+        reply.status(400).send({ message: 'Not authorized' });
+      }
+    },
+  );
+
+  fastify.delete<{ Querystring: { jobId: string } }>(
+    '/',
+    { ...getRequestQueryString },
+    async (request, reply) => {
+      const dbClient = fastify.container<PrismaClient>('PrismaClient');
+      if (request.authUser.group.includes('recruiter')) {
+        await dbClient.jobListings.delete({
+          where: {
+            id: request.query.jobId,
+          },
+        });
+        reply.code(204);
       } else {
         reply.status(400).send({ message: 'Not authorized' });
       }
