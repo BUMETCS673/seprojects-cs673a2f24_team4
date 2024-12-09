@@ -94,6 +94,8 @@ password1
         KEYCLOAK_AUTH_URL=http://localhost:8080/
         KEYCLOAK_AUTH_REALM={realm id goes here} # This is the id of the Realm you created
 
+        ANTHROPIC_API_KEY="{anthropic-api-key}" # Your Anthropic API Key
+
         #Example
         KEYCLOAK_AUTH_REALM=t4
         ```
