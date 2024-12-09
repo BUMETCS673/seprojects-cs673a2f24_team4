@@ -4,6 +4,16 @@
 
 ResumAI is an Applicant Tracking System (ATS) designed for both applicants and recruiters. For applicants, it provides an intelligent overview of their resumes based on job descriptions and allows them to upload their resumes to apply for jobs. For recruiters, it offers a ranked list of all resumes, optimizing the recruitment process. Built with React, Fastify, PostgreSQL, Redis, and integrated with AWS and Kubernetes, ResumAI aims to streamline the hiring workflow with advanced tech solutions.
 
+App is up on http://3.80.136.244:5173/
+
+Recruiter side:
+test_recruiter_1
+password1
+
+Appliacant side:
+test_applicant_1
+password1
+
 ## Setup Instructions
 
 1. **Install Dependencies**<br >
@@ -83,6 +93,8 @@ ResumAI is an Applicant Tracking System (ATS) designed for both applicants and r
        
         KEYCLOAK_AUTH_URL=http://localhost:8080/
         KEYCLOAK_AUTH_REALM={realm id goes here} # This is the id of the Realm you created
+
+        ANTHROPIC_API_KEY="{anthropic-api-key}" # Your Anthropic API Key
 
         #Example
         KEYCLOAK_AUTH_REALM=t4
