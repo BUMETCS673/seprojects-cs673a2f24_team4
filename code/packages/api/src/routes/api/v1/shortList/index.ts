@@ -9,7 +9,7 @@ const shortList: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     { ...getRequestQueryString },
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         const shortlistedApplications = await dbClient.recruiterShortlist.findMany({
           where: {
             recruiterId: request.userId,
@@ -36,7 +36,7 @@ const shortList: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     { ...getRequestQueryString },
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         const body = await validatePostShortlist.validate(request.body);
         const newShortlist = await dbClient.recruiterShortlist.create({
           data: {
@@ -69,7 +69,7 @@ const shortList: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     { ...getRequestQueryString },
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         await dbClient.recruiterShortlist.delete({
           where: {
             id: request.query.shortlistId,

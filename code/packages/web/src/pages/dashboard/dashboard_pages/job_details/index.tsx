@@ -119,7 +119,7 @@ const JobDetails = () => {
       </span>
 
       <div className={styles.apply_button}>
-        {userGroup === 'user' ? (
+        {!userGroup || userGroup !== 'recruiter' ? (
           <Button variant="contained" onClick={handleClickOpen}>
             Apply
           </Button>
@@ -135,7 +135,7 @@ const JobDetails = () => {
       <div>{jobDetail?.coreRequirements}</div>
 
       {/* Applications Button - Visible only to recruiters */}
-      {userGroup === 'recruiter' && (
+      {userGroup && userGroup === 'recruiter' && (
         <div style={{ marginTop: '20px' }}>
           <Button
             variant="contained"
@@ -145,6 +145,7 @@ const JobDetails = () => {
           </Button>
           {showApplications && (
             <Button
+              className={styles.shortlistButton}
               variant="contained"
               onClick={handleShortlist}
               disabled={selectedApplications.length === 0}
@@ -157,7 +158,8 @@ const JobDetails = () => {
       )}
 
       {/* Applications Table - Visible only to recruiters */}
-      {userGroup === 'recruiter' &&
+      {userGroup &&
+        userGroup === 'recruiter' &&
         showApplications &&
         jobData?.Applications &&
         jobData.Applications.length > 0 && (
@@ -279,7 +281,7 @@ const JobDetails = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          {userGroup === 'user' ? (
+          {!userGroup || userGroup !== 'recruiter' ? (
             <Button variant="contained" onClick={handleApply}>
               Apply
             </Button>

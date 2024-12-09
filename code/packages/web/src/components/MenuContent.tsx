@@ -15,9 +15,10 @@ import {
 } from '@mui/icons-material';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ROUTES } from 'src/react_router/routes';
-import { useCallback } from 'react';
-import { useSelector } from 'react-redux';
+import { useCallback, useEffect } from 'react';
 import { RootState } from 'src/redux/store';
+import { getMe } from 'src/redux/slices/meSlice';
+import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 
 type ListItem = {
   text: string;
@@ -42,12 +43,17 @@ const secondaryListItems: ListItem[] = [
 ];
 
 export default function MenuContent() {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(getMe);
+  }, []);
   const location = useLocation();
   const navigate = useNavigate();
-  const userDetails = useSelector((state: RootState) => state.me);
+  const userDetails = useAppSelector((state: RootState) => state.me);
   const userGroup = userDetails.response?.user?.group;
   const exists = mainListItems.some((item) => item.text == 'Resume Analysis');
-  if (userGroup == 'user' && !exists) {
+  if (userGroup && userGroup !== 'recruiter' && !exists) {
+    console.log(userGroup);
     mainListItems.push({
       text: 'Resume Analysis',
       icon: <DocumentScannerRounded />,

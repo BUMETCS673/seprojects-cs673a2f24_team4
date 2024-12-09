@@ -30,14 +30,14 @@ const me: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       const user = await dbClient.users.upsert({
         create: {
           email: request.authUser.email,
-          group: request.authUser.group[0],
+          group: request.authUser.group ? request.authUser.group[0] : 'user',
           firstName: body.firstName ? body.firstName : request.authUser.given_name,
           lastName: body.lastName ? body.lastName : request.authUser.family_name,
           phone: body.phone,
           ...providerDetails,
         },
         update: {
-          group: request.authUser.group[0],
+          group: request.authUser.group ? request.authUser.group[0] : 'user',
           firstName: body.firstName ? body.firstName : request.authUser.given_name,
           lastName: body.lastName ? body.lastName : request.authUser.family_name,
           phone: body.phone,
@@ -49,7 +49,7 @@ const me: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
       });
       const decoded = request.authUser;
       reply.send({ user, decoded });
-    }
+    },
   );
 };
 

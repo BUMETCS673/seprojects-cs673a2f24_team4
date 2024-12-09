@@ -23,6 +23,15 @@ import CreateJobListings from './pages/dashboard/dashboard_pages/create_job_list
 
 const commonRoutes: React.ReactElement[] = [
   <Route
+    key="/"
+    path="/"
+    element={
+      <DashboardLayout>
+        <ApplicantJobListings />
+      </DashboardLayout>
+    }
+  />,
+  <Route
     key={ROUTES.profile}
     path={ROUTES.profile}
     element={

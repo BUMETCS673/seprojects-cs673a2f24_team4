@@ -142,7 +142,7 @@ const applications: FastifyPluginAsync = async (fastify, opts): Promise<void> =>
     { ...getRequestQueryString },
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         const body = await validatePutApplications.validate(request.body);
         const updatedApplication = await dbClient.applications.update({
           where: {

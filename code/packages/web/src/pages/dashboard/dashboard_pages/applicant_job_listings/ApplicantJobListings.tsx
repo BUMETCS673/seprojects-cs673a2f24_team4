@@ -56,7 +56,7 @@ export const ApplicantJobListings = () => {
         <Typography component="h2" variant="h6" className={styles.title}>
           Job Listings
         </Typography>
-        {userGroup == 'recruiter' ? (
+        {userGroup && userGroup == 'recruiter' ? (
           <Button
             variant="contained"
             className={styles.createButton}
@@ -89,7 +89,7 @@ export const ApplicantJobListings = () => {
                 >
                   View Details
                 </Button>
-                {userGroup == 'recruiter' ? (
+                {userGroup && userGroup == 'recruiter' ? (
                   <Button
                     variant="text"
                     onClick={handleDeleteClick(job.id)}

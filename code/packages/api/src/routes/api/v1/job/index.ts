@@ -9,7 +9,7 @@ import {
 const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   fastify.get('/', { ...getRequestQueryString }, async (request, reply) => {
     const dbClient = fastify.container<PrismaClient>('PrismaClient');
-    if (request.authUser.group.includes('recruiter')) {
+    if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
       const jobListings = await dbClient.jobListings.findMany({
         where: { userId: request.userId },
         include: {
@@ -28,7 +28,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
       const searchTerm = request.query.searchTerm ? request.query.searchTerm : '';
-      if (request.authUser.group.includes('user')) {
+      if (request.authUser.group && !request.authUser.group?.includes('recruiter')) {
         const jobListings = await dbClient.jobListings.findMany({
           where: {
             active: true,
@@ -55,7 +55,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
       const body = await validatePostJobListing.validate(request.body);
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         const newJobListing = await dbClient.jobListings.create({
           data: {
             title: body.title,
@@ -89,7 +89,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
       const body = await validatePutJobListing.validate(request.body);
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         const jobListings = await dbClient.jobListings.update({
           where: { id: request.query.jobListingId, userId: request.userId },
           data: {
@@ -111,7 +111,7 @@ const job: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     { ...getRequestQueryString },
     async (request, reply) => {
       const dbClient = fastify.container<PrismaClient>('PrismaClient');
-      if (request.authUser.group.includes('recruiter')) {
+      if (request.authUser.group && request.authUser.group?.includes('recruiter')) {
         await dbClient.jobListings.delete({
           where: {
             id: request.query.jobId,
