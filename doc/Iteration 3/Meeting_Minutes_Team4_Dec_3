@@ -1,0 +1,415 @@
+CS673 Software Engineering 
+Team 4  : Team Four
+Meeting Minutes
+
+Meeting 9  
+
+Meeting Date: Dec 3rd  
+Time: 3:00 - 4:00 PM  
+Place: Zoom  
+Participants: Shubh, Hemant, Jaindra, Jerome, Tushar, Faizan  
+Minutes Taker: Jaindra  
+Timekeeper: Jaindra  
+Purpose: Finalizing project components and preparing for the presentation  
+
+
+Topics Discussed:  
+- Verified resume analysis tests and discussed UI requirements.  
+- Assigned frontend test and UI tasks.  
+- Reviewed backend progress and planned CI/CD setup.  
+- Planned the presentation and outlined key points to include.  
+
+Agenda:  
+1. Verify resume analysis tests.  
+2. Finalize UI components for the application.  
+3. Distribute frontend test and UI responsibilities.  
+4. Plan backend tasks and CI/CD setup.  
+5. Create the presentation for the professor by tomorrow evening.  
+
+
+Discussions:  
+- Resume Analysis Tests:  
+  - Resume analysis tests need to be verified for completeness and accuracy.  
+  - UI components supporting these functionalities need to be implemented.  
+
+- Frontend Tasks:  
+  - Shared frontend test and UI work among Jaindra, Jerome, and Hemant.  
+  - Tushar suggested streamlining the UI for ease of recruiter use.  
+
+- Backend Tasks:  
+  - Tushar and Shubh discussed ongoing backend tasks and integration with UI.  
+  - Backend to focus on stabilizing APIs and ensuring compatibility with the frontend.  
+
+- CI/CD Setup:  
+  - Scheduled for tomorrow by Jaindra and Tushar.  
+  - Focus on ensuring smooth deployment without interruptions.  
+
+- Presentation:  
+  - Agreed to prepare the presentation by tomorrow evening. 
+
+Key Decisions:  
+1. Verify resume analysis tests and complete associated UI.  
+2. Distribute frontend tasks among Jaindra, Jerome, and Hemant.  
+3. Tushar and Shubh to continue working on backend functionality.  
+4. Complete CI/CD setup by tomorrow.  
+5. Prepare and finalize the presentation by tomorrow evening.  
+
+Action Items:  
+1. Jaindra, Jerome, Hemant: Complete frontend test and UI tasks.  
+2. Tushar, Shubh: Finalize backend functionalities and integrate with frontend.  
+3. Jaindra, Tushar: Set up CI/CD tomorrow.  
+4. Team: Work on the presentation and ensure readiness by tomorrow evening.
+
+
+
+Meeting 8  
+Meeting Date: Nov 21st  
+Time: 5:00 - 6:00 PM  
+Place: Zoom  
+Participants: Shubh, Hemant, Jaindra, Jerome, Tushar, Faizan  
+Minutes Taker: Jaindra  
+Timekeeper: Jaindra  
+Purpose: Finalizing frontend flow and recruiter-side functionalities 
+
+Topics Discussed:  
+- Reviewed progress on recruiter-side functionalities and frontend requirements  
+- Discussed front-end improvements and implementation of key features, tests.
+- Identified pending tests and deployment needs  
+
+
+Agenda:  
+1. Finalize frontend flow for recruiter-side functionalities  
+3. Ensure functionality for deletion, updates, and verifications across components  
+4. Plan deployment and notify professor about app status  
+5. Address test coverage for frontend and recruiter-side  
+Discussions:  
+- Frontend Flow:  
+  - Tushar Emphasized the need to review CI checks thoroughly.  
+  - Ensure that frontend flow is aligned with recruiter-side needs.  
+
+- Application Review:  
+  - Job Listings: Transition to a stack layout instead of cards.  
+  - Recruiter Functions: Enable adding, viewing, and managing job listings and associated applications.  
+
+- Core Functionalities:  
+  - Deletion: Add verification before allowing deletion for resumes, JDs, and rows in all lists.  
+  - Update: Implement editing for all entities.  
+
+- Recruiter-Side:  
+  - Focused on improving recruiter functionalities and access control (led by Shubh).  
+
+- Testing:  
+  - Shubh and Jaindra to focus on front-end test cases to ensure all functionalities are working as expected.  
+  - Testing to cover API integrations and user flows comprehensively.  
+
+- Deployment:  
+  - Deployment of the application was highlighted as a critical next step.  
+  - Agreed to notify the professor post-deployment and ask her about the paid tier in AWS.  
+
+
+Key Decisions:  
+1. Ensure proper frontend flow with recruiter-side functionalities as a priority.  
+2. Add deletion and update functionalities with proper verifications.  
+3. Focus on comprehensive testing for frontend and recruiter-side.  
+4. Deploy the application promptly and communicate updates to the professor.  
+
+
+Action Items:  
+1. Jaindra, Shubh: Finalize frontend flow and test lines.  
+2. Shubh: Complete recruiter-side access control and improve UI components.  
+3. All Members: Address frontend test coverage for functionalities and flows.  
+4. Team: Prepare the app for deployment and finalize communication with the professor.
+
+
+
+Meeting 7
+Meeting Date: Nov 7th
+Time: 3:30 - 4:30 PM
+Place: In person
+Participants: Shubh, Hemant, Jaindra, Jerome, Tushar, Faizan
+Minutes Taker: Jaindra              
+Timekeeper: Jaindra
+Purpose: Sprints planning
+
+Topics Discussed: Reviewed progress on assigned tasks, identified missing core functionalities, and planned collaborative efforts for the next two sprints.
+
+Agenda:
+●	Updates on progress for each assigned section
+●	Core functionality and CI/CD pipeline planning
+●	Prioritization and scheduling for upcoming sprints
+Discussions:
+●	Sprints: Decided to conduct two sprints before the next iteration, with each sprint focusing on a core functionality.
+●	Core Functionality & Integration Risks: Identified missing core features and integration risks, highlighting the need for CI/CD.
+●	Collaboration: Emphasized the need for collaborative work across all members to complete the next two sprints, with each sprint scheduled for one week.
+●	Commit Frequency: Noted the need for more frequent commits from all members.
+●	CI/CD Pipeline: Assigned Jaindra to set up the CI/CD pipeline with help from Tushar
+●	Configuration Files: Agreed on resolving blank .yml files to ensure proper CI/CD setup.
+●	Frontend Development: Discussed finalizing the frontend, with a focus on removing inline styles and enhancing component reusability.
+●	Prioritization of Features:
+○	Subscription plans are marked as a low priority or to be removed if time constraints persist.
+○	Job listings ranked as the second-lowest priority.
+○	Recruiter-side functionality marked as a lower priority.
+○	Analytics backend APIs set as a high priority for the next sprint.
+●	Testing: Shubh will handle Jest test cases, emphasizing the need for both Jest and API integration testing.
+●	API Integration & Frontend: Acknowledged that API integration is incomplete, with pending tasks on the frontend to ensure smooth user experience.
+●	Resume Analysis: Assigned Jerome, Jaindra, and Hemant to work on resume analysis functionality.
+●	Resume Upload and Analysis: Faizan to continue focusing on this section with additional support from the resume analysis team if required.
+Key Decisions:
+●	Prioritize CI/CD, core functionality, and backend API development for analytics.
+●	Structured a collaborative sprint approach to complete essential tasks within the next two weeks.
+Action Items:
+●	Jaindra: Complete CI/CD pipeline setup along with Tushar
+●	Shubh: Finalize Jest test cases and ensure coverage for all core functionalities along with Tushar.
+●	Jerome, Jaindra, Hemant: Continue development on resume analysis.
+●	Faizan: Focus on resume upload and analysis.
+●	All team members to increase commit frequency and work collaboratively towards sprint goals.
+
+
+
+
+Meeting 6
+Meeting Date: oct 21st
+Time: 2-3 PM
+Place: Zoom
+Participants: Shubh, Hemant, Jaindra, Jerome, Tushar, Faizan
+Minutes Taker: Jaindra              
+Timekeeper: Jaindra
+Purpose: Progress
+
+Agenda:
+●	Review of individual assignments for project sections
+Discussions:
+●	Faizan emphasized that everyone should focus on the dashboard page.
+●	Hemant was assigned the profile page.
+●	Jaindra was tasked with the job listings page.
+●	Shubh took responsibility for the shortlists page.
+●	Tushar will handle the resume analysis section.
+●	Jerome was assigned the manage subscriptions section.
+Key Decisions:
+●	Assigned specific tasks to each team member for focused progress on application sections.
+Action Items:
+●	Each participant to focus on their respective assigned sections and provide updates at the next meeting.
+
+
+
+
+Meeting 5
+
+Meeting Date: Mon, Oct 8
+Time: 8th October – 2-3 PM
+Place: Zoom
+Participants: Shubh, Hemant, Jaindra, Jerome
+Minutes Taker: Shubh              
+Timekeeper: Shubh
+Purpose: Update Meeting
+ 
+ 
+Topics Discussed: This meeting focused on updates regarding our ongoing tasks such as Pivotal Tracker/Jira exploration, React setup, and design in Figma.
+Agenda:
+●	Figuring Out Pivotal Tracker/Exploring Jira
+●	React Setup
+●	Figma
+Discussions:
+●	Faizan shared updates on the completion of the React Jest and Redux setups, including testing and usage examples available on GitHub.
+●	Addressed the blockage issues with the Resume/JD upload page due to the navbar constraints.
+●	Reviewed the completion and distribution of acceptance tests for the project.
+●	Acknowledged the ongoing academic commitments affecting team member availability for project tasks.
+●	Clarified the upload functionalities for both recruiter and applicant sides, detailing actions for JD and Resume uploads.
+●	Discussed the progress in creating UML Class Diagrams to support all user stories in the project.
+Key Decisions:
+●	Jaindra has joined the team responsible for creating components for the application.
+●	The team decided to switch to JIRA from Pivotal Tracker for project management.
+Action Items:
+●	Jaindra will assist Shubh and Hemant with creating components for the application.
+
+
+Meeting 4
+
+Database Structure : Faizan to draft the initial database schema for review.
+Date and Time:  Fri, Sept 29  8:00  PM – 9:00 PM
+Place: Zoom
+Participants: Hemant, Jaindra, Amruth, Shubh, Tushar, Faizan
+Minutes taker: Faizan
+Timekeeper: Faizan
+Agenda: Sprint planning (Sep 29 - Oct 5) & DB design review
+
+Notes:
+-	Shubh and Hemant said that they can get started with FE
+-	Team did task breakdown for Sprint 1 (Sep 29 - Oct 5)
+-	Hemant said that Jerome and Jaindra will reach to Faizan for design
+-	Hemant said that Jaindra is shy to talk to Faizan
+-	Faizan went through the db design document
+-	Db design looks good for now. Tushar will make some updates later
+-	Tushar will setup the login
+-	We need to do a KT for rest of the team
+
+Actions: 
+●	Frontend
+○	Setup JEST - Faizan
+○	Setup Redux - Faizan
+○	Create basic layout of the dashboard
+■	Navigation sidebar (w/ routing) and base layout - Hemant & Shubh * Create a new component and use it in App.tsx (don’t create anything inside App.tsx)
+●	Description: Create routing in react based on ReactRouter (routes for all pages) (reuse components as much as possible)
+●	Sidebar use MUI (UI library that we’ll use)
+●	Sidebar Item and display respective pages
+●	Connect Sidebar Item (onClick) to router navigation
+■	Resume/JD upload (page) (blocked by Navbar) - Faizan
+●	Jaindra and Jerome will work on Figma reach out to Faizan
+●	Backend:
+○	Login/Signup integration in React - Tushar
+■	Use keycloak theme for login
+■	Use keycloak theme for signup
+○	Create all db tables in fastify using  - Tushar
+○	CRUD API for any 1 table - Tushar
+■	Create API (POST)
+■	Read API (GET)
+■	Update API (PUT)
+■	Delete API (PUT) (Soft deletes only)
+○	Review DB design by Faizan - Tushar
+●	Knowledge Transfer (KT) meeting
+
+Meeting 3
+
+Database Structure : Faizan to draft the initial database schema for review.
+Date and Time:  Fri, Sept 21  2:00  PM – 4:00 PM
+Place: Zoom
+Participants: Hemant, Jaindra, Amruth, Shubh, Tushar, Faizan
+Minutes taker: Hemant
+Timekeeper: Hemant
+Purpose: Env and Stack setup in all systems
+
+Actions: 
+●	Started setting up Docker, Postman, PGAdmin
+●	Ran through the initial boilerplate code to start off
+●	Debugged all errors and made sure all systems are supporting the stack and the env
+
+
+
+Meeting 2 
+
+Date and Time:  Fri, Sept 15  12:00  PM – 1:30 PM
+Place: Zoom
+Participants: Hemant, Jaindra, Amruth, Shubh, Tushar, Faizan
+Minutes taker: Amruth
+Timekeeper: Amruth
+Purpose: Discussing the UI design, tech stack, MVP features, security considerations, and task assignments.
+ 
+ 
+Agenda : 
+1. Discuss UI and tech stack  
+2. Finalize MVP features  
+3. Assign tasks for backend and frontend teams  
+4. Security considerations  
+5. Discuss GitHub protocol and project structure
+ 
+ 
+ Discussions :
+ 
+1.UI Design :
+Faizan  initiated the discussion by asking if we should use Figma templates or design a detailed UI from scratch.
+Tushar  emphasized that the UI should be functional, mentioning that many teams rely on Material UI (MUI), which could be a good option.
+ 
+2.  Tech Stack :
+      Tushar  outlined the tech stack for the project:
+     1.  Authentication : Keycloak (OAuth 2.0 with JWT)
+     2.  Backend : Fastify for APIs, Prisma ORM, PostgreSQL (tentative)
+     3.  Frontend : React with TypeScript
+     4.  UI Package : Material UI (tentative)
+     5.  Cache : Redis
+ 
+3.  MVP Features :
+      Hemant  suggested starting the process by finalizing the MVP features.
+      Tushar  proposed that the MVP will include the following:
+      Applicant Dashboard : Upload Resume, Upload Job Description (JD), Analytics 
+	Recruiter Dashboard : View Resumes, Analytics
+      Hemant  raised a suggestion for a feature that would allow applicants to check if their resume is suited for a particular job.
+ 
+ 
+4.  Project Phases : Tushar  stated that Phase 1 will focus on implementing the Resume ATS system, while Phase 2 will handle job listings if time permits.
+ 
+5.  Security Considerations :
+Faizan  questioned if security features should be included as part of the learning experience.
+Tushar  responded by explaining that the SQL database will not be exposed to the internet, and the API security will be handled through Prisma ORM. Prisma also creates types for the database, making it efficient and secure.
+ 
+6.  GitHub Protocol :
+      Faizan  proposed that we establish a protocol for GitHub pull requests.
+      Tushar  suggested using conventional commit comments to maintain structure.
+ 
+7.  Backend and Frontend Teams :
+      Hemant  proposed  Faizan and Tushar to work on the backend.
+      Tushar  suggested dividing the team into three members for the backend and three for the frontend. He will begin with building the CRUD API before moving on to the frontend tasks.
+ 
+ Key Decisions :
+Decided to use the proposed tech stack, including Fastify, Prisma, and Redis.
+Agreed to focus on the ATS features for Phase 1 and job listings for Phase 2 if time permits.
+Established a tentative security plan based on API security through Prisma.
+ 
+   
+Action Items :
+UI Design : Faizan to explore UI options, potentially leveraging Figma and Material UI.
+Tech Stack Setup : Tushar to set up the tech stack, focusing on Fastify and Prisma.
+Backend and Frontend Division : Hemant to assign team members for backend and frontend tasks.
+
+
+
+Meeting 1 
+
+
+Date and Time:  Fri, Sept 6 2:00 PM - 2:50 PM
+Place: Zoom
+Participants: Hemant, Jaindra, Amruth, Shubh
+Minutes taker: Jaindra
+Timekeeper: Jaindra
+Purpose: Project initiation meet
+
+Agenda: 
+-	Decide on a project idea 
+
+Discussions:
+-	The team discussed the course schedule for the semester with Hemant leading the conversation.
+
+-	Each team member shared the technologies they were familiar with to gauge the overall skill set of the group.
+
+-	 It was collectively decided that the project would be a web application. 
+
+-	Project Ideas :
+
+-	Idea 1: An online document analyzer specifically for legal documents (suggested by Shubh).
+-	Idea 2: A tool to shortlist proposals through a comparative analysis, providing both objective and subjective grading (suggested by Hemant). This idea was also considered for filtering job applications.
+-	Idea 3: A prototype generation tool that leverages generative AI to create prototypes based on user inputs (suggested by Jaindra). However, this idea was considered challenging due to the lack of domain knowledge about specific prototypes.
+-	Idea 4: A finance tracker app with AI integration to provide personalized recommendations based on spending habits and income, offering personal financial advice (suggested by Jerome).
+-	Idea 5: A grading tool that evaluates assignments based on a model assignment that represents a perfect grade (suggested by Hemant).
+
+-	The team is deciding between building an already popular project with improvements or developing a completely new idea. The initial inclination is to follow the first route, enhancing the application with a simpler UI and more sophisticated backend.
+
+-	The team discussed the potential use of Langchain, embeddings, a vector database, and Elasticsearch for the project. For the backend, Fastify and Prisma were identified as possible technologies.
+
+-	The team is leaning towards Idea 2 - a reviewer app that compares one document against others, helping to filter out key differences. The focus would be on creating a simple UI while implementing a more complex backend.
+
+-	The team was deciding on what to call the project but put it away for later discussions
+ 
+-	The team talked about starting the iteration 0 document 
+
+-	Decided on possible use of Fastify, Prisma in backend. 
+
+-	Security lead - jerome, Qna lead - shubh have agreed on going about the practises that would be in the project by the next meeting
+
+-	Jaindra was assigned the task of creating an empty repository on Git and notifying the team once it’s ready.
+
+-	Shubh and Jerome will collaborate on certain aspects of the project which includes testing.
+
+-	Jerome suggested that Fastify has a testing framework which could be used in the testing process.
+
+-	 The team agreed to meet every Friday at 2 PM for project updates.
+
+Key Decisions:
+-	Decided on the meeting time.
+-	Decided that the project would be a web application
+
+Action Items:
+-	Think of more project ideas (Group)
+-	Setup Git and let the team know after creating an empty repository (Jaindra)
+-	Read about the technologies (Langchain, fastify….), (Group)
+
+Links : 
+-	https://fastify.dev/docs/v1.14.x/Documentation/Testing/
